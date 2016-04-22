@@ -1,0 +1,97 @@
+
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='15362737291' AND tradetime>'20150730040000'  
+ 150730073424188260283691868355
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730073424188260283691868355'
+ 
+ 
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='17727541769' AND tradetime>'20150730040000'
+150730082757668380200214
+150730083112140229600223
+150730103603765595700902
+
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730082757668380200214'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730083112140229600223'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730103603765595700902'
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='13318093505' AND tradetime>'20150730040000'
+150730084030491258200272
+150731082709677575405577
+
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730084030491258200272'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150731082709677575405577'
+
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='17706848174' AND tradetime>'20150730040000'
+15073009286098
+15073013456318
+15073013457267
+
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073009286098'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073013456318'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073013457267'
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='15372995401' AND tradetime>'20150730040000'
+15073009297757
+15073010324626
+15073010349503
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073009297757'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010324626'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010349503'
+------------------------------------------------------------------------------------------------
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='18024220299' AND tradetime>'20150730040000'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730100955188260283691869803'    
+订单号 ：150730100955188260283691869803  账务号 37QDF1802422029993833815   交易账号 18024220299  代办点登录号 18826028369  面额 100000 实际金额 98200
+
+SELECT 22253064+491860    22744924
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='18967490572' AND tradetime>'20150730040000'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010318318'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073013481425'
+订单号 ：15073010318318  账务号 05QDF1896749057295487348   交易账号 18967490572  代办点登录号 13777517860  面额 50000 实际金额 49186     05QSF1896749057210456989   111
+
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='18967954249' AND tradetime>'20150730040000'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010326724'
+订单号 ：15073010326724  账务号 05QDF1896795424912610121   交易账号 18967954249  代办点登录号 13777517860  面额 500000 实际金额 491860   05QSF1896795424914812175   1110 
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073011406168'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073011406294'
+
+SELECT 22420297+49186 
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='13388666907' AND tradetime>'20150730040000'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010326751'
+订单号 ：15073010326751  账务号 43QDF1338866690767119117   交易账号 13388666907  代办点登录号 13777517860  面额 100000 实际金额 98372  43QSF1338866690720520117  222
+
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010333147'
+
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='18006549860' AND tradetime>'20150730040000'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073010332722'
+订单号 ：15073010332722  账务号 56QDF1800654986088560753   交易账号 18006549860  代办点登录号 13777517860  面额 50000 实际金额 49186  56QSF1800654986052805695  111
+
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='15073019746142'
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='18978849893' AND tradetime>'20150730040000'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730150538631262402076'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730150642939414902082'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730150809916670602086'
+订单号 ：150730150809916670602086  账务号 10QDF1897884989352395668   交易账号 18978849893  代办点登录号 13316910209  面额 50000 实际金额 49150  10QSF1897884989336301405  50
+
+SELECT 1017881+49150
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730151111532885402099'
+订单号 ：150730151111532885402099  账务号 14QDF1897884989383585917   交易账号 18978849893  代办点登录号 13316910209  面额 50000 实际金额 49150  14QSF1897884989352492698  50
+
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730151218437640202107'
+SELECT * FROM  wht_acctbill_1507 WHERE tradeserial='150730151607442200602122'
+订单号 ：150730151607442200602122  账务号 09QDF1897884989396000138   交易账号 18978849893  代办点登录号 13316910209  面额 50000 实际金额 49150  09QSF1897884989384283521  50
+
+
+SELECT tradeserial,tradeobject,fee,tradefee,user_name FROM wht_orderform_1507 WHERE tradeobject='15572462189' AND tradetime>'20150730040000'
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td ,article, aside, dialog, figure, footer, header, hgroup, menu, nav, section{
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+	font-weight:normal;
+}
+html{_background-image:url(about:blank);_background-attachment:fixed;}
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section{ display: block; }
+ol, ul {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+em{font-style:normal;}
+:focus {
+    outline: 0 none;
+}
+textarea {
+    height: auto;
+    resize: none;
+}
+a{text-decoration:none; color:#ddd; background:url(about:blank);}
+
+body{
+	background:#FFF;
+    color: #fff;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+/*自定义css*/
+.clear{clear: both; height:0; overflow:hidden;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*+height:1%;}
+.zoom{zoom:1; overflow:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.play_b{display: block;}
+.play_i{display: inline; _display:inline;_zoom:1}
+.play_h{display: none;}
+
+.no_border{border:none;}
+
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+
+.fst{font-family:"宋体";}
+
+.pos_r{position:relative;}
+.pos_a{position:absolute;}
+
+#greybackground {position:fixed;_position:absolute;z-index:10;top:0px;left:0px;width:100%;_width:expression(document.documentElement.clientWidth);height:100%;_height:expression(document.documentElement.clientHeight);background:#000;background:rgba(0,0,0,0.8);_background:url(about:blank);}
+
+body{
+	background:#fff;
+}
+
+
+.fly_wrapper{
+	width:830px;
+	height:auto;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+	margin:0 auto;	
+}
+
+.flymain{
+	width:830px;
+	margin:0 auto;
+	position:relative;
+	z-index:1;	
+}
+
+.flymain img{
+	margin:0 auto;
+	display:block;	
+}
+
+.cz h1,.cz h3,.cz p{
+	color:#000;
+	margin:10px 0;
+}
+
+.cz h1{ font-size:24px; text-align:center; margin:10px 0; line-height:30px;}
+
+.cz h3{ font-size:18px; margin-top:40px;}
+
+.cz p{ font-size:16px; margin:10px 0; line-height:24px;}
+
+.cz p span{ font-weight:bold;}
+
+.cz h3 span{ font-size:16px;}
+
+.cz img{ margin:10px auto;}

@@ -1,0 +1,304 @@
+<html>
+<head>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t, h) {
+  var form = document._Calendar;
+  if (form.onsubmit) {
+     var retVal = form.onsubmit();
+     if (typeof retVal == "boolean" && retVal == false)
+       return false;
+  }
+  var target = document._domino_target;
+  if (o.href != null) {
+    if (o.target != null)
+       target = o.target;
+  } else {
+    if (t != null)
+      target = t;
+  }
+  form.target = target;
+  form.__Click.value = v;
+  if (h != null)
+    form.action += h;
+  form.submit();
+  return false;
+}
+// -->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" onmousedown="if(event.button==2||event.button==3) alert(&quot;本窗口禁止使用鼠标右键！&quot;)">
+<input type="hidden" name="__Click" value="0"><STYLE type=text/css>
+.BUTTON_01{
+	border-left: 1px solid #FFFFFF; 
+	border-right: 1px solid #C0C0C0; 
+	border-top: 1px solid #FFFFFF; 
+	border-bottom: 1px solid #C0C0C0; 
+	background-color: #F0F0F0
+}
+A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+TD {
+	VERTICAL-ALIGN: middle; TEXT-ALIGN: center
+}
+.CalHead {
+	FONT:   8pt Arial; COLOR: white
+}
+.CalCell {
+	FONT: 8pt Arial; CURSOR: hand
+}
+.HeadBtn {
+	FONT: 10pt Fixedsys; VERTICAL-ALIGN: middle; WIDTH: 18px; HEIGHT: 22px
+
+}
+.HeadBox {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; VERTICAL-ALIGN: middle; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+.Today {
+	FONT:   10pt Arial; COLOR: white
+}
+</STYLE>
+<SCRIPT>
+<!-- Begin Configurable Part
+var giStartYear = 2005;
+var giEndYear = 2015;
+var giCellWidth = 16;
+var gMonths = new Array("01","02","03","04","05","06","07","08","09","10","11","12");
+var gcOtherDay = "gray";
+var gcToggle = "yellow";
+var gcBG = "#E3F6FF";
+var gcTodayBG = "white";
+var gcFrame = "#1DAF48";
+var gcHead = "white";
+var gcWeekend = "red";
+var gcWorkday = "black";
+var gcCalBG = "#6699cc";
+//-- End Configurable Part -->
+var gcTemp = gcBG;
+var gdCurDate = new Date();
+var giYear = gdCurDate.getFullYear();
+var giMonth = gdCurDate.getMonth()+1;
+var giDay = gdCurDate.getDate();
+var tbMonSelect, tbYearSelect;
+var gCellSet = new Array;
+var gfPop = parent.document.getElementById(self.name);
+var gdCtrl = new Object;
+//****************************************************************************
+// Here, you could modify the date format as you need !
+//****************************************************************************
+function fSetDate(iYear, iMonth, iDay){
+  if (iDay.toString().length<2) 
+     SetDay="0"+iDay.toString()
+  else
+     SetDay=iDay.toString();
+  gdCtrl.value = iYear+"-"+gMonths[iMonth-1]+"-"+SetDay; // <--Modify this
+  gfPop.style.visibility = "hidden";
+}
+//****************************************************************************
+// Param: popCtrl is the widget beyond which you want popup this calendar;
+
+// dateCtrl is the widget into which you want to put the selected date;
+//****************************************************************************
+function fPopCalendar(popCtrl, dateCtrl, anEvent){
+  anEvent.cancelBubble=true;
+  gdCtrl = parent.document.getElementById(dateCtrl);
+  var pc = parent.document.getElementById(popCtrl);
+  fSetYearMon(giYear, giMonth);
+  var point = fGetXY(pc);
+  with (gfPop.style) {
+  	left = point.x-1;
+	top  = point.y+pc.offsetHeight+1;
+	visibility = "visible";
+  }
+}
+function Point(iX, iY){
+	this.x = iX;
+	this.y = iY;
+}
+function fGetXY(aTag){
+  var pt = new Point(aTag.offsetLeft, aTag.offsetTop);
+  do {
+  	aTag = aTag.offsetParent;
+  	pt.x += aTag.offsetLeft;
+  	pt.y += aTag.offsetTop;
+  } while(aTag.tagName!="BODY");
+  return pt;
+}
+function fSetSelected(aCell){
+  var iOffset = 0;
+  var iYear = parseInt(tbSelYear.value);
+  var iMonth = parseInt(tbSelMonth.value);
+  aCell.bgColor = gcBG;
+  with (aCell.firstChild){
+  	var iDate = parseInt(innerHTML);
+  	if (style.color==gcOtherDay)
+		iOffset = (id<10)?-1:1;
+	iMonth += iOffset;
+	if (iMonth<1) {
+		iYear--;
+		iMonth = 12;
+	}else if (iMonth>12){
+		iYear++;
+		iMonth = 1;
+	}
+  }
+  fSetDate(iYear, iMonth, iDate);
+}
+function fBuildCal(iYear, iMonth) {
+  var aMonth=new Array();
+  for(i=1;i<7;i++)
+  	aMonth[i]=new Array(i);
+  var dCalDate=new Date(iYear, iMonth-1, 1);
+  var iDayOfFirst=dCalDate.getDay();
+  var iDaysInMonth=new Date(iYear, iMonth, 0).getDate();
+  var iOffsetLast=new Date(iYear, iMonth-1, 0).getDate()-iDayOfFirst+1;
+
+  var iDate = 1;
+  var iNext = 1;
+  for (d = 0; d < 7; d++)
+	aMonth[1][d] = (d<iDayOfFirst)?-(iOffsetLast+d):iDate++;
+  for (w = 2; w < 7; w++)
+  	for (d = 0; d < 7; d++)
+		aMonth[w][d] = (iDate<=iDaysInMonth)?iDate++:-(iNext++);
+  return aMonth;
+}
+function fDrawCal(iCellWidth) {
+  var WeekDay = new Array("日","一","二","三","四","五","六");
+  var styleTD = " width='"+iCellWidth+"' ";            //Coded by Liming Weng(Victor Won)  email:victorwon@netease.com
+  with (document) {
+	write("<tr>");
+	for(i=0; i<7; i++)
+		write("<td class='CalHead' "+styleTD+">" + WeekDay[i] + "</td>");
+
+	write("</tr>");
+  	for (w = 1; w < 7; w++) {
+		write("<tr>");
+		for (d = 0; d < 7; d++) {
+			write("<td class='CalCell' "+styleTD+" onMouseOver='gcTemp=this.bgColor;this.bgColor=gcToggle;this.bgColor=gcToggle' onMouseOut='this.bgColor=gcTemp;this.bgColor=gcTemp' onclick='fSetSelected(this)'>");
+			write("<A href='#null' onfocus='this.blur();'>00</A></td>")
+
+		}
+		write("</tr>");
+	}
+  }
+}
+function fUpdateCal(iYear, iMonth) {
+  myMonth = fBuildCal(iYear, iMonth);
+  var i = 0;
+  var iDate = 0;
+  for (w = 0; w < 6; w++)
+	for (d = 0; d < 7; d++)
+		with (gCellSet[(7*w)+d]) {
+			id = i++;
+			if (myMonth[w+1][d]<0) {
+				style.color = gcOtherDay;
+				innerHTML = -myMonth[w+1][d];
+				iDate = 0;
+			}else{
+				style.color = ((d==0)||(d==6))?gcWeekend:gcWorkday;
+
+				innerHTML = myMonth[w+1][d];
+				iDate++;
+			}
+			parentNode.bgColor = ((iYear==giYear)&&(iMonth==giMonth)&&(iDate==giDay))?gcTodayBG:gcBG;
+			parentNode.bgColor = parentNode.bgColor;
+		}
+}
+function fSetYearMon(iYear, iMon){
+  tbSelMonth.options[iMon-1].selected = true;
+  if (iYear>giEndYear) iYear=giEndYear;
+  if (iYear<giStartYear) iYear=giStartYear;
+  tbSelYear.options[iYear-giStartYear].selected = true;
+  fUpdateCal(iYear, iMon);
+}
+function DateClear(){
+  gdCtrl.value = "";
+  gfPop.style.visibility = "hidden";
+}
+
+function DateClear2(){
+  gfPop.style.visibility = "hidden";
+}
+
+function fPrevMonth(){
+  var iMon = tbSelMonth.value;
+  var iYear = tbSelYear.value;
+  if (--iMon<1) {
+	  iMon = 12;
+	  iYear--;
+  }
+  fSetYearMon(iYear, iMon);
+}
+function fNextMonth(){
+  var iMon = tbSelMonth.value;
+  var iYear = tbSelYear.value;
+  if (++iMon>12) {
+	  iMon = 1;
+	  iYear++;
+  }
+  fSetYearMon(iYear, iMon);
+}
+with (document) {
+  write("<table id='popTable' width=0px bgcolor='"+gcCalBG+"' cellspacing='0' cellpadding='0' border='0'><TR>");
+  write("<td align='center' style=background-color:#E1F5E7;padding-top:1px><input class=button_01 onmouseover=msover(); onmouseout=msout(); type='button' value='<' class='HeadBtn' onClick='fPrevMonth()' title='前一月'>");
+  write("<select class=button_01 id='tbMonSelect' class='HeadBox' onChange='fUpdateCal(tbSelYear.value, tbSelMonth.value)' Victor='Won'>");
+
+  for (i=0; i<12; i++)
+	write("<option value='"+(i+1)+"'>"+gMonths[i]+"</option>");
+  write("</SELECT><SELECT class=button_01 id='tbYearSelect' class='HeadBox' onChange='fUpdateCal(tbSelYear.value, tbSelMonth.value)' Victor='Won'>");
+  for(i=giStartYear;i<=giEndYear;i++)
+	write("<OPTION value='"+i+"'>"+i+"</OPTION>");
+  write("</SELECT><input class=button_01 onmouseover=msover(); onmouseout=msout(); type='button' value='>' class='HeadBtn' onclick='fNextMonth()' title='下一月'>");
+  write("</td></TR><TR><td align='center'>");
+  write("<DIV style='background-color:"+gcFrame+";width:"+((giCellWidth+6)*7+2)+"px;'><table width=100% border='0' cellpadding='0' cellspacing='1'>");
+  tbSelMonth = getElementById("tbMonSelect");
+  tbSelYear = getElementById("tbYearSelect");
+  fDrawCal(giCellWidth);
+  gCellSet = getElementsByTagName("A"); 
+  fSetYearMon(giYear, giMonth);
+  write("</table></DIV></td></TR><TR align='center'><TD align='center' style=background-color:#E1F5E7;>");
+  write("<A href='#null' class='Today' onclick='fSetDate(giYear,giMonth,giDay); this.blur();' onMouseOver='gcTemp=this.style.color;this.style.color=gcToggle' onMouseOut='this.style.color=gcTemp'><FONT style='font-size:11px;color:#1DAF48' onmouseover='event.srcElement.style.color=\"#36E11E\";' onmouseout='event.srcElement.style.color=\"#1DAF48\";'>今天是:&nbsp;"+giYear+"-"+gMonths[giMonth-1]+"-"+giDay+"</FONT></A>");
+  write("<input class=button_01 align='center' onmouseover=msover(); onmouseout=msout(); style=background-Color:rgb(214,229,244);height:18;width:18; type='button' value='关闭' class='HeadBtn' onclick='DateClear2()' title='清空'>")
+  write("</TD></TR></TABLE>");
+  
+  gfPop.width = getElementById("popTable").offsetWidth;
+  gfPop.height = getElementById("popTable").offsetHeight;
+}
+// End -- Coded by Liming Weng, email: victorwon@netease.com -->
+</SCRIPT>
+<script language="JavaScript">
+<!--
+function alter_del(){
+var k=window.confirm("    您的操作将导致数据被删除，请确认操作无误！");
+if(k)
+	{
+	return true;}
+	else{
+	return false;
+	}
+}
+function msover()
+{
+{
+event.srcElement.style.color="#111111";
+event.srcElement.style.backgroundColor="#EAF8FF";
+event.srcElement.style.cursor = "hand";
+}
+}
+function msout()
+{
+{
+event.srcElement.style.color="black";event.srcElement.style.backgroundColor="rgb(214,229,244)";
+event.srcElement.style.cursor = "auto";
+}
+}
+//-->
+</script>
+</body>
+</html>

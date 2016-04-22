@@ -1,0 +1,69 @@
+package com.wlt.webm.business.bean.lkal;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonAnyFormatVisitor;
+
+
+public class TestB {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+//		RquestJson rs=new RquestJson();
+//		rs.setAppid("1hsdfy1291912912");
+//		rs.setDealType("http://10.2.1.23:8080/service/notify");
+//		rs.setRedirectURL("012001|012003|012016");
+//		System.out.println(JSON.toJSON(rs));
+//		
+//		HashMap<String, Object> maps=new HashMap<String, Object>();
+//		maps.put("key1", 1);
+//		maps.put("key2", 2);
+//		System.out.println("+++"+JSON.toJSON(maps));
+		/**
+		String text="{\"success\":true,\"resultCode\":\"SUCCESS\",\"message\":\"订阅成功\",\"properties\":{\"keys\":[{index:1,key:\"D596732DDCC14159A67ED37F1605CE4B\"},{\"index\":2,\"key\":\"D596732DDCC14159A67ED37F1605CE4c\"}]}}";
+	    UUIDResponseJson ps=JSON.parseObject(text, UUIDResponseJson.class);
+	    System.out.println(ps.getMessage());
+	    System.out.println(ps.getProperties().getKeys().get(0).getIndex());
+	    System.out.println(ps.getProperties().getKeys().get(0).getKey());
+	    
+	    UUIDResponseJson ps1=new UUIDResponseJson();
+	    ps1.setSuccess("true");
+	    ps1.setResultCode("SUCCESS");
+	    ps1.setMessage("成功");
+	    Keys  properties=new Keys();
+	    ArrayList<Key> keys=new ArrayList<Key>();
+	    Key key1=new Key();
+	    key1.setIndex(1);
+	    key1.setKey("12345678");
+	    
+	    Key key2=new Key();
+	    key2.setIndex(2);
+	    key2.setKey("22345678");
+	    
+	    keys.add(key1);
+	    keys.add(key2);
+	    
+	    properties.setKeys(keys);
+	    
+	    ps1.setProperties(properties);
+	    
+	    System.out.println(JSON.toJSON(ps1));
+	    */
+	    //MD5(dealType+dealTime+dealAmount+psam+solt)
+		String str1="{\"index\":1,\"mac\":\"AD182123SAFKASDFDASF\",\"dealInfo\":{\"dealType\":\"012066\",\"dealTime\":\"20140902101000\",\"dealAmount\":\"100000\",\"psam\":\"CA-1230LAD0101\",\"channel\":\"MPOS\"}}";
+		Mposinfo a=JSON.parseObject(str1, Mposinfo.class);
+	     System.out.println(a.getIndex());
+	     System.out.println(a.getMac());
+	     DealInfo b=a.getDealInfo();
+	     System.out.println(b.getPsam());
+	     System.out.println(b.getDealType());
+	     System.out.println(b.getDealTime());
+	     System.out.println(b.getDealAmount());
+	     System.out.println(b.getChannel());
+	}
+
+}

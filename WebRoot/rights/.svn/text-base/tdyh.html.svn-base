@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="大优惠活动页" />
+<meta name="keywords" content="大优惠活动页" />
+<title>大优惠活动页</title>
+
+<style>
+*{ margin:0; padding:0;}
+
+.banner{
+	background:#eafafa;
+	width:100%;
+	height:620px;
+	position:relative;
+	z-index:0;
+}
+.banner a{
+	display:block;
+	width:100%;
+	height:620px;
+}
+.bg0{
+	background:#fff url(images/banner_01.jpg) no-repeat center 0;
+}
+.bg1{
+	background:#fff url(images/banner_02.jpg) no-repeat center 0;
+}
+.bg2{
+	background:#fff url(images/banner_03.jpg) no-repeat center 0;
+}
+
+#cri{
+	display:block;
+	position:absolute;
+	top:590px;
+	width:100%;
+	height:30px;
+	z-index:10;
+	text-align:center;
+}
+#cri li{
+	background:url(images/icon1.png) no-repeat;
+	_background:#8b8888;
+	color:#fff;
+	cursor:pointer;
+	display:inline-block;
+	*display:inline;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	margin-right:10px;
+	zoom:1;
+	font-size:12px;
+}
+#cri li.cur{
+	background:url(images/icon2.png) no-repeat;
+	_background:#424242;
+}
+
+
+</style>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	//banner
+	imgPlay();	
+
+	
+});
+
+function imgPlay(){
+	var
+		timer,
+		counter = -1 ,
+		intval = 3000;
+		var imgs = [
+			{ cn:'bg0' , href:'jtwz.html'},
+			{ cn:'bg1' , href:'skb.html'},
+			{ cn:'bg2' , href:'yzf.html'}
+		  ];
+		for(i=0;i<imgs.length;i++){
+		   $("#cri").append('<li>'+parseInt(i+1)+'</li>');
+		}
+		
+		$("#cri li").click(function(){
+		   counter=$(this).index()-1;
+		   play();
+		   });
+		
+		function play(){
+		  !!timer && clearTimeout( timer );
+		  //counter =  counter + 1 == imgs.length ? 0 : counter + 1 ;
+		  counter=++counter%imgs.length;
+		  $("#cri>li").removeClass("cur");
+		  $("#anim > a").attr("class",imgs[counter].cn ).attr("href",imgs[counter].href);
+		  $("#cri>li").eq(counter).addClass("cur");
+		  timer=setTimeout( play , intval );
+		}
+		
+		//鼠标停留时停止动画
+		$("#anim").hover(function() {
+				clearTimeout(timer);
+			},function() {
+				timer=setTimeout( play , intval );
+		}).trigger("mouseleave");
+		
+		play();
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="banner" id="anim">
+    <a target="_blank" title="点击了解更多活动详情"></a>
+    <ul id="cri"></ul>
+</div>
+
+</body>
+</html>

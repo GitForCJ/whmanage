@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>tdyh.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+ <style>
+
+*{ margin:0; padding:0;}
+
+.fly_wrapper{
+	width:100%;
+	min-width:1000px;
+	height:4000px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+	margin:0 auto;	
+}
+
+.bg_box{
+	width:1920px;
+	height:4000px;
+	position:absolute;
+	left:50%;
+	top:0;
+	margin:0 0 0 -960px;
+	z-index:0;	
+}
+
+.bg_box img{
+	display:block;
+	margin:0 auto;	
+}
+</style>
+</head>
+
+<body>
+<div class="fly_wrapper">
+	<div class="bg_box">
+    	<img src="images/bg_01.jpg" alt="bg">
+        <img src="images/bg_02.jpg" alt="bg">
+        <img src="images/bg_03.jpg" alt="bg">
+        <img src="images/bg_04.jpg" alt="bg">
+        <img src="images/bg_05.jpg" alt="bg">
+        <img src="images/bg_06.jpg" alt="bg">
+        <img src="images/bg_07.jpg" alt="bg">
+        <img src="images/bg_08.jpg" alt="bg">
+        <img src="images/bg_09.jpg" alt="bg">
+        <img src="images/bg_10.jpg" alt="bg">
+        <img src="images/bg_11.jpg" alt="bg">
+        <img src="images/bg_12.jpg" alt="bg">
+        <img src="images/bg_13.jpg" alt="bg">
+        <img src="images/bg_14.jpg" alt="bg">
+        <img src="images/bg_15.jpg" alt="bg">
+        <img src="images/bg_16.jpg" alt="bg">
+        <img src="images/bg_17.jpg" alt="bg">
+        <img src="images/bg_18.jpg" alt="bg">
+        <img src="images/bg_19.jpg" alt="bg">
+        <img src="images/bg_20.jpg" alt="bg">
+    </div>
+</div>
+</body>
+</html>

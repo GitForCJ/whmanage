@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>狂欢继续，巨惠返场</title>
+<meta name="description" content="狂欢继续，巨惠返场" />
+<meta name="keywords" content="狂欢继续，巨惠返场" />
+<style>
+*{ margin:0; padding:0;}
+
+.fly_wrapper{
+	width:100%;
+	min-width:1000px;
+	height:1000px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+	margin:0 auto;	
+}
+
+.fly_box{
+	width:1920px;
+	height:1000px;
+	position:absolute;
+	left:50%;
+	top:0;
+	margin:0 0 0 -960px;
+	z-index:0;	
+}
+
+.fly_box img{
+	display:block;
+	margin:0 auto;	
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="fly_wrapper">
+    <div class="fly_box">
+    	<img src="images/y_01.jpg" alt="bg">
+        <img src="images/y_02.jpg" alt="bg">
+        <img src="images/y_03.jpg" alt="bg">
+        <img src="images/y_04.jpg" alt="bg">
+        <img src="images/y_05.jpg" alt="bg">
+    </div>
+</div><!--fly_wrapper End-->
+
+</body>
+</html>

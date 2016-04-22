@@ -1,0 +1,65 @@
+<%@ page contentType="text/html; charset=gb2312" language="java"%>
+<%
+String path = request.getContextPath();
+%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Insert title here</title>
+<title></title>
+<link href="../rights/css/member.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+	function funA()
+	{
+		window.parent.document.body.style.overflowX="hidden";
+		window.parent.document.body.style.overflowY="hidden";
+		
+		var div=window.parent.document.getElementById("zzc");
+		
+		var sTop=window.parent.document.body.scrollTop+window.parent.document.documentElement.scrollTop;
+		div.style.top=sTop+"px";
+		div.style.display="block";
+		
+		var divTwo=window.parent.document.getElementById("zzcTwo");
+		divTwo.style.left=(window.parent.document.body.clientWidth-500)/2+"px";
+		divTwo.style.top=(window.screen.height-200)/2+sTop-50+"px";
+		divTwo.style.display="block";
+		
+		// 关闭弹出层后的 ifream 页面路径
+		window.parent.document.getElementById("responseUrl").value="<%=path%>/AccountInfo/AccountPay.jsp";
+	}
+</script>
+</head>
+<body style="font-size: 16px;background-color: #E4F4FC;">
+<div class="navigation"style="width:99%">
+<div class="crumbs ">
+<a href="#">账户管理</a>
+<a href="#">电信账单支付</a>
+</div>
+</div>
+  
+<div class="rcontent" style="width:97%">
+<table border="1">
+<thead>
+<tr>
+<th>确定电信账单支付信息&nbsp;<a href="<%=path%>/AccountInfo/AccountPay.jsp">返回上一步</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td  style="padding-left:40px;"><div class="tab1">产品类型：深圳市万恒科技电信账单购买</div>
+<div class="tab1">转账方式：电信账单支付</div>
+<div class="tab1">转账金额：${moeny} 元</div>
+<div class="tab1"><span class="btn3"><a href="${responseUrl}" onclick="funA()" target="_blank">点击确定使用电信账单购买</a></span></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+
+</div>  
+
+</body>
+</html>

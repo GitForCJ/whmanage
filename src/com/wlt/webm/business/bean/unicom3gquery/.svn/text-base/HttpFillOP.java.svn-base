@@ -1,0 +1,608 @@
+package com.wlt.webm.business.bean.unicom3gquery;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+
+import net.sf.json.test.JSONAssert;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpException;
+import org.apache.commons.httpclient.HttpMethod;
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.lang.text.StrSubstitutor;
+
+import whmessgae.TradeMsg;
+
+import bsh.This;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.bonc.wo_key.WoMd5;
+import com.commsoft.epay.util.logging.Log;
+import com.wlt.webm.business.bean.BiProd;
+import com.wlt.webm.db.DBService;
+import com.wlt.webm.ten.service.MD5Util;
+import com.wlt.webm.tool.FloatArith;
+import com.wlt.webm.util.Tools;
+
+/**
+ * 联通流量充值
+ * 
+ * @author 1989
+ * 
+ */
+public class HttpFillOP {
+	public static final String tencent_code="1000";//腾讯
+	public static final String jd_code="1001"; //京东
+	
+    public static String FLOw1="21";//省公司流量 需要同步产品
+    public static String FLOw2="23";//北分联通
+    public static String FLOW3="25";//思空移动流量
+    public static String FLOW4="26";//思空联通流量
+    public static String FLOW5="27";//思空电信流量
+    public static String FLOW6="29";//北京移动流量
+    
+    public static String FLOW7="31";//大汉三通电信
+    public static String FLOW8="32";//大汉三通移动
+    public static String FLOW9="33";//大汉三通联通
+    
+    public static String FLOW10="34";//乐流电信
+    public static String FLOW11="35";//乐流移动
+    public static String FLOW12="36";//乐流联通
+    
+    public static String FLOW13="37";//连连电信
+    public static String FLOW14="38";//连连移动
+    public static String FLOW15="39";//连连联通
+    
+    public static String flow16="41";//正邦流量
+    public static String flow17="42";//自由移动流量
+    public static String flow18="43";//流量饭 联通
+    
+	public static String ACTIVITYID = "1278";//"2808";// 全国产品目录 对应 21 省公司流量
+	public static String ZDY="1234";//产品目录，随意定义
+//	public static String SHANGHAI = "2849";// 上海
+//	public static String HEILONGJIAN = "2848";// 黑龙江
+	
+	public static String BEIFENUNICOM="3366";//北分联通产品目录
+
+	//正式
+	public static String SIGNKEY ="womail201409231504"; //"test123";// 密钥
+	
+	public static String QUERYURL = "http://e.wo.com.cn/ewo/server/product/getBackProList.jsonp?";// 产品过滤rl
+	public static String FILLURL = "http://e.wo.com.cn/ewo/server/product/backOrderInterfaceNew.jsonp?";// 产品订购
+	public static String RESULTURL = "http://e.wo.com.cn/ewo/server/product/queryBackOrderResultNewSec.jsonp?";// 产品订购结果查询
+	public static String CHECKURL="http://e.wo.com.cn/ewo/server/product/checkBackProduct.jsonp?";//产品鉴权接口
+
+	static MultiThreadedHttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
+	static HttpClient client = new HttpClient(connectionManager);
+	static{
+		client.getHttpConnectionManager().getParams().setConnectionTimeout(60*1000);//链接时间 60秒，单位是毫秒
+		client.getHttpConnectionManager().getParams().setSoTimeout(60*1000);//读取时间 20秒，单位是毫秒
+	}
+	public static Map<String,String> phone_check=new HashMap<String, String>();//鉴权面值产品id对应
+	public static Map<String, String> phoneAreas = new HashMap<String, String>();// 省份对应编码  宽带公司--》本地
+	public static Map<String, String> phoneAreas1 = new HashMap<String, String>();// 省份对应编码  本地--》宽带公司
+	static {
+		phoneAreas.put("71", "2");
+		phoneAreas.put("19", "46");
+		phoneAreas.put("51", "35");
+		phoneAreas.put("11", "43");
+		phoneAreas.put("13", "44");
+		phoneAreas.put("18", "45");
+		phoneAreas.put("10", "48");
+		phoneAreas.put("91", "49");
+		phoneAreas.put("90", "50");
+		phoneAreas.put("97", "51");
+		phoneAreas.put("31", "52");
+		phoneAreas.put("34", "53");
+		phoneAreas.put("36", "54");
+		phoneAreas.put("30", "55");
+		phoneAreas.put("38", "56");
+		phoneAreas.put("75", "57");
+		phoneAreas.put("17", "58");
+		phoneAreas.put("76", "59");
+		phoneAreas.put("74", "60");
+		phoneAreas.put("59", "61");
+		phoneAreas.put("50", "62");
+		phoneAreas.put("83", "63");
+		phoneAreas.put("81", "64");
+		phoneAreas.put("85", "65");
+		phoneAreas.put("86", "66");
+		phoneAreas.put("79", "67");
+		phoneAreas.put("84", "68");
+		phoneAreas.put("87", "69");
+		phoneAreas.put("70", "70");
+		phoneAreas.put("88", "71");
+		phoneAreas.put("89", "72");
+		//省份对应编码  本地--》宽带公司
+		phoneAreas1.put("2","71");
+		phoneAreas1.put("46","19");
+		phoneAreas1.put("35","51");
+		phoneAreas1.put("43","11");
+		phoneAreas1.put("44","13");
+		phoneAreas1.put("45","18");
+		phoneAreas1.put("48","10");
+		phoneAreas1.put("49","91");
+		phoneAreas1.put("50","90");
+		phoneAreas1.put("51","97");
+		phoneAreas1.put("52","31");
+		phoneAreas1.put("53","34");
+		phoneAreas1.put("54","36");
+		phoneAreas1.put("55","30");
+		phoneAreas1.put("56","38");
+		phoneAreas1.put("57","75");
+		phoneAreas1.put("58","17");
+		phoneAreas1.put("59","76");
+		phoneAreas1.put("60","74");
+		phoneAreas1.put("61","59");
+		phoneAreas1.put("62","50");
+		phoneAreas1.put("63","83");
+		phoneAreas1.put("64","81");
+		phoneAreas1.put("65","85");
+		phoneAreas1.put("66","86");
+		phoneAreas1.put("67","79");
+		phoneAreas1.put("68","84");
+		phoneAreas1.put("69","87");
+		phoneAreas1.put("70","70");
+		phoneAreas1.put("71","88");
+		phoneAreas1.put("72","89");
+		
+		//面值对应产品id
+		phone_check.put("50","11_000501");
+		phone_check.put("200","11_002001");
+		phone_check.put("100","11_001000");
+		phone_check.put("20","11_002000");
+		phone_check.put("500","11_005000");
+	}
+
+	/**
+	 * 
+	 * @param url
+	 *            问号结尾
+	 * @param data
+	 *            参数
+	 * @param method
+	 *            GET或者POST
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public static String OP(String url, HashMap data, String method) {
+		Set<String> set = data.keySet();
+		for (String key : set) {
+			url += (key + "=" + data.get(key) + "&");
+		}
+		url = url.substring(0, url.length() - 1);
+		Log.info("联通流量发起请求,请求号码:"+data.get("c_phone")+",,,url:"+url);
+		HttpMethod obj = null;
+		if ("GET".equals(method)) {
+			obj = new GetMethod(url);
+		} else {
+			obj = new PostMethod(url);
+		}
+		try {
+			int status = client.executeMethod(obj);
+			if (200 == status) {
+				String result = convertStreamToString(obj
+						.getResponseBodyAsStream());
+				Log.info("联通产品请求号码:"+data.get("c_phone")+",,,响应结果" + result);
+				if (null == result) {
+					Log.info("请求联通号码:"+data.get("c_phone")+",,,解析响应内容错误");
+					return "{\"desc\":\"省代服务繁忙\",\"status\":\"8\"}";
+				} else {
+					FillProductInfo info = JSON.parseObject(result.toLowerCase(),
+							FillProductInfo.class);
+					if (info!=null){
+						return result;
+					}
+				}
+			}
+		} catch (Exception e) {
+           Log.error("请求联通号码:"+data.get("c_phone")+",,,系统异常"+e.toString());
+           return "{\"desc\":\"省代服务繁忙\",\"status\":\"8\"}";
+		} finally {
+			 obj.releaseConnection();
+		}
+		Log.info("请求联通号码:"+data.get("c_phone")+",,,响应超时,,订单处理中");
+		return "{\"desc\":\"省代服务繁忙\",\"status\":\"8\"}";
+	}
+
+	/**
+	 * 输入流转成字符串
+	 * 
+	 * @param is
+	 * @return
+	 * @throws IOException
+	 */
+	public static String convertStreamToString(InputStream is)
+			throws IOException {
+		StringBuilder sf = new StringBuilder();
+		String line;
+		BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+			while ((line = reader.readLine()) != null) {
+				sf.append(line);
+			}
+		} finally {
+			is.close();
+			if (null != reader) {
+				reader.close();
+			}
+		}
+		return sf.toString();
+	}
+
+	/**
+	 * 根据号码 省份id 过滤产品
+	 * 
+	 * @param phone
+	 * @param areaId
+	 * @return FillProductInfo
+	 */
+	public static FillProductInfo filterProduct(String phone, String areaId,
+			String ACTIVITYID) {
+		FillProductInfo info = null;
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("activityId", ACTIVITYID);
+		map.put("phoneNum", "");
+		map.put("areaId", areaId);
+		map.put("c_phone", phone);
+		String rs = OP(QUERYURL, map, "GET");
+		System.out.println("联通流量充值,产品查询返回json,号码:"+phone+",,,resutl:"+rs);
+		if (null != rs) {
+			info = JSON.parseObject(rs.toLowerCase(), FillProductInfo.class);
+		}
+		return info;
+	}
+
+	/**
+	 * 根据号码 省份id 过滤产品
+	 * @param phone
+	 * @param areaId  号码省份id
+	 * @param areacode   0电信  1移动  2联通
+	 * @param rtype json or bean
+	 * @param tp_groups 接口商 佣金魔板编号
+	 * @return FillProductInfo
+	 */
+	@SuppressWarnings("unchecked")
+	public static Object filterProductJSON(String phone, String areaId,String areacode,String rtype,String tp_groups)  {
+		List<String[]> arrs=BiProd.getFaceBytype(areacode,HttpFillOP.phoneAreas.get(areaId)); //[0]接口id   [1]多少兆
+		if(arrs==null || arrs.size()<=0){
+			Log.info("流量同步产品,号码:"+phone+",,获取本地数据库面值,接口失败");
+			return null;
+		}
+		DBService db=null;
+		try{
+			String aa="";
+			String ff="";
+			String f2="";
+			for(String[] str:arrs){
+				if(!FLOw1.equals(str[0])){
+					aa=aa+str[1]+",";
+				}else{//宽带公司
+					ff=ff+str[1]+"mb";
+					f2=f2+str[1]+",";
+				}
+			}
+			FillProductInfo info=new FillProductInfo();
+			ArrayList<FillProductDetail> pList=new ArrayList<FillProductDetail>();
+			
+			db=new DBService();
+			if(!"".equals(aa)){
+				String sql="SELECT fl.name,fl.price,(SELECT tp.value FROM sys_tpemploy_Flow tp WHERE tp.type='"+areacode+"' AND tp.cm_addr=0 AND tp.groups='"+tp_groups+"' LIMIT 0,1) AS yj FROM wht_flowprice fl  WHERE fl.type='"+areacode+"' AND fl.name in("+aa.substring(0,aa.length()-1)+")";
+				List<String[]> ar=db.getList(sql);
+				for(String[] s:ar){
+					FillProductDetail d=new FillProductDetail();
+					d.setProduct_id(ZDY);
+					d.setProduct_name(s[0]+"mb");
+					double facctFee=0.0;
+					try {
+						facctFee=FloatArith.mul(Double.parseDouble(s[1])*1000,1-FloatArith.div(Float.parseFloat(s[2]), 100));
+					} catch (Exception e) {
+						Log.info("流量同步产品,号码:"+phone+",,计算佣金错误");
+						return null;
+					}
+					d.setProduct_price(s[1]+"");
+					d.setPrice_num((int)facctFee);
+					d.setPro_num(1);
+					pList.add(d);
+				}
+			}
+			
+			if(!"".equals(ff)){//宽带公司
+				String sql2="SELECT fl.name,fl.price,(SELECT tp.value FROM sys_tpemploy_Flow tp WHERE tp.type='"+areacode+"' AND tp.cm_addr=0 AND tp.groups='"+tp_groups+"' LIMIT 0,1) AS yj FROM wht_flowprice fl  WHERE fl.type='"+areacode+"' AND fl.name in("+f2.substring(0,f2.length()-1)+")";
+				List<String[]> ars=db.getList(sql2);
+				FillProductInfo result=filterProduct(phone, areaId, ACTIVITYID);
+				if(result!=null && result.getData()!=null && result.getData().getList()!=null && result.getData().getList().size()>0){
+					List<FillProductDetail> fList=result.getData().getList();
+					for(FillProductDetail f:fList){
+						if(ff.indexOf(f.getProduct_name())!=-1){
+							for(String[] s2:ars){
+								if(f.getProduct_name().equals(s2[0]+"mb")){
+									f.setProduct_price(s2[1]);
+									double facctFee=0.0;
+									try {
+										facctFee=FloatArith.mul(Double.parseDouble(s2[1])*1000,1-FloatArith.div(Float.parseFloat(s2[2]), 100));
+									} catch (Exception e) {
+										Log.info("流量同步产品,号码:"+phone+",宽带公司,计算佣金错误");
+										return null;
+									}
+									f.setPrice_num((int)facctFee);
+									pList.add(f);
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+			if(pList.size()>0){
+				ProList p=new ProList();
+				p.setList(pList);
+				info.setStatus("0");
+				info.setDesc("数据读取成功");
+				info.setData(p);
+				if("json".equals(rtype))
+					return JSON.toJSONString(info);
+				else 
+					return info;
+			}else{
+				if("json".equals(rtype))
+					return "{\"desc\":\"接口查询超时,请重新获取\",\"status\":\"3\"}";
+				else 
+					return null;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			if("json".equals(rtype))
+				return "{\"desc\":\"系统异常\",\"status\":\"10\"}";
+			else 
+				return null;
+		}finally{
+			if(null!=db){
+				db.close();
+				db=null;
+			}
+		}
+	}
+
+	/**
+	 * 联通流量充值
+	 * 
+	 * @param orderNo
+	 * @param productId
+	 * @param phone
+	 * @param realPrice
+	 *            分
+	 * @param aCTIVITYID
+	 * @param userNo
+	 * @param login
+	 * @param areaCode
+	 * @param phonePid
+	 * @param userPid
+	 * @param parentID
+	 * @param groups   组
+	 * @param interfaceID
+	 * @param flag
+	 * @param name            
+	 * @return
+	 */
+	public static HashMap<String, String> fillFlow(String orderNo, String productId,
+			String phone, int realPrice, String aCTIVITYID, String userNo,
+			String login, String areaCode, String phonePid, String userPid,
+			String parentID, String groups,String interfaceID,String flag,String name) {
+		TradeMsg reveMess = new TradeMsg();
+		reveMess.setSeqNo(orderNo);
+		HashMap<String, String> content = new HashMap<String, String>();
+		content.put("phoneNum", phone);
+		content.put("userNo", userNo);
+		content.put("parentID", parentID);
+		content.put("isline", flag);// 是否直营标示 0标示非直营 1标示直营
+		content.put("userPid", userPid);
+		content.put("phonePid", phonePid);
+		content.put("areaCode", areaCode);
+		content.put("phoneType", "2");
+		content.put("tradeFee", realPrice + "");
+		content.put("interfaceID", interfaceID);
+		content.put("login", login);
+		content.put("time", Tools.getNow3());
+		content.put("termType", "3");
+		content.put("productId", productId);
+		content.put("realPrice", realPrice + "");
+		content.put("aCTIVITYID", aCTIVITYID);
+		content.put("groups", groups);
+		content.put("name", name);
+		reveMess.setContent(content);
+		BiProd bp = new BiProd();
+		int n = bp.yiKaHuiService(reveMess, null, orderNo, "10001", orderNo);
+		String str=null;
+		if (n == -5) {
+			str= "{\"desc\":\"余额不足\",\"status\":\"2030\"}";
+		} else if (n == 0) {
+			str ="{\"desc\":\"订购成功\",\"status\":\"0\"}";
+		} else if (n == -1 || n == 1) {
+			str= "{\"desc\":\"订购失败\",\"status\":\"2\"}";
+		}else if (n == 8) {
+			str= "{\"desc\":\"虚假面额\",\"status\":\"9103\"}";
+		} else if(n==3){
+			str= "{\"desc\":\"接口异常\",\"status\":\"8\"}";
+		}else{
+			str= "{\"desc\":\"订购中\",\"status\":\"1\"}";
+		}
+		content.clear();
+		content.put("code",n+"");
+		content.put("result",str);
+		return content;
+	}
+
+	/**
+	 * 联通流量订购产品
+	 * 
+	 * @param orderNo
+	 * @param productId
+	 * @param phone
+	 * @param realPrice
+	 * @return 0成功 -1失败 2异常 1未知状态
+	 */
+	public static int fillProduct(String orderNo, String productId,
+			String phone, long realPrice, String aCTIVITYID) {
+		int a = 1;
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("activityId", aCTIVITYID);
+		map.put("phoneNum", phone);
+		map.put("orderNo", orderNo);
+		map.put("productId", productId);
+		map.put("realPrice", realPrice);
+		map.put("c_phone", phone);
+		String sign = WoMd5.encode(SIGNKEY + orderNo + phone + productId
+				+ aCTIVITYID + realPrice);
+		map.put("token", sign);
+		String rs1 = OP(FILLURL, map, "GET");
+		FillRes rs = null;
+		if (null != rs1) {
+			rs = JSON.parseObject(rs1.toLowerCase(), FillRes.class);
+			if (null != rs) {
+				a = Integer.parseInt(rs.getStatus());
+				if (a == 0 ) {
+					a=0;
+				} else if (a==8||a==1){
+					a=2;
+				}else{
+					a=-1;
+				}
+			}
+		}
+		Log.info("联通流量充值返回,号码:"+phone+",,充值结果(0成功 -1失败 2异常 1未知状态):"+a);
+		return a;
+	}
+
+	/**
+	 * 订购结果查询
+	 * 
+	 * @param orderNo
+	 * @return 0：订购成功（充值成功） 1：订购失败（充值失败） 2：查询失败，无该订单（失败，未充值） 3：订购中（充值中）
+	 *         -1：接口调用异常（系统异常，联系管理员解决）
+	 */
+	@SuppressWarnings("unchecked")
+	public static int queryResult(String orderNo) {
+		int a = -1;
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("orderNo", orderNo);
+		map.put("activityId", ACTIVITYID);
+		String rs = OP(RESULTURL, map, "GET");
+		if (null != rs) {
+			HashMap<String, String> result = JSON
+					.parseObject(rs, HashMap.class);
+			a = Integer.parseInt(result.get("status"));
+		}
+		return a;
+	}
+
+	/**
+	 * 订购结果查询JSON
+	 * 
+	 * @param orderNo
+	 * @return json
+	 */
+	@SuppressWarnings("unchecked")
+	public static String queryResultJSON(String orderNo) {
+		String rs = "";
+		String tableName="wht_orderform_"+Tools.getNow3().substring(2,6);
+		DBService db=null;
+		try {
+			db=new DBService();
+			String[] strs=db.getStringArray("SELECT state,CONCAT(writeoff,'流量充值') AS cc FROM "+tableName+" WHERE tradeserial='"+orderNo+"'");
+			if(strs==null || strs.length<=0){
+				//订单不存在
+				rs="{\"desc\":\"查询失败，无该订单\",\"status\":\"2\"}";
+			}else if("0".equals(strs[0])){
+				rs="{\"desc\":\""+strs[1]+"\",\"status\":\"0\"}";
+			}else if("1".equals(strs[0])){
+				rs="{\"desc\":\""+strs[1]+"\",\"status\":\"1\"}";
+			}else {
+				rs="{\"desc\":\""+strs[1]+"\",\"status\":\"3\"}";
+			}
+		} catch (Exception e) {
+			Log.error("流量查询接口,订单号:"+orderNo+",系统异常,ex:"+e);
+			rs="{\"desc\":\"系统异常\",\"status\":\"-1\"}";
+		}finally{
+			if(db!=null){
+				db.close();
+				db=null;
+			}
+		}
+		return rs;
+	}
+	
+	/**
+	 * 
+	 * @param url
+	 * @param data
+	 * @param method
+	 * @throws IOException 
+	 * @throws HttpException 
+	 */
+	@SuppressWarnings("unchecked")
+	public static void OPReturn(String url, HashMap data, String method) throws HttpException, IOException {
+		Set<String> set = data.keySet();
+		for (String key : set) {
+			url += (key + "=" + data.get(key) + "&");
+		}
+		url = url.substring(0, url.length() - 1);
+		HttpMethod obj = null;
+		if ("GET".equals(method)) {
+			obj = new GetMethod(url);
+		} else {
+			obj = new PostMethod(url);
+		}
+		int status=client.executeMethod(obj);
+		if (200 == status) {
+			String result = obj.getResponseBodyAsString();
+		}
+	}
+
+	public static void main(String[] args) {
+		String str="";
+		System.out.println("20150909150408T15474".length());
+		queryResult("1234567890");
+		
+		// 调用充值查询
+//		for(int i=0;i<10;i++){
+//		 FillProductInfo info=filterProduct("18682033916","51","1278");
+//		 List<FillProductDetail> list=info.getData().getList();
+//		}
+//		 for(FillProductDetail a:list){
+//		 System.out.println(a.getProduct_name()+"  "+a.getProduct_id()+"  "+a.
+//		 getProduct_price());
+//		 }
+		// 调用充值
+		/*
+		String orderno = new SimpleDateFormat("yyyyMMddHHmmssSSS")
+				.format(new Date())
+				+ (int) (Math.random() * (1000 - 100) + 100);
+		System.out.println(orderno);
+		// int map=fillProduct(orderno,"51_000501X","18682033916",6);//传钱无意义?
+		// System.out.println("充值结果:"+map);
+		System.out
+				.println(MD5Util
+						.MD5Encode(
+								"201505131037080661990000000201236TWX778T8MV9F937GTQVKBB87VT2FY",
+								"UTF-8"));
+		// System.out.println(queryResult("111111111"));
+		 */
+
+	}
+
+}

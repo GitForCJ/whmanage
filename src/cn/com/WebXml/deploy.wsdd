@@ -1,0 +1,65 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from IpAddressSearchWebService WSDL service -->
+
+  <service name="IpAddressSearchWebServiceSoap" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://WebXml.com.cn/"/>
+      <parameter name="wsdlServiceElement" value="IpAddressSearchWebService"/>
+      <parameter name="schemaQualified" value="http://WebXml.com.cn/"/>
+      <parameter name="wsdlServicePort" value="IpAddressSearchWebServiceSoap"/>
+      <parameter name="className" value="cn.com.WebXml.IpAddressSearchWebServiceSoapImpl"/>
+      <parameter name="wsdlPortType" value="IpAddressSearchWebServiceSoap"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getCountryCityByIp" qname="operNS:getCountryCityByIp" xmlns:operNS="http://WebXml.com.cn/" returnQName="retNS:getCountryCityByIpResult" xmlns:retNS="http://WebXml.com.cn/" returnType="rtns:ArrayOfString" xmlns:rtns="http://WebXml.com.cn/" returnItemQName="tns:string" xmlns:tns="http://WebXml.com.cn/" soapAction="http://WebXml.com.cn/getCountryCityByIp" >
+        <parameter qname="pns:theIpAddress" xmlns:pns="http://WebXml.com.cn/" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getGeoIPContext" qname="operNS:getGeoIPContext" xmlns:operNS="http://WebXml.com.cn/" returnQName="retNS:getGeoIPContextResult" xmlns:retNS="http://WebXml.com.cn/" returnType="rtns:ArrayOfString" xmlns:rtns="http://WebXml.com.cn/" returnItemQName="tns:string" xmlns:tns="http://WebXml.com.cn/" soapAction="http://WebXml.com.cn/getGeoIPContext" >
+      </operation>
+      <operation name="getVersionTime" qname="operNS:getVersionTime" xmlns:operNS="http://WebXml.com.cn/" returnQName="retNS:getVersionTimeResult" xmlns:retNS="http://WebXml.com.cn/" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="http://WebXml.com.cn/getVersionTime" >
+      </operation>
+      <parameter name="allowedMethods" value="getVersionTime getCountryCityByIp getGeoIPContext"/>
+
+      <arrayMapping
+        xmlns:ns="http://WebXml.com.cn/"
+        qname="ns:ArrayOfString"
+        type="java:java.lang.String[]"
+        innerType="cmp-ns:string" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema"
+        encodingStyle=""
+      />
+  </service>
+  <service name="IpAddressSearchWebServiceSoap12" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://WebXml.com.cn/"/>
+      <parameter name="wsdlServiceElement" value="IpAddressSearchWebService"/>
+      <parameter name="schemaQualified" value="http://WebXml.com.cn/"/>
+      <parameter name="wsdlServicePort" value="IpAddressSearchWebServiceSoap12"/>
+      <parameter name="className" value="cn.com.WebXml.IpAddressSearchWebServiceSoap12Impl"/>
+      <parameter name="wsdlPortType" value="IpAddressSearchWebServiceSoap"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getCountryCityByIp" qname="operNS:getCountryCityByIp" xmlns:operNS="http://WebXml.com.cn/" returnQName="retNS:getCountryCityByIpResult" xmlns:retNS="http://WebXml.com.cn/" returnType="rtns:ArrayOfString" xmlns:rtns="http://WebXml.com.cn/" returnItemQName="tns:string" xmlns:tns="http://WebXml.com.cn/" soapAction="http://WebXml.com.cn/getCountryCityByIp" >
+        <parameter qname="pns:theIpAddress" xmlns:pns="http://WebXml.com.cn/" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getGeoIPContext" qname="operNS:getGeoIPContext" xmlns:operNS="http://WebXml.com.cn/" returnQName="retNS:getGeoIPContextResult" xmlns:retNS="http://WebXml.com.cn/" returnType="rtns:ArrayOfString" xmlns:rtns="http://WebXml.com.cn/" returnItemQName="tns:string" xmlns:tns="http://WebXml.com.cn/" soapAction="http://WebXml.com.cn/getGeoIPContext" >
+      </operation>
+      <operation name="getVersionTime" qname="operNS:getVersionTime" xmlns:operNS="http://WebXml.com.cn/" returnQName="retNS:getVersionTimeResult" xmlns:retNS="http://WebXml.com.cn/" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="http://WebXml.com.cn/getVersionTime" >
+      </operation>
+      <parameter name="allowedMethods" value="getVersionTime getCountryCityByIp getGeoIPContext"/>
+
+      <arrayMapping
+        xmlns:ns="http://WebXml.com.cn/"
+        qname="ns:ArrayOfString"
+        type="java:java.lang.String[]"
+        innerType="cmp-ns:string" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

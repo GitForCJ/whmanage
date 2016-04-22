@@ -1,0 +1,68 @@
+CREATE TABLE `wht_acctbill_1603` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `childfacct` VARCHAR(17) NOT NULL,
+  `dealserial` VARCHAR(50) NOT NULL,
+  `tradeaccount` VARCHAR(30) NOT NULL,
+  `tradetime` VARCHAR(14) NOT NULL,
+  `tradefee` BIGINT(20) DEFAULT NULL,
+  `infacctfee` BIGINT(20) DEFAULT NULL,
+  `tradetype` INT(11) NOT NULL,
+  `expl` VARCHAR(11) NOT NULL,
+  `state` INT(11) NOT NULL,
+  `distime` VARCHAR(14) NOT NULL,
+  `accountleft` BIGINT(20) DEFAULT NULL,
+  `tradeserial` VARCHAR(50) NOT NULL,
+  `other_childfacct` VARCHAR(40) DEFAULT NULL,
+  `pay_type` INT(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `wht_orderform_1603` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `areacode` VARCHAR(11) NOT NULL,
+  `tradeserial` VARCHAR(50) NOT NULL,
+  `tradeobject` VARCHAR(30) NOT NULL,
+  `buyid` VARCHAR(30) DEFAULT NULL,
+  `service` VARCHAR(20) DEFAULT NULL,
+  `fee` INT(11) NOT NULL,
+  `tradefee` INT(11) NOT NULL,
+  `fundacct` VARCHAR(20) NOT NULL,
+  `tradetime` VARCHAR(14) NOT NULL,
+  `chgtime` VARCHAR(50) NOT NULL,
+  `state` INT(11) NOT NULL,
+  `writeoff` VARCHAR(100) DEFAULT NULL,
+  `writecheck` VARCHAR(100) DEFAULT NULL,
+  `term_type` VARCHAR(2) DEFAULT NULL,
+  `userno` VARCHAR(20) DEFAULT NULL,
+  `user_name` VARCHAR(20) DEFAULT NULL,
+  `phone_type` INT(11) NOT NULL,
+  `phone_pid` INT(11) NOT NULL,
+  `phoneleft` INT(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tradeserial_index` (`tradeserial`),
+  KEY `writeoff_index` (`writeoff`)
+) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `wht_qbbreakrecord_1603` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `tradeserial` VARCHAR(50) NOT NULL,
+  `tradeobject` VARCHAR(30) NOT NULL,
+  `buyid` VARCHAR(30) DEFAULT NULL,
+  `service` VARCHAR(20) DEFAULT NULL,
+  `fee` INT(11) NOT NULL,
+  `tradefee` INT(11) NOT NULL,
+  `tradetime` VARCHAR(14) NOT NULL,
+  `chgtime` VARCHAR(50) NOT NULL,
+  `state` INT(11) NOT NULL,
+  `writecheck` VARCHAR(100) DEFAULT NULL,
+  `userno` VARCHAR(20) DEFAULT NULL,
+  `oldorderid` VARCHAR(50) DEFAULT NULL,
+  `bak1` VARCHAR(20) DEFAULT NULL,
+  `bak2` VARCHAR(20) DEFAULT NULL,
+  `bak3` VARCHAR(20) DEFAULT NULL,
+  `bak4` VARCHAR(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `order_index` (`oldorderid`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8

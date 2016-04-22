@@ -1,0 +1,54 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@page import="java.io.*"%>
+<jsp:useBean id="bipord" scope="page" class="com.wlt.webm.business.bean.BiProd"/>
+<jsp:useBean id="des" scope="page" class="com.wlt.webm.tool.DES"/>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+des.setKey("wh#@!a59");
+String id=request.getParameter("id");
+String[] strs=bipord.AppUserInfos(Integer.parseInt(id.trim()));
+
+String name=strs[0];
+String company=strs[1];
+String zhiwei=strs[2];
+String cell=strs[3];
+String tel=strs[4];
+String pos=strs[5];
+String qq=strs[6];
+String msn=strs[7];
+String email=strs[8];
+String website=strs[9];
+
+
+String line="BEGIN:VCARD\r\nVERSION:3.0\r\nFN:"+name+"\r\nN:"+name+"\r\nORG:"+company+
+"\r\nTITLE:"+zhiwei+"\r\nTEL;TYPE=CELL:"+cell+"\r\nTEL;TYPE=HOME:"+tel+"\r\nADR;TYPE=POSTAL:"+
+pos+"\r\nX-QQ:"+qq+"\r\nX-MSN:"+msn+"\r\nEMAIL;TYPE=WORK:"+email+"\r\nURL:"+website+"\r\nEND:VCARD";
+
+String filename ="vcard.vcf";   
+response.setContentType("application/octet-stream");   
+response.setHeader("Content-Disposition","attachment;filename = "+filename); 
+BufferedWriter fos =new BufferedWriter(new OutputStreamWriter(response.getOutputStream(),"utf-8"));
+fos.write(line);
+fos.flush();
+fos.close();
+out.clear();
+out = pageContext.pushBody();
+%>
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>名片信息下载</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+  </head>
+  
+  <body>
+
+  </body>
+</html>

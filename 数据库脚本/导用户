@@ -1,0 +1,18 @@
+SELECT a.`user_login`,a.`user_ename`,b.`sa_name`,a.`user_adress`
+ ,a.`user_tel` FROM sys_user a ,sys_area b WHERE a.user_city=b.sa_id AND
+a.`user_role` IN(52,51,61,42,66,63,69,70)
+
+SELECT * FROM sys_area
+
+SELECT * FROM sys_user
+
+SELECT * FROM sys_roletype 
+---------------------------
+1	管理员
+2	代理商
+3	代办点
+0	超级管理员
+4	接口代理商
+---------------------------
+
+SELECT * FROM sys_role WHERE sr_type=3

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID">
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>
+        /WEB-INF/struts-config/struts-config.xml,
+        /WEB-INF/struts-config/struts-rights-config.xml,
+        /WEB-INF/struts-config/struts-operation-config.xml,
+        /WEB-INF/struts-config/struts-count-config.xml
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+<init-param>
+  <param-name>batchpath</param-name>
+  <param-value>d:\uploadFolder\</param-value>
+</init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>WEB服务器启动时调用的初始化资源类</description>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.wlt.webm.pccommon.InitServlet</servlet-class>
+    <load-on-startup>5</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <display-name>wht</display-name>
+   <!--  
+    <servlet>
+    <description>WEB服务器启动时调用的初始化资源类</description>
+    <servlet-name>CmccServlet</servlet-name>
+    <servlet-class>com.wlt.webm.business.cmcc.CmccServlet</servlet-class>
+    <load-on-startup>5</load-on-startup>
+  </servlet>
+  -->
+    <filter>
+    <description>设置获取post表单值的字符集过滤器</description>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>com.wlt.webm.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>GBK</param-value>
+    </init-param>
+    <init-param>
+      <description>该过滤器是否被忽略，true为忽略，其他为不忽略</description>
+      <param-name>ignore</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>*.htm</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  	<welcome-file>index.htm</welcome-file>
+  	<welcome-file>index.jsp</welcome-file>
+  	<welcome-file>default.html</welcome-file>
+  	<welcome-file>default.htm</welcome-file>
+  	<welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+	<error-page>
+      <error-code>500</error-code>
+      <location>/error/newerror.jsp</location>  
+    </error-page>  
+    <error-page>     
+     <error-code>404</error-code>     
+     <location>/error/newerror.jsp</location> 
+    </error-page>  
+
+  <filter>
+    <description>检查用户登陆的过滤器</description>
+    <filter-name>UserSessionValidateFilter</filter-name>
+    <filter-class>com.wlt.webm.filter.UserSessionValidateFilter</filter-class>
+    <init-param>
+      <description>该过滤器是否被忽略，true为忽略，其他为不忽略</description>
+      <param-name>ignore</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>UserSessionValidateFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UserSessionValidateFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+
+   <!-- spring config 	
+  <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring/applicationContext.xml
+		</param-value>
+	</context-param>
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+		
+	</listener>
+		<servlet>
+		<servlet-name>ejetweb</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/spring/ejetweb-servlet.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ejetweb</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+  -->
+   <servlet>
+    <description>余额</description>
+    <servlet-name>leftMoney</servlet-name>
+    <servlet-class>com.wlt.webm.rights.action.LeftMoneyServert</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>leftMoney</servlet-name>
+    <url-pattern>/util/MoneyServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description>mobile phone service</description>
+    <servlet-name>AdPhoneServlet</servlet-name>
+    <servlet-class>com.ejet.phone.AdPhoneServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>AdPhoneServlet</servlet-name>
+    <url-pattern>/AdPhoneServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description>out service</description>
+    <servlet-name>OutServiceServlet</servlet-name>
+    <servlet-class>com.ejet.phone.OutServiceServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>OutServiceServlet</servlet-name>
+    <url-pattern>/OutServiceServlet</url-pattern>
+  </servlet-mapping>
+  
+ 
+      <session-config>
+        <session-timeout>240</session-timeout>
+    </session-config>
+    
+    <!-- net pay  -->
+      <servlet>
+  <display-name>Transaction</display-name>
+  <servlet-name>Transaction</servlet-name>
+  <servlet-class>chinapay.servlet.TransactionServlet</servlet-class>
+ </servlet>
+
+ <servlet>
+  <display-name>WhiteList</display-name>
+  <servlet-name>WhiteList</servlet-name>
+  <servlet-class>chinapay.servlet.WhiteListServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <display-name>WhiteListReturn</display-name>
+  <servlet-name>WhiteListReturn</servlet-name>
+  <servlet-class>chinapay.servlet.WhiteListReturnServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>QuerySend</display-name>
+  <servlet-name>QuerySend</servlet-name>
+  <servlet-class>chinapay.servlet.QuerySendServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>QueryReturn</display-name>
+  <servlet-name>QueryReturn</servlet-name>
+  <servlet-class>chinapay.servlet.QueryReturnServlet</servlet-class>
+ </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>ResonseServlet</display-name>
+    <servlet-name>ResonseServlet</servlet-name>
+    <servlet-class>chinapay.servlet.ResonseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>TransactionReturn</display-name>
+    <servlet-name>TransactionReturn</servlet-name>
+    <servlet-class>chinapay.servlet.TransactionReturnServlet</servlet-class>
+  </servlet>
+
+ <servlet-mapping>
+  <servlet-name>Transaction</servlet-name>
+  <url-pattern>/Transaction</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>WhiteList</servlet-name>
+  <url-pattern>/WhiteList</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>WhiteListReturn</servlet-name>
+  <url-pattern>/WhiteListReturn</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>QuerySend</servlet-name>
+  <url-pattern>/QuerySend</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>QueryReturn</servlet-name>
+  <url-pattern>/QueryReturn</url-pattern>
+ </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResonseServlet</servlet-name>
+    <url-pattern>/ResonseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransactionReturn</servlet-name>
+    <url-pattern>/TransactionReturn</url-pattern>
+  </servlet-mapping>
+    
+      	<servlet>
+		<servlet-name>authImg</servlet-name>
+		<servlet-class>com.wlt.webm.filter.AuthImg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>authImg</servlet-name>
+		<url-pattern>/authImg</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 
+  		<filter>
+	    <filter-name>DruidWebStatFilter</filter-name>
+	    <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+	    <init-param>
+	        <param-name>exclusions</param-name>
+	        <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+	    </init-param>
+	  </filter>
+	  <filter-mapping>
+	    <filter-name>DruidWebStatFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	  </filter-mapping>
+	<servlet>
+	    <servlet-name>DruidStatView</servlet-name>
+	    <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>DruidStatView</servlet-name>
+	    <url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+	 -->
+</web-app>
+

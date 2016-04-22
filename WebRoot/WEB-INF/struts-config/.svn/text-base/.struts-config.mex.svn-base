@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/common/count.do" location="0,0" dimension="376,104" />
+  <StrutsActivity path="/common/back.do" location="476,0" dimension="370,104" />
+  <StrutsActivity path="/common/excel.do" location="0,302" dimension="371,104" />
+  <StrutsActivity path="/error/counterror.jsp" location="55,204" dimension="154,53" />
+  <StrutsActivity path="/common/count.jsp" location="644,204" dimension="145,53" />
+  <StrutsTransition id="/common/count.do,counterror,/error/counterror.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="94,104" />
+      <AbsolutePoint location="94,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/common/count.do,count,/common/count.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,104" />
+      <AbsolutePoint location="282,139" />
+      <AbsolutePoint location="681,139" />
+      <AbsolutePoint location="681,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/common/back.do,count,/common/count.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="753,104" />
+      <AbsolutePoint location="753,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/common/back.do,counterror,/error/counterror.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="568,104" />
+      <AbsolutePoint location="568,169" />
+      <AbsolutePoint location="171,169" />
+      <AbsolutePoint location="171,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/rights/sysuser.do" location="650,150" dimension="283,104" />
+  <StrutsActivity path="/rights/notice.do" location="1850,2350" dimension="283,104" />
+  <StrutsActivity path="/rights/sysarea.do" location="350,350" dimension="283,104" />
+  <StrutsActivity path="/rights/sysrole.do" location="950,350" dimension="282,104" />
+  <StrutsActivity path="/business/syscommission.do" location="50,550" dimension="344,104" />
+  <StrutsActivity path="/business/sysrebate.do" location="650,550" dimension="314,104" />
+  <StrutsActivity path="/business/prod.do" location="950,1150" dimension="314,104" />
+  <StrutsActivity path="/business/jtfk.do" location="50,1350" dimension="293,104" />
+  <StrutsActivity path="/rights/sysloginuser.do" location="1250,1350" dimension="283,104" />
+  <StrutsActivity path="/rights/sysuserbank.do" location="50,1750" dimension="315,104" />
+  <StrutsActivity path="/business/sit.do" location="950,1750" dimension="293,104" />
+  <StrutsActivity path="/business/sui.do" location="1550,1750" dimension="352,104" />
+  <StrutsActivity path="/business/spa.do" location="50,1950" dimension="352,104" />
+  <StrutsActivity path="/business/order.do" location="50,2150" dimension="336,104" />
+  <StrutsActivity path="/business/checkAccountError.do" location="50,2750" dimension="358,84" />
+  <StrutsActivity path="/business/checkAccountErrorLog.do" location="650,2750" dimension="376,84" />
+  <StrutsActivity path="/business/mobileCharge.do" location="1850,650" dimension="289,104" />
+  <StrutsActivity path="/business/zshCharge.do" location="1250,2750" dimension="310,84" />
+  <StrutsActivity path="/xunjie/xjaction.do" location="2450,750" dimension="256,84" />
+  <StrutsActivity path="/business/CmccAction.do" location="2150,150" dimension="279,104" />
+  <StrutsActivity path="/business/UnicomAction.do" location="50,2550" dimension="305,104" />
+  <StrutsActivity path="/oufei/rcharge.do" location="1850,1050" dimension="337,104" />
+  <StrutsActivity path="/jiebei/rcharge.do" location="1850,1250" dimension="367,104" />
+  <StrutsActivity path="/business/acctbill.do" location="1850,1450" dimension="367,104" />
+  <StrutsActivity path="/business/bank.do" location="1550,2150" dimension="317,104" />
+  <StrutsActivity path="/business/banklog.do" location="1550,250" dimension="305,104" />
+  <StrutsActivity path="/report/tradeLogCount.do" location="2450,350" dimension="331,104" />
+  <StrutsActivity path="/report/tradeLogAgent.do" location="2450,550" dimension="344,104" />
+  <StrutsActivity path="/kami/fill.do" location="2450,2450" dimension="292,84" />
+  <StrutsActivity path="/report/tasklogmanage.do" location="950,2550" dimension="334,84" />
+  <StrutsActivity path="/report/citydaycount.do" location="1550,2550" dimension="334,84" />
+  <StrutsActivity path="/report/agentdaycount.do" location="2150,2650" dimension="334,84" />
+  <StrutsActivity path="/rights/wltlogin.jsp" location="50,750" dimension="140,53" />
+  <StrutsActivity path="/rights/wltframe.jsp" location="50,350" dimension="145,53" />
+  <StrutsActivity path="/rights/wltuserlist.jsp" location="50,1150" dimension="152,53" />
+  <StrutsActivity path="/business/wlttranschild.jsp" location="1850,450" dimension="184,53" />
+  <StrutsActivity path="/rights/wltuseraddsus.jsp" location="350,750" dimension="178,53" />
+  <StrutsActivity path="/rights/wltnoticelist.jsp" location="2150,350" dimension="162,53" />
+  <StrutsActivity path="/rights/wltarealist.jsp" location="950,750" dimension="153,53" />
+  <StrutsActivity path="/rights/wltrolelist.jsp" location="650,850" dimension="150,53" />
+  <StrutsActivity path="/business/wltcommissionjtlist.jsp" location="2150,850" dimension="220,53" />
+  <StrutsActivity path="/business/wltcommissionchecksmx.jsp" location="1250,550" dimension="253,53" />
+  <StrutsActivity path="/business/wltcommissionslist.jsp" location="950,1550" dimension="219,53" />
+  <StrutsActivity path="/business/wltcommissionjklist.jsp" location="1250,1550" dimension="223,53" />
+  <StrutsActivity path="/business/wltcommissioncheckjkmx.jsp" location="1250,950" dimension="257,53" />
+  <StrutsActivity path="/business/wltcommissionchecktcmx.jsp" location="1250,750" dimension="257,53" />
+  <StrutsActivity path="/business/wltcommissioncheckmx.jsp" location="950,1350" dimension="247,53" />
+  <StrutsActivity path="/business/wltcommissiontclist.jsp" location="350,1550" dimension="223,53" />
+  <StrutsActivity path="/business/wltcommissioncheckjtmx.jsp" location="2150,1650" dimension="254,53" />
+  <StrutsActivity path="/business/wltcommissionlist.jsp" location="50,950" dimension="213,53" />
+  <StrutsActivity path="/business/wltrebatelist.jsp" location="350,950" dimension="182,53" />
+  <StrutsActivity path="/business/wltprodlist.jsp" location="350,1150" dimension="173,53" />
+  <StrutsActivity path="/business/wltsanlist.jsp" location="350,2950" dimension="184,48" />
+  <StrutsActivity path="/business/weizhangchaxun.jsp" location="650,1250" dimension="206,53" />
+  <StrutsActivity path="/business/weizhanglist.jsp" location="650,1450" dimension="182,53" />
+  <StrutsActivity path="/" location="50,1550" dimension="37,53" />
+  <StrutsActivity path="/rights/wltuserbanklist.jsp" location="650,1650" dimension="181,53" />
+  <StrutsActivity path="/business/wltinterfacetypelist.jsp" location="1550,1550" dimension="219,53" />
+  <StrutsActivity path="/business/wltuserinterfacelist.jsp" location="650,1850" dimension="219,53" />
+  <StrutsActivity path="/business/wltphonearealist.jsp" location="950,1950" dimension="207,53" />
+  <StrutsActivity path="/business/zshorderlist.jsp" location="650,3250" dimension="196,48" />
+  <StrutsActivity path="/business/orderjtfk.jsp" location="950,2150" dimension="163,53" />
+  <StrutsActivity path="/business/ordercharge.jsp" location="1250,2150" dimension="185,53" />
+  <StrutsActivity path="/business/wltreverselist.jsp" location="2150,2050" dimension="187,53" />
+  <StrutsActivity path="/business/orderqb.jsp" location="650,2250" dimension="161,53" />
+  <StrutsActivity path="/business/wltorderlist.jsp" location="650,2050" dimension="177,53" />
+  <StrutsActivity path="/task/checkAccountErrorList.jsp" location="2450,3250" dimension="226,48" />
+  <StrutsActivity path="/task/checkAccountErrorLogList.jsp" location="50,3350" dimension="244,48" />
+  <StrutsActivity path="/business/business.jsp" location="1850,850" dimension="162,53" />
+  <StrutsActivity path="/business/xjydbusiness.jsp" location="1850,3050" dimension="196,48" />
+  <StrutsActivity path="/business/cmccbusiness.jsp" location="2150,2950" dimension="191,53" />
+  <StrutsActivity path="/business/unicombusiness.jsp" location="50,3050" dimension="204,53" />
+  <StrutsActivity path="/business/wltyjbilllist.jsp" location="650,2450" dimension="170,53" />
+  <StrutsActivity path="/business/wltincomebilllist.jsp" location="1550,2350" dimension="203,53" />
+  <StrutsActivity path="/business/wltcommissionbilllist.jsp" location="1250,2350" dimension="230,53" />
+  <StrutsActivity path="/business/wltacctbilllist.jsp" location="1850,1950" dimension="184,53" />
+  <StrutsActivity path="/business/wlttransnext.jsp" location="350,2350" dimension="181,53" />
+  <StrutsActivity path="/business/wlttrans.jsp" location="50,2350" dimension="157,53" />
+  <StrutsActivity path="/business/wltbankloglist.jsp" location="950,2350" dimension="192,53" />
+  <StrutsActivity path="/ejet/wlt_tradelogcitycount_export.jsp" location="2450,1050" dimension="248,53" />
+  <StrutsActivity path="/ejet/wlt_tradelogcitycountlist.jsp" location="2450,1250" dimension="221,53" />
+  <StrutsActivity path="/ejet/wlt_tradelogcitycount.jsp" location="2450,1450" dimension="205,53" />
+  <StrutsActivity path="/ejet/wlt_tradelogAgentcount_export.jsp" location="2450,1850" dimension="263,53" />
+  <StrutsActivity path="/ejet/wlt_tradelogAgentcountlist.jsp" location="2450,2050" dimension="236,53" />
+  <StrutsActivity path="/ejet/wlt_tradelogAgentcount.jsp" location="2450,2250" dimension="220,53" />
+  <StrutsActivity path="/ejet/wlt_tasklistcount.jsp" location="1250,3250" dimension="202,48" />
+  <StrutsActivity path="/rights/wltaccountTrans.jsp" location="2150,1850" dimension="188,53" />
+  <StrutsActivity path="/rights/phoneValidate.jsp" location="0,188" dimension="150,49" />
+  <StrutsActivity path="/rights/login.jsp" location="250,188" dimension="104,49" />
+  <StrutsActivity path="/rights/frame.jsp" location="454,188" dimension="110,49" />
+  <StrutsActivity path="/rights/wltuserinfo.jsp" location="950,950" dimension="158,53" />
+  <StrutsActivity path="/rights/wltu.jsp" location="650,1050" dimension="118,53" />
+  <StrutsActivity path="/business/wltInterfaceTypelist.jsp" location="1550,1150" dimension="223,53" />
+  <StrutsActivity path="/business/jtfk。" location="1250,1950" dimension="122,53" />
+  <StrutsActivity path="/business/jtfk" location="1550,1950" dimension="110,53" />
+  <StrutsActivity path="/business/checkAccount.do" location="350,3650" dimension="196,72" />
+  <StrutsActivity path="/task/wltorderlist.jsp" location="650,3650" dimension="172,48" />
+  <StrutsTransition id="/business/order.do,zshsuccess,/business/zshorderlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,2232" />
+      <AbsolutePoint location="15,2232" />
+      <AbsolutePoint location="15,3274" />
+      <AbsolutePoint location="650,3274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,successchecksmx,/business/wltcommissionchecksmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="252,654" />
+      <AbsolutePoint location="252,699" />
+      <AbsolutePoint location="1376,699" />
+      <AbsolutePoint location="1376,603" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuserbank.do,success,/rights/wltuserbanklist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="196,1750" />
+      <AbsolutePoint location="196,1676" />
+      <AbsolutePoint location="650,1676" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xunjie/xjaction.do,mobilecharge,/business/xjydbusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2450,788" />
+      <AbsolutePoint location="2419,788" />
+      <AbsolutePoint location="2419,2595" />
+      <AbsolutePoint location="1948,2595" />
+      <AbsolutePoint location="1948,3050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/checkAccountErrorLog.do,success,/task/checkAccountErrorLogList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="861,2834" />
+      <AbsolutePoint location="861,3374" />
+      <AbsolutePoint location="294,3374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tradeLogAgent.do,export,/ejet/wlt_tradelogAgentcount_export.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2757,654" />
+      <AbsolutePoint location="2757,1876" />
+      <AbsolutePoint location="2713,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,updatesuccess,/rights/sysuser.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="791,150" />
+      <AbsolutePoint location="791,75" />
+      <AbsolutePoint location="1085,75" />
+      <AbsolutePoint location="1085,172" />
+      <AbsolutePoint location="933,172" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/order.do,success,/business/wltorderlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="218,2150" />
+      <AbsolutePoint location="218,2076" />
+      <AbsolutePoint location="650,2076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,login_out,/rights/wltlogin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="933,232" />
+      <AbsolutePoint location="1522,232" />
+      <AbsolutePoint location="1522,669" />
+      <AbsolutePoint location="120,669" />
+      <AbsolutePoint location="120,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/order.do,chargeDetail,/business/ordercharge.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="386,2218" />
+      <AbsolutePoint location="1342,2218" />
+      <AbsolutePoint location="1342,2203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/CmccAction.do,cmcccharge,/business/cmccbusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2327,254" />
+      <AbsolutePoint location="2327,565" />
+      <AbsolutePoint location="1818,565" />
+      <AbsolutePoint location="1818,1569" />
+      <AbsolutePoint location="2869,1569" />
+      <AbsolutePoint location="2869,2976" />
+      <AbsolutePoint location="2341,2976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/acctbill.do,incomeSuccess,/business/wltincomebilllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1518" />
+      <AbsolutePoint location="1525,1518" />
+      <AbsolutePoint location="1525,2376" />
+      <AbsolutePoint location="1550,2376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/acctbill.do,success,/business/wltacctbilllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2019,1554" />
+      <AbsolutePoint location="2019,1950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,success,/rights/wltuseraddsus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="821,254" />
+      <AbsolutePoint location="821,469" />
+      <AbsolutePoint location="439,469" />
+      <AbsolutePoint location="439,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/checkAccountError.do,success,/task/checkAccountErrorList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,2834" />
+      <AbsolutePoint location="229,2909" />
+      <AbsolutePoint location="2563,2909" />
+      <AbsolutePoint location="2563,3250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/citydaycount.do,query,/ejet/wlt_tasklistcount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1717,2634" />
+      <AbsolutePoint location="1717,3274" />
+      <AbsolutePoint location="1452,3274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tasklogmanage.do,query,/ejet/wlt_tasklistcount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1117,2634" />
+      <AbsolutePoint location="1117,3274" />
+      <AbsolutePoint location="1250,3274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/sit.do,success,/business/wltinterfacetypelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1096,1750" />
+      <AbsolutePoint location="1096,1718" />
+      <AbsolutePoint location="1659,1718" />
+      <AbsolutePoint location="1659,1603" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/CmccAction.do,success,/business/cmccbusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2289,150" />
+      <AbsolutePoint location="2289,105" />
+      <AbsolutePoint location="-105,105" />
+      <AbsolutePoint location="-105,3533" />
+      <AbsolutePoint location="2245,3533" />
+      <AbsolutePoint location="2245,3003" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/order.do,qbDetail,/business/orderqb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="386,2188" />
+      <AbsolutePoint location="730,2188" />
+      <AbsolutePoint location="730,2250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,transchildsuccess,/business/wlttranschild.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="933,202" />
+      <AbsolutePoint location="1942,202" />
+      <AbsolutePoint location="1942,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,successcheckjtmx,/business/wltcommissioncheckjtmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="222,550" />
+      <AbsolutePoint location="222,518" />
+      <AbsolutePoint location="2385,518" />
+      <AbsolutePoint location="2385,1650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/prod.do,success,/business/wltsanlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1218" />
+      <AbsolutePoint location="-45,1218" />
+      <AbsolutePoint location="-45,2974" />
+      <AbsolutePoint location="350,2974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/xunjie/xjaction.do,success,/business/xjydbusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2578,834" />
+      <AbsolutePoint location="2578,965" />
+      <AbsolutePoint location="2320,965" />
+      <AbsolutePoint location="2320,1399" />
+      <AbsolutePoint location="2809,1399" />
+      <AbsolutePoint location="2809,3074" />
+      <AbsolutePoint location="2046,3074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/sysrebate.do,success,/business/wltrebatelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="815,654" />
+      <AbsolutePoint location="815,976" />
+      <AbsolutePoint location="532,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,login_fail,/rights/wltlogin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,252" />
+      <AbsolutePoint location="-45,252" />
+      <AbsolutePoint location="-45,776" />
+      <AbsolutePoint location="50,776" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/mobileCharge.do,mobilecharge,/business/business.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1994,754" />
+      <AbsolutePoint location="1994,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,successcheckmx,/business/wltcommissioncheckmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="394,572" />
+      <AbsolutePoint location="618,572" />
+      <AbsolutePoint location="618,1376" />
+      <AbsolutePoint location="950,1376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/bank.do,transforwad,/business/wlttrans.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1768,2254" />
+      <AbsolutePoint location="1768,2418" />
+      <AbsolutePoint location="128,2418" />
+      <AbsolutePoint location="128,2403" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/prod.do,success,/business/wltprodlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1188" />
+      <AbsolutePoint location="523,1188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/mobileCharge.do,reverse,/business/order.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1934,754" />
+      <AbsolutePoint location="1934,818" />
+      <AbsolutePoint location="-15,818" />
+      <AbsolutePoint location="-15,2202" />
+      <AbsolutePoint location="50,2202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,login_success,/rights/wltframe.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="791,254" />
+      <AbsolutePoint location="791,312" />
+      <AbsolutePoint location="122,312" />
+      <AbsolutePoint location="122,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/acctbill.do,yjSuccess,/business/wltyjbilllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1488" />
+      <AbsolutePoint location="1495,1488" />
+      <AbsolutePoint location="1495,2476" />
+      <AbsolutePoint location="820,2476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/bank.do,transnext,/business/wlttransnext.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1708,2254" />
+      <AbsolutePoint location="1708,2318" />
+      <AbsolutePoint location="440,2318" />
+      <AbsolutePoint location="440,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,success5,/business/wltcommissionjtlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="222,654" />
+      <AbsolutePoint location="222,918" />
+      <AbsolutePoint location="2260,918" />
+      <AbsolutePoint location="2260,903" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tradeLogAgent.do,enter,/ejet/wlt_tradelogAgentcount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2794,602" />
+      <AbsolutePoint location="2929,602" />
+      <AbsolutePoint location="2929,2276" />
+      <AbsolutePoint location="2670,2276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/acctbill.do,commSuccess,/business/wltcommissionbilllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2049,1554" />
+      <AbsolutePoint location="2049,2269" />
+      <AbsolutePoint location="1372,2269" />
+      <AbsolutePoint location="1372,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/mobileCharge.do,success,/business/business.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1964,754" />
+      <AbsolutePoint location="1964,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/UnicomAction.do,success,/business/unicombusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="355,2602" />
+      <AbsolutePoint location="588,2602" />
+      <AbsolutePoint location="588,3076" />
+      <AbsolutePoint location="254,3076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysuser.do,listsuccess,/rights/wltuserlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,173" />
+      <AbsolutePoint location="-135,173" />
+      <AbsolutePoint location="-135,1176" />
+      <AbsolutePoint location="50,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,success3,/business/wltcommissionslist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="394,602" />
+      <AbsolutePoint location="588,602" />
+      <AbsolutePoint location="588,1576" />
+      <AbsolutePoint location="950,1576" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysloginuser.do,success,/,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1388" />
+      <AbsolutePoint location="1212,1388" />
+      <AbsolutePoint location="1212,1618" />
+      <AbsolutePoint location="68,1618" />
+      <AbsolutePoint location="68,1603" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/UnicomAction.do,unicomharge,/business/unicombusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,2602" />
+      <AbsolutePoint location="-15,2602" />
+      <AbsolutePoint location="-15,3076" />
+      <AbsolutePoint location="50,3076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/bank.do,loglist,/business/wltbankloglist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1708,2150" />
+      <AbsolutePoint location="1708,2065" />
+      <AbsolutePoint location="1128,2065" />
+      <AbsolutePoint location="1128,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/jtfk.do,paysuccess,/business/weizhangchaxun.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="343,1418" />
+      <AbsolutePoint location="753,1418" />
+      <AbsolutePoint location="753,1303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,successchecktcmx,/business/wltcommissionchecktcmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="175,654" />
+      <AbsolutePoint location="175,729" />
+      <AbsolutePoint location="1376,729" />
+      <AbsolutePoint location="1376,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysrole.do,success,/rights/wltrolelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1123,454" />
+      <AbsolutePoint location="1123,876" />
+      <AbsolutePoint location="800,876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/notice.do,success,/rights/wltnoticelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2079,2350" />
+      <AbsolutePoint location="2079,1665" />
+      <AbsolutePoint location="1788,1665" />
+      <AbsolutePoint location="1788,376" />
+      <AbsolutePoint location="2150,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,success1,/business/wltcommissionlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,602" />
+      <AbsolutePoint location="-75,602" />
+      <AbsolutePoint location="-75,976" />
+      <AbsolutePoint location="50,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/spa.do,success,/business/wltphonearealist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="402,1988" />
+      <AbsolutePoint location="950,1988" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/order.do,reverseSuccess,/business/wltreverselist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="248,2150" />
+      <AbsolutePoint location="248,2118" />
+      <AbsolutePoint location="2243,2118" />
+      <AbsolutePoint location="2243,2103" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/order.do,jtfkDetail,/business/orderjtfk.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="386,2158" />
+      <AbsolutePoint location="950,2158" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,successcheckjkmx,/business/wltcommissioncheckjkmx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="312,654" />
+      <AbsolutePoint location="312,1018" />
+      <AbsolutePoint location="1378,1018" />
+      <AbsolutePoint location="1378,1003" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/agentdaycount.do,query,/ejet/wlt_tasklistcount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2317,2734" />
+      <AbsolutePoint location="2317,2879" />
+      <AbsolutePoint location="1351,2879" />
+      <AbsolutePoint location="1351,3250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,success2,/business/wltcommissiontclist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,654" />
+      <AbsolutePoint location="282,1265" />
+      <AbsolutePoint location="461,1265" />
+      <AbsolutePoint location="461,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/banklog.do,loglist,/business/wltbankloglist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,354" />
+      <AbsolutePoint location="1702,1065" />
+      <AbsolutePoint location="914,1065" />
+      <AbsolutePoint location="914,2376" />
+      <AbsolutePoint location="950,2376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/sui.do,success,/business/wltuserinterfacelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1738,1854" />
+      <AbsolutePoint location="1738,1876" />
+      <AbsolutePoint location="869,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rights/sysarea.do,success,/rights/wltarealist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="633,402" />
+      <AbsolutePoint location="881,402" />
+      <AbsolutePoint location="881,469" />
+      <AbsolutePoint location="1026,469" />
+      <AbsolutePoint location="1026,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tradeLogCount.do,export,/ejet/wlt_tradelogcitycount_export.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2781,402" />
+      <AbsolutePoint location="2869,402" />
+      <AbsolutePoint location="2869,1076" />
+      <AbsolutePoint location="2698,1076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/spa.do,addsuccess,/business/spa.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="226,1950" />
+      <AbsolutePoint location="226,1918" />
+      <AbsolutePoint location="725,1918" />
+      <AbsolutePoint location="725,1958" />
+      <AbsolutePoint location="402,1958" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/jtfk.do,success,/business/weizhanglist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="196,1454" />
+      <AbsolutePoint location="196,1476" />
+      <AbsolutePoint location="650,1476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tradeLogCount.do,enter,/ejet/wlt_tradelogcitycount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2781,372" />
+      <AbsolutePoint location="2899,372" />
+      <AbsolutePoint location="2899,1476" />
+      <AbsolutePoint location="2655,1476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tradeLogCount.do,query,/ejet/wlt_tradelogcitycountlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2781,432" />
+      <AbsolutePoint location="2809,432" />
+      <AbsolutePoint location="2809,1276" />
+      <AbsolutePoint location="2671,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/business/syscommission.do,success4,/business/wltcommissionjklist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="394,632" />
+      <AbsolutePoint location="547,632" />
+      <AbsolutePoint location="547,1518" />
+      <AbsolutePoint location="1361,1518" />
+      <AbsolutePoint location="1361,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/report/tradeLogAgent.do,query,/ejet/wlt_tradelogAgentcountlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2794,632" />
+      <AbsolutePoint location="2839,632" />
+      <AbsolutePoint location="2839,2076" />
+      <AbsolutePoint location="2686,2076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

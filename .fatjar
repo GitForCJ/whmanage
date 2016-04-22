@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Mar 15 18:05:18 CST 2012
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=http.jar
+manifest.mergeall=true
+manifest.mainclass=com.commsoft.epay.pc.tenpay.bean.HttpRequest
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~resources/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~util/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~test/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~task/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~service/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~bean/~SendMsgScpBean.class;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~bean/~QBSendMsgScpBean.class;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~bean/~QBLogInfoBean.class;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~bean/~LogInfoBean.class;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~tenpay/~action/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~rights/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~operation/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~log/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~invoice/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~filter/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~db/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~count/;<po|epay_pc20111215>~com/~commsoft/~epay/~pc/~common/;<po|epay_pc20111215>~sz-hrdkj.jks;<po|epay_pc20111215>~gateway-keys.propertes;<jar|antlr.jar>;<jar|commons-beanutils.jar>;<jar|commons-digester.jar>;<jar|commons-fileupload.jar>;<jar|commons-logging.jar>;<jar|commons-validator.jar>;<jar|dom4j-1.6.1.jar>;<jar|epay_util.jar>;<jar|esb.jar>;<jar|ifxjdbc.jar>;<jar|jakarta-oro.jar>;<jar|json.jar>;<jar|jstl.jar>;<jar|poi-2.5-final-20040302.jar>;<jar|poi-contrib-2.5-final-20040302.jar>;<jar|poi-scratchpad-2.5-final-20040302.jar>;<jar|smsagent.jar>;<jar|standard.jar>;<jar|struts.jar>;<jar|Hnapay_Client_V2.6.2.1[jdk1.4.2].jar>;<jar|javaee.jar>;<jar|jsf-impl.jar>;<jar|jsf-api.jar>;<jar|jstl-1.2.jar>
+includes=

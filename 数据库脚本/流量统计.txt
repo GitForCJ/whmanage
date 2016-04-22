@@ -1,0 +1,186 @@
+
+SELECT * FROM sys_interface WHERE flag=2
+
+SELECT  * FROM sys_flowcountRecord a  WHERE a.riqi='20151124' ORDER BY a.riqi,a.buyid,a.sa_id
+
+ 
+
+SELECT * FROM sys_flowcount
+
+SELECT COUNT(*) FROM wht_orderform_1511 WHERE tradetime>'20151124000000' AND tradetime<'20151124235959' AND  phone_pid=381 AND buyid=21
+
+DESC wht_orderform_1511
+
+SELECT * FROM sys_area
+
+
+INSERT INTO sys_flowcountRecord(riqi,bishu,state,buyid,buyname,sa_id,sa_name) 
+
+SELECT '20151124',COUNT(a.tradeserial) AS bishu,a.state,b.id,b.name,c.sa_id,c.sa_name 
+FROM wht_orderform_1511 a LEFT JOIN  sys_interface b ON a.buyid=b.id LEFT JOIN sys_area c 
+ON a.phone_pid=c.sa_id WHERE a.tradetime>'20151124000000'
+ AND a.tradetime<'20151124235959' AND  b.flag=2 
+GROUP BY a.state,a.buyid,a.phone_pid  ORDER BY a.buyid 
+ 
+ 
+ 
+INSERT INTO sys_flowcountRecord(riqi,bishu,state,buyid,buyname,sa_id,sa_name) 
+
+SELECT '20151124',COUNT(a.tradeserial) AS bishu,a.state,b.id,b.name,c.sa_id,c.sa_name FROM wht_orderform_1511 a LEFT JOIN 
+ sys_interface b ON a.buyid=b.id LEFT JOIN sys_area c ON a.phone_pid=c.sa_id WHERE a.tradetime>'20151124000000' 
+ AND a.tradetime<'20151124235959' 
+AND b.flag=2 GROUP BY a.state,a.buyid,a.phone_pid  ORDER BY a.buyid 
+ 
+ 
+ 
+ SELECT '20151124',COUNT(a.tradeserial) AS bishu,a.state,b.id,b.name,c.sa_id,c.sa_name 
+FROM (SELECT * FROM wht_orderform_1511 WHERE tradetime>'20151124000000' AND tradetime<'20151124235959') a ,  ( SELECT * FROM sys_interface WHERE flag=2) b  , sys_area c 
+WHERE a.buyid=b.id AND  a.phone_pid=c.sa_id 
+GROUP BY a.state,a.buyid,a.phone_pid  ORDER BY a.buyid 
+ =======================
+ 
+  SELECT * FROM sys_flowcount
+ 
+SELECT * FROM wht_orderform_1511 WHERE tradetime>='20151101000000' AND tradetime<='20151131235959'
+AND service IN('0009','0010','0011') 
+ 
+   SELECT * FROM wht_orderform_1511 WHERE tradeserial='201511160000105'
+ 
+  SELECT DATE_FORMAT(chgtime,'%y-%m-%d')-tradetime FROM wht_orderform_1511 WHERE tradeserial='201511160000105'
+  
+  SELECT DATE_FORMAT(chgtime,'%Y%m%d%H%i%s'),DATE_FORMAT(tradetime,'%Y%m%d%H%i%s')  FROM wht_orderform_1511 
+  WHERE tradeserial='201511160000105'
+  
+ 
+   SELECT TIMESTAMPDIFF(SECOND,DATE_FORMAT(tradetime,'%Y%m%d%H%i%s'),DATE_FORMAT(chgtime,'%Y%m%d%H%i%s'))  FROM wht_orderform_1511 
+  WHERE tradeserial='201511160000105'
+  
+UPDATE wht_orderform_1511 SET chgtime=TIMESTAMPADD(SECOND,30,DATE_FORMAT(chgtime,'%Y%m%d%H%i%s'))  WHERE tradeserial='201511160000105'
+  
+ SELECT TIMESTAMPADD(SECOND,30,DATE_FORMAT(chgtime,'%Y%m%d%H%i%s'))  FROM wht_orderform_1511 
+  WHERE tradeserial='201511160000105'
+  
+  
+  SELECT userno, TIMESTAMPDIFF(SECOND,DATE_FORMAT(tradetime,'%Y%m%d%H%i%s'),DATE_FORMAT(chgtime,'%Y%m%d%H%i%s')) AS difftime
+  FROM wht_orderform_1511 WHERE tradetime>='20151101000000' AND tradetime<='20151131235959'
+  AND service IN('0009','0010','0011') 
+  
+ INSERT INTO sys_flowtimerecord(riqi,userno,timerange,num)  
+  
+ SELECT '20151202',a.userno, ELT(INTERVAL(a.difftime,0,180,600),'三分钟内','三到十分钟','十分钟以上') AS timerange,COUNT(a.id)
+FROM (
+  SELECT id,userno,buyid,TIMESTAMPDIFF(SECOND,DATE_FORMAT(tradetime,'%Y%m%d%H%i%s'),DATE_FORMAT(chgtime,'%Y%m%d%H%i%s')) AS difftime
+  FROM wht_orderform_1511 WHERE tradetime>='20151101000000' AND tradetime<='20151131235959'
+  AND service IN('0009','0010','0011') ) a
+  GROUP BY userno,ELT(INTERVAL(a.difftime,0,180,600),'三分钟内','三到十分钟','十分钟以上')
+  
+  
+
+  
+
+  
+SELECT id,userno,buyid,TIMESTAMPDIFF(SECOND,DATE_FORMAT(tradetime,'%Y%m%d%H%i%s'),DATE_FORMAT(chgtime,'%Y%m%d%H%i%s')) AS difftime
+FROM wht_orderform_1511 WHERE tradetime>='20151101000000' AND tradetime<='20151131235959'
+ AND service IN('0009','0010','0011')   
+  
+  
+ SELECT ELT(INTERVAL(d.id,0, 100, 500, 1000), '1/less100', '2/100to500', '3/500to1000', '4/more1000') AS yb_level, COUNT(d.id) AS cnt
+ FROM wht_orderform_1511 d  
+ GROUP BY ELT(INTERVAL(d.id, 0, 100, 500, 1000), '1/less100', '2/100to500', '3/500to1000', '4/more1000K');  
+  
+  INSERT INTO sys_flowtimerecord(riqi,userno,timrange,num)
+
+  CREATE TABLE `sys_flowtimerecord` (
+  `riqi` VARCHAR(20) NOT NULL ,
+  `userno` VARCHAR(20) NOT NULL ,
+  `timerange` VARCHAR(20) NOT NULL,
+  `num` INT(14) NOT NULL,
+  `exp1` VARCHAR(20) DEFAULT NULL,
+  `exp2` VARCHAR(20) DEFAULT NULL,
+  `exp3` VARCHAR(20) DEFAULT NULL,
+   INDEX index1 (riqi,userno)
+) ENGINE=INNODB DEFAULT CHARSET=utf8
+
+SELECT a.riqi,a.userno,a.timerange,a.num ,b.total,ROUND(a.num/b.total*100,3) FROM 
+(SELECT riqi,userno,timerange,num FROM sys_flowtimerecord WHERE 1=1 AND riqi='20151202') AS a,
+(SELECT userno,SUM(num) AS total FROM sys_flowtimerecord  WHERE 1=1 AND riqi='20151202' GROUP BY userno) AS b 
+WHERE a.userno=b.userno
+
+
+SELECT * FROM sys_flowcount
+SELECT * FROM sys_flowtimerecord WHERE 1=1  AND riqi>='20151101'  AND riqi<='20151130' 
+
+
+
+
+
+  INSERT INTO sys_flowtimerecord(riqi,userno,timerange,num) 
+  SELECT '20151201',a.userno,ELT(INTERVAL(a.difftime,0,180,600),'三分钟内','三到十分钟','十分钟以上') AS timerange,COUNT(a.id) 
+  FROM (SELECT id,userno,buyid,TIMESTAMPDIFF(SECOND,DATE_FORMAT(tradetime,'%Y%m%d%H%i%s'),
+  DATE_FORMAT(chgtime,'%Y%m%d%H%i%s')) AS difftime FROM wht_orderform_1512 WHERE tradetime>='20151201000000' 
+  AND tradetime<='20151201235959' AND service IN('0009','0010','0011') ) a 
+  GROUP BY userno,ELT(INTERVAL(a.difftime,0,180,600),'三分钟内','三到十分钟','十分钟以上')
+  
+  
+  SELECT a.riqi,a.userno,a.timerange,a.num ,b.total,ROUND(a.num/b.total*100,3) FROM 
+  (SELECT riqi,userno,timerange,num FROM sys_flowtimerecord WHERE 1=1  AND riqi>='20151101'  
+  AND riqi<='20151130' ) AS a,(SELECT userno,SUM(num) AS total FROM sys_flowtimerecord WHERE 1=1 
+   AND riqi>='20151101'  AND riqi<='20151130'  GROUP BY userno) AS b  WHERE a.userno=b.userno
+  
+  ===================
+  
+SELECT * FROM wht_flow_Reissue WHERE o_buyid=33 AND o_state=0 AND o_tradetime>='20160201000000'
+
+
+SELECT COUNT(*) FROM wht_orderform_1602 WHERE state=0 AND buyid='33' AND userno='0004611683' AND tradetime<'20160104114300'
+
+SELECT tradeserial,'|',tradeobject,'|',CAST(fee/1000 AS DECIMAL(9,3)),'|',writeoff,'|',tradetime,'|',writecheck 
+FROM wht_orderform_1602 WHERE state=0 AND buyid='33'  AND userno='0004611683' AND tradetime<'20160104114300'
+
+
+SELECT tradeserial,'|',tradeobject,'|',fee,'|',writeoff,'|',tradetime,'|',writecheck 
+FROM wht_orderform_1602 WHERE state=0 AND buyid='33'  AND userno='0004611683' AND tradetime<'20160104114300'
+
+SELECT CAST(2.10000 AS DECIMAL(9,2))                     SELECT * FROM wht_orderform_1602
+
+DESC wht_orderform_1602
+
+SELECT * FROM wht_service
+
+SELECT * FROM sys_agentsign
+
+SELECT * FROM sys_interface
+
+
+
+================
+SELECT * FROM wht_orderform_1603 WHERE tradeobject='15876086639'
+
+
+SELECT * FROM wht_orderform_1603 WHERE tradeserial='160301092004000651180400156409'
+
+SELECT SUM(a.fee)/1000,'|',b.user_login,'|',b.user_ename,'|',c.sr_name FROM wht_orderform_1602 a LEFT JOIN sys_user b ON a.userno=b.user_no 
+LEFT JOIN sys_role c ON b.user_role=c.sr_id GROUP BY a.userno ORDER BY sr_name
+
+user_role
+
+SELECT * FROM sys_role   sr_id
+DESC sys_role
+
+DESC sys_user
+
+DESC wht_orderform_1603
+
+
+
+
+
+
+SELECT tradeserial,'|',tradeobject,'|',writeoff,'|',tradetime,'|',chgtime,'|',writecheck FROM wht_orderform_1603  WHERE buyid='33' AND state=0
+
+SELECT * FROM sys_interface
+
+DESC wht_orderform_1603
+
+SELECT * FROM wht_orderform_1603 WHERE id=1
+ 

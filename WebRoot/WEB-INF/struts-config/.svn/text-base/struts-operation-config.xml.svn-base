@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <form-beans>
+    <form-bean name="telPayForm" type="com.wlt.webm.business.dianx.form.TelcomForm"></form-bean>
+    
+    <form-bean name="AccountInfoBean" type="com.wlt.webm.AccountInfo.bean.AccountInfoBean"></form-bean>
+    <form-bean name="MonthAwardRule" type="com.wlt.webm.MonthAwardRule.bean.MonthAwardRule"></form-bean>
+    <form-bean name="cartsBean" type="com.wlt.webm.business.Car.bean.CarInfo"></form-bean>
+    <form-bean name="batchrechage" type="com.wlt.webm.business.form.BatchRechargeForm"></form-bean>
+  </form-beans> 
+
+  <action-mappings>
+    <action path="/dianxin/telecom" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.business.dianx.action.TelcomChargeAction" validate="false">
+    </action>
+    
+   <action path="/ten/tenpay" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.ten.action.TenpayResultAction" validate="false">
+    </action>
+    
+        <action path="/qb/query" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.ten.action.QbQueryAction" validate="false">
+    </action>
+        <action path="/qb/fill" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.ten.action.QBTenpayResultAction" validate="false">
+    </action>
+    <action path="/business/CmccAction" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.business.cmcc.CmccAction" validate="false">
+    </action>
+    <action path="/unicom/UnicomAction" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.business.unicom.UnicomAction" validate="false">
+    </action>
+            <action path="/qb/qbResult" name="telPayForm" scope="request" parameter="method"
+        type="com.wlt.webm.ten.action.QbMiddle" validate="false">
+    </action>
+    
+    <!-- 账户信息录入 -->
+    <action path="/AccountInfo/showAccountInfo" name="AccountInfoBean" scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.action.AccountInfo"  validate="false">
+    	<forward name="success" path="/AccountInfo/wltAccountInfo.jsp" />
+    </action>
+     <!-- 账户信息验证 -->
+    <action path="/AccountInfo/AccountVerify"  scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.action.AccountVerify"  validate="false">
+    	<forward name="success" path="/AccountInfo/wltAccountVerify.jsp" />
+    </action>
+     <!-- 转账 -->
+    <action path="/AccountInfo/TransferAccounts"  scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.action.TransferAccounts"  validate="false">
+    	<forward name="success" path="/AccountInfo/wltTransferAccounts.jsp" />
+    </action>
+    
+    <!-- 中石化月度奖励 -->
+    <action path="/MonthAwardRule/showMonthAwardRule" name="MonthAwardRule"  scope="request" parameter="method" 
+    	type="com.wlt.webm.MonthAwardRule.action.MonthAwardRuleAction"  validate="false">
+    	<forward name="success" path="/zsh/MethodAwardRule.jsp" />
+    	<forward name="addsuccess" path="/zsh/AddMethodAwardRule.jsp" />
+    </action>
+    
+    <!-- 下级网点管理>>用户信息 获取上级用户名称  -->
+     <action path="/branchManage/userInfoA" scope="request" parameter="method" 
+    	type="com.wlt.webm.branchManage.action.BranchManageAction"  validate="false">
+    </action>
+    
+    <!-- 代理商 获取下边代办点 -->
+    <action path="/branchManage/BranchSelect" scope="request" parameter="method" 
+    	type="com.wlt.webm.branchManage.action.BranchManageAction"  validate="false">
+    	<forward name="success" path="/BranchSelect/BranchSelect.jsp" />
+    </action>
+    
+     <!-- 单笔订单查询接口 -->
+    <action path="/OrderQueryInter/OrderQueryInter" scope="request" parameter="method" 
+    	type="com.wlt.webm.OrderQueryInter.OrderQueryInter"  validate="false">
+    </action>
+    
+    <!-- 对账文件获取 -->
+    <action path="/AccountChecking/AccountChecking"  scope="request" parameter="method" 
+    	type="com.wlt.webm.OrderQueryInter.AccountChecking"  validate="false">
+    </action>
+    
+    <!-- 翼支付网关 回调 action -->
+    <action path="/typortinfo"  scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.action.TyPortInfo"  validate="false">
+    </action>
+    
+    <!-- 九七惠 电信账单支付 回调 action -->
+    <action path="/AccountPay"  scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.action.JqhAccountPay"  validate="false">
+    </action>
+    
+    <!-- 拉卡拉提现-->
+    <action path="/AccountInfo/lakala"  scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.action.LakalaAccount"  validate="false">
+    </action>
+    
+    <!-- 百事帮交通罚款 回调 action -->
+    <action path="/car"  scope="request" parameter="method" type="com.wlt.webm.AccountInfo.Car"  validate="false">
+    </action>
+    
+   	<!-- 劲峰 回调 -->
+   	<action path="/Callback"  scope="request" parameter="method" type="com.wlt.webm.AccountInfo.action.JingFengRechargeCallback"  validate="false">
+    </action>
+       	<!-- 联通流量-->
+   	<action path="/flow"  scope="request" parameter="method" 
+   	type="com.wlt.webm.business.action.Flow3g"  validate="false">
+    </action>
+    
+    <!-- 交通罚款 第二版 -->
+    <action path="/cars" name="cartsBean" scope="request" parameter="method"
+    type="com.wlt.webm.business.Car.CarAction"  validate="false"></action>
+    
+    <!-- 思空流量回调 -->
+    <action path="/flowback"  scope="request" parameter="method"
+    type="com.wlt.webm.business.bean.sikong.SiKongBack"  validate="false"></action>
+    
+    <!-- 批量充值-->
+    <action path="/batchcharge"  scope="request" parameter="method" name="batchrechage"
+    	type="com.wlt.webm.business.action.BatchRecharge"  validate="false">
+    </action>
+    
+    <!-- web app service-->
+    <action path="/app"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.action.WebAppService"  validate="false">
+    </action>
+    
+    <!-- 腾讯流量 充值-->
+     <action path="/PPOrderPay"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.action.Tencent_Flows"  validate="false">
+    </action>
+    
+     <!-- 腾讯流量 查询-->
+     <action path="/PPOrdercheck"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.action.Tencent_Query"  validate="false">
+    </action>
+    
+    <!-- app 操作 -->
+    <action path="/apps"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.AppRequest.App"  validate="false">
+    </action>
+     <!-- 支付宝回调 -->
+    <action path="/AlipayBack"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.AppRequest.AlipayBack"  validate="false">
+    </action>
+     <!-- 微信回调 -->
+    <action path="/WxBack"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.AppRequest.WxBack"  validate="false">
+    </action>
+    
+    <!-- 百度钱包 -->
+     <action path="/BaiduBack"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.AppRequest.BaiduBack"  validate="false">
+    </action>
+    
+    <!-- 和包 移动 -->
+    <action path="/HeBaoBack"  scope="request" parameter="method" 
+    	type="com.wlt.webm.AccountInfo.HeBaoBack"  validate="false">
+    </action>
+    
+    <!-- 京东预查询 -->
+    <action path="/trafficPrepareSearch"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.action.JdPrepareSearch"  validate="false">
+    </action>
+    
+    <!-- 京东流量充值 -->
+    <action path="/trafficBeginFill"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.action.Jd_Flows"  validate="false">
+    </action>
+    
+    <!-- 京东订单查询 -->
+    <action path="/trafficFindFill"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.action.JdOrderQuery"  validate="false">
+    </action>
+    
+    <!-- 流量饭 回调 -->
+    <action path="/LiuLiangFanBack"  scope="request" parameter="method" 
+    	type="com.wlt.webm.business.bean.liuliangfan.LiuLiangFanBack"  validate="false">
+    </action>
+  </action-mappings>
+</struts-config>
+
+
+
+
+

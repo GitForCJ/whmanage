@@ -1,0 +1,81 @@
+
+
+SELECT * FROM wht_flowprice
+
+SELECT * FROM wht_flowproduct
+
+SHOW CREATE TABLE wht_flowproduct
+
+SELECT * FROM sys_tpemploy_Flow WHERE groups='30003'  AND cm_addr=0 AND TYPE=2
+
+SELECT * FROM sys_Flow
+
+SELECT * FROM sys_interface
+
+SELECT * FROM wht_orderform_1506 WHERE user_name='18501370555'
+
+SELECT accountleft FROM wht_childfacct WHERE fundacct='000006222318201' AND TYPE='01'
+
+---------------------------
+
+
+SELECT * FROM wht_flowprice
+
+SELECT * FROM wht_flowproduct
+
+SHOW CREATE TABLE wht_flowproduct
+
+SELECT * FROM sys_tpemploy_Flow WHERE groups='30003'  AND cm_addr=0 AND TYPE=2
+
+SELECT * FROM sys_Flow
+
+SELECT * FROM wht_orderform_1506 WHERE user_name='18501370555'
+
+SELECT accountleft FROM wht_childfacct WHERE fundacct='000006222318201' AND TYPE='01'
+
+
+SELECT * FROM wht_flowprice
+
+SELECT * FROM wht_flowproduct
+
+SHOW CREATE TABLE wht_flowproduct
+
+SELECT * FROM sys_tpemploy_Flow WHERE groups='30003'  AND cm_addr=0 AND TYPE=2
+
+SELECT * FROM sys_Flow WHERE flow_interid=35
+
+SELECT * FROM sys_interface   32 大汉移动   35乐流移动       3072  4096  6144
+
+DESC sys_Flow
+
+10M、30M、70M、150M、500M、1G、2G、3G、4G、6G、11G
+
+
+--------------------
+
+SELECT * FROM sys_flow WHERE operator_type=1 AND flow_interId=38
+
+SELECT * FROM sys_interface
+
+SELECT * FROM sys_interface2face WHERE interfaceID=35
+
+SELECT * FROM wht_flowprice WHERE TYPE=1
+
+SELECT * FROM wht_flowproduct
+
+SELECT * FROM sys_tpemploy_Flow WHERE TYPE=1
+
+
+SELECT fl.name,fl.price,(SELECT tp.value FROM sys_tpemploy_Flow tp WHERE tp.type='1' 
+AND tp.cm_addr=0 AND tp.groups='30001' LIMIT 0,1) AS yj FROM wht_flowprice fl  
+WHERE fl.type='1' AND fl.name IN(aa.substring(0,aa.length()-1))
+
+SELECT * FROM sys_flowinterfaceMaping WHERE TYPE='1' AND pid='35'
+
+SELECT flow.flow_interId,flow.exp1 FROM sys_Flow flow,(SELECT map.interid FROM sys_flowinterfaceMaping map WHERE 
+map.type='1' AND pid='35' LIMIT 0,1) AS ac WHERE flow.operator_type='1' AND flow.flow_interId=ac.interid
+
+
+
+--------------------
+select * from interGroups  --流量组佣金名称添加

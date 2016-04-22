@@ -1,0 +1,181 @@
+/*
+  各种链接的颜色保持一直
+*/
+A:hover{
+  cursor:Hand;
+}
+A:visited{
+  color:#0000FF
+}
+A:link{
+  color:#0000FF
+}
+A:active{
+  color:#0000FF
+}
+
+/*
+  按钮采用的样式
+*/
+.onbutton{
+	BACKGROUND: #f2f2f2; 
+	BORDER-BOTTOM: #333333 1px solid; 
+	BORDER-LEFT: #333333 1px solid; 
+	BORDER-RIGHT: #333333 1px solid; 
+	BORDER-TOP: #333333 1px solid; 
+	COLOR: #333333; 
+	CURSOR: hand; 
+	FONT-FAMILY: "新宋体"; 
+	FONT-SIZE: 10pt; 
+	HEIGHT: 20px; 
+	PADDING-BOTTOM: 1px; 
+	PADDING-LEFT: 1px; 
+	PADDING-RIGHT: 1px; 
+	PADDING-TOP: 1px
+}
+.onbutton1{
+  BORDER-RIGHT: #104a7b 1px solid; 
+  BORDER-TOP: #afc4d5 1px solid; 
+  BACKGROUND: #d6e7ef; 
+  BORDER-LEFT: #afc4d5 1px solid; 
+  CURSOR: hand; 
+  COLOR: #000066; 
+  BORDER-BOTTOM: #104a7b 1px solid; 
+  HEIGHT: 19px; 
+  TEXT-DECORATION: none
+}
+/*
+  整个系统的字体样式
+*/
+body,table,tr,td,p,font {
+    font-family:"新宋体";
+    font-size:10pt; 
+    line-height:150%;
+}
+/*
+  各种文本框的样式
+*/
+.inputtext{
+    font-family:"新宋体";
+    font-size:10pt; 
+	color: #FFFFFF; 
+	color:
+	border: 1px outset #E6E6E6;		
+}
+/*
+  复选框，单选框的样式
+*/
+.inputcheck{
+
+}
+/*
+  下拉框的样式
+*/
+.selectlist{
+    font-family:"新宋体";
+    font-size:10pt; 
+	border: 1px outset #E6E6E6;	
+}
+.selectlist1{
+  COLOR: #000066; 
+  BACKGROUND-COLOR: #d6e7ef
+}
+/*
+  列表显示时表格采用的样式
+*/
+.tablelist{
+BACKGROUND-COLOR:#337fb2;
+
+}
+/*
+  增加，修改记录时，外层表格的样式
+*/
+.tableoutline{
+BACKGROUND-COLOR:#94C2EF
+}
+/*
+  增加，修改记录时，内层表格的样式
+*/
+.tablecontent{
+BACKGROUND-COLOR:#e3e3e3
+}
+/*
+  列表显示时奇数行的样式
+*/
+.tr1{
+BACKGROUND-COLOR:#e3e3e3
+}
+/*
+  列表显示时偶数行的样式
+*/
+.tr2{
+BACKGROUND-COLOR:#ffffff
+}
+/*
+  列表显示时标题行的样式
+*/
+.trlist{
+background-image:url(../images/tabletop.gif);
+/*
+BACKGROUND-COLOR:#337fb2;
+*/
+}
+/*
+  增加，修改记录时，标题行的样式
+*/
+.trcontent{
+BACKGROUND-COLOR:#337fb2
+}
+/*
+  列表显示时表头的字体样式
+*/
+.fontlisttitle{
+	font-weight: bold;
+	color: #000000;
+}
+/*
+  列表显示时列头的字体样式
+*/
+.fontcoltitle{
+	font-weight: bold;
+	color: #FFFFFF;  
+}
+/*
+  增加，修改数据时表头的字体样式
+*/
+.fontcontitle{
+	font-weight: bold;
+	color: #FFFFFF;
+}
+/*
+  导航条的背景色
+*/
+.menubg{
+  BACKGROUND-COLOR:#336699
+}
+/*
+  导航条的文字样式
+*/
+.fontmenu {
+	FONT-WEIGHT: bold; 
+	COLOR: #000066; 
+	TEXT-DECORATION: none
+}
+
+/*
+  初始化模块的文字样式
+*/
+.fontmenu1 {
+	FONT-WEIGHT: bold; 
+	COLOR: #000066; 
+	TEXT-DECORATION: none
+	font-size:10pt; 
+}
+/*
+  全选的文字样式
+*/
+.fontselect {
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none
+}

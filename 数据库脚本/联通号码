@@ -1,0 +1,23 @@
+CREATE TABLE `test_phone` (
+  phone VARCHAR(11) ,
+  PRIMARY KEY (phone)
+) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+
+SELECT COUNT(*) FROM test_phone
+
+
+SELECT * FROM sys_phone_area WHERE phone_type =2 AND 
+
+SELECT * FROM sys_area WHERE sa_pid=1
+
+
+SELECT  a.phone FROM  test_phone a LEFT JOIN sys_phone_area b 
+ON SUBSTRING(a.phone,1,7)=b.phone_num  LEFT JOIN sys_area c ON b.province_code=c.sa_id
+WHERE b.phone_type =2 AND c.sa_id=52 ORDER BY c.sa_name
+
+
+SELECT a.phonenum, FROM sys_phone_area a LEFT JOIN sys_area b ON a.province_code=b.sa_id
+
+
+ 

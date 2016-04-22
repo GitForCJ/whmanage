@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>固话充值问题</title>
+<meta name="description" content="固话充值问题" />
+<meta name="keywords" content="固话充值问题" />
+<link href="css/style.css" rel="stylesheet" media="all" type="text/css">
+</head>
+
+
+<body>
+<div class="fly_wrapper">
+
+	<div class="flymain">
+    	<img src="images/bg_top.jpg" alt=""><!--topBg-->
+       
+       <div class="cz">
+       		<h1>固话充值问题</h1>
+            <h3>1. 如何进行固话充值？</h3>
+            <p style="text-indent:2em;">1)   在首页“产品服务”选择【广东电信】菜单</p>
+            <p style="text-indent:2em;">2)   输入-充值手机号码，选择-充值金额，并确认号码正确无误，点击-确定充值，即可完成交易。</p>
+            <img src="images/aa.jpg" alt="">
+            
+            
+            <h3>2. 充值范围：<span>广东省内电信业务操作，包括：电信固话、电信宽带、天翼手机、小灵通的充值缴费。</span></h3>
+            
+            
+            <h3>3. 缴费说明：</h3>
+            
+            
+            
+            <h3>4. 综合缴费：<span>为该号码同一账户内所有号码进行充值缴费，捆绑套餐用户建议使用综合缴费进行充值（如：E6、E8、E9套餐用户）。</span></h3>
+            
+            <h3>5. 单一充值：<span>仅为电信的天翼手机或固定电话单一号码进行充值。</span></h3>
+            
+            <h3>6. 宽带缴费：<span>为预/后付费宽带用户充值缴费，面额10元起，暂无法为包年优惠赠送宽带充值,无线宽带请选择“单一充值”进行充值。（单一宽带账号充值格式“区号ADSLD888888”）</span></h3>
+            
+            
+       </div>
+       
+        <img src="images/bg_bottom.jpg" alt=""><!--bottomBg-->
+    </div>
+    
+</div><!--fly_wrapper End-->
+
+</body>
+</html>

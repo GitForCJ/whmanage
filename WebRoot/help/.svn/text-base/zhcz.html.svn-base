@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>如何使用银行代扣为账户充值</title>
+<meta name="description" content="如何使用银行代扣为账户充值" />
+<meta name="keywords" content="如何使用银行代扣为账户充值" />
+<link href="css/style.css" rel="stylesheet" media="all" type="text/css">
+<!--<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>-->
+</head>
+
+
+<body>
+<div class="fly_wrapper">
+
+	<div class="flymain">
+    	<img src="images/bg_top.jpg" alt=""><!--topBg-->
+       
+       <div class="cz">
+       		<h1>如何使用银行代扣为账户充值</h1>
+            <p style="color:#f00;">用户首次使用银行代扣为自己账户充值时，需要先绑定银行卡，绑定成功后可为用户账户充值，
+后续使用时只要选中所需扣款银行卡就可以直接为账户充值。</p>
+            <h3>1.  首次使用时请，在“财务管理”中选择【代扣绑定】，按照表中所给信息填写。
+            </h3>
+           
+            <img src="images/acc.jpg" alt="">
+            
+            <p style=" margin:30px 0;"><span style="color:#f00; font-weight:normal;">注：绑定银行卡需要发往相应银行进行验证，用户需要填写真实信息；若用户绑定银行
+卡在银行预留信息与万汇通平台身份证号码一致时，则不经过系统管理员验证，自动发往银
+行进行校验。若绑定银行卡非用户本人则需要提供相应证明并由后台管理员手工核对再发往
+银行验证。</span><br><br>1) 按照以上信息填写完成后，用户确认无误时点击“确认绑定”。</p>
+            <img src="images/acct.jpg" alt="">
+            
+            <p style=" margin:30px 0;">2) 状态：<br>
+            未验证：若用户绑定银行卡为非本人银行卡则需要管理员手工发起验证，未验证银行卡
+    不能发起付款请求。<br>
+    已验证：若用户绑定银行卡为本人银行卡且与万汇通开户时所填写身份证号码相同，系
+    统自动发起验证。<br>
+    <span style="font-weight:normal; color:#f00;">用户想要为万汇通账户充值时，选择所需要付款的银行卡，填写转款金额及输入交易密码后，
+点击转款，系统将自动使用用户所选择的银行卡为万汇通账户增加额度。</span></p>
+             
+             
+               
+               
+       </div>
+       
+        <img src="images/bg_bottom.jpg" alt=""><!--bottomBg-->
+    </div>
+    
+</div><!--fly_wrapper End-->
+    
+    
+    
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix(".fixpng");
+</script>
+<![endif]-->
+
+</body>
+</html>

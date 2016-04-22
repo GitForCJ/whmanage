@@ -1,0 +1,15 @@
+DESC wht_orderform_1501
+DESC sys_area
+DESC wht_service
+
+phone_pid  tradeserial
+
+SELECT SUM(n.co) FROM (SELECT COUNT(a.tradeserial) AS co,b.sa_name FROM wht_orderform_1501 a,sys_area b 
+WHERE a.phone_pid=b.sa_id GROUP BY a.phone_pid,a.fee) n
+
+
+SELECT COUNT(*) FROM wht_orderform_1501 
+
+
+SELECT COUNT(a.tradeserial) AS co,LEFT(a.fee,LENGTH(a.fee)-3),b.sa_name,c.name FROM wht_orderform_1501 a,sys_area b ,wht_service c 
+WHERE a.phone_pid=b.sa_id AND a.service=c.code GROUP BY a.phone_pid,a.fee,a.service ORDER BY  a.phone_pid,a.service

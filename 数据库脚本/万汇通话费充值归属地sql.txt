@@ -1,0 +1,20 @@
+SELECT * FROM wht_orderform_1512  WHERE tradeobject='13119837258' 
+ user_name='13421565490'  buyid=1
+
+SELECT * FROM sys_phone_area WHERE phone_num ='1311983'
+
+SELECT * FROM sys_area WHERE sa_pid=35
+
+
+SELECT interid FROM sys_interfaceMaping a,sys_valueRange b 
+ WHERE a.cmid=b.cm_id AND a.pid=62 AND TYPE=2 AND 100>=MIN AND 100<MAX
+ 
+ SELECT * FROM sys_interface
+ 
+ SELECT * FROM wht_service
+ 
+ 
+ 
+SELECT DISTINCT a.province_code,a.phone_type,CONCAT(b.sa_name,' ',a.cart_type) 
+FROM sys_phone_area a,sys_area b
+WHERE a.phone_num='1311983' AND a.province_code=b.sa_id 

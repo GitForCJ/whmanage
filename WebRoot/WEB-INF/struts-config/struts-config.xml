@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+	<form-bean name="countForm" type="com.wlt.webm.pccommon.struts.form.CountForm"></form-bean>
+  </form-beans>
+  <global-exceptions>
+    <exception key="wht.error" type="java.lang.Exception" handler="com.wlt.webm.pccommon.WebExceptionHandler" path="/error/newerror.jsp" />
+  </global-exceptions>
+  <global-forwards />
+  <action-mappings>
+    <!-- 查询统计 -->
+    <action path="/common/count" name="countForm" scope="request" parameter="method"
+        type="com.wlt.webm.pccommon.struts.action.CountAction" validate="false">
+      <forward name="count" path="/common/count.jsp"></forward>
+      <forward name="counterror" path="/error/counterror.jsp"></forward>
+    </action>
+        <!-- 查询返销数据统计 -->
+    <action path="/common/back" name="countForm" scope="request" parameter="method" 
+        type="com.wlt.webm.pccommon.struts.action.BackAction" validate="false">
+      <forward name="count" path="/common/count.jsp"></forward>
+      <forward name="counterror" path="/error/counterror.jsp"></forward>
+    </action>
+    <!-- 导出EXCEL -->
+    <action path="/common/excel" name="countForm" scope="request" parameter="method"
+        type="com.wlt.webm.pccommon.struts.action.ExcelAction" validate="false">
+    </action>
+  </action-mappings>
+  <message-resources parameter="com.wlt.webm.resources.ApplicationResources" />
+</struts-config>
+

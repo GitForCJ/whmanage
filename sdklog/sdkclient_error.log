@@ -1,0 +1,70 @@
+[ERROR] 2016-04-08 14:28:14,151 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:29:18,671 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:31:29,646 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:32:16,946 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[ERROR] 2016-04-08 14:32:34,790 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:34:42,375 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:57:35,277 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:57:49,028 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 14:58:16,092 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:13:19,078 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:13:34,849 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:13:54,836 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:20:10,625 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:26:27,423 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:31:27,345 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:32:11,598 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:39:56,555 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:43:37,452 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:45:24,331 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[ERROR] 2016-04-08 15:48:08,141 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:52:26,105 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:54:35,332 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 15:57:31,523 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 16:04:53,182 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 16:21:04,472 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 16:32:34,898 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 16:33:01,197 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 16:33:29,183 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[ERROR] 2016-04-08 16:37:05,454 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 17:14:49,828 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-08 17:28:12,614 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-11 10:09:31,150 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123895650 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-12 10:20:42,046 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123892668 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR] 2016-04-13 11:31:01,836 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+00123892220 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[ERROR] 2016-04-21 11:06:57,924 method:com.commsoft.epay.util.logging.Log.error(Log.java:57)
+联动流量产品查询,,系统异常,ex:java.net.ConnectException: Connection timed out: connect

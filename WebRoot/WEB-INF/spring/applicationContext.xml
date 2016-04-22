@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+ 	xmlns:aop="http://www.springframework.org/schema/aop"
+ 	xmlns:beans="http://www.springframework.org/schema/beans"
+ 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	default-autowire="byName">
+
+
+
+	<!-- 配置执行定时任务的类和方法，注意只修改注释部分 -->   
+    <bean id="agentCount"    
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">    
+        <property name="targetObject">
+            <bean class="com.ejet.task.AgentCountTaskReport"></bean>  <!-- 定时任务实现类 -->
+        </property>    
+        <property name="targetMethod">    
+            <value>excute</value>    <!-- 定时任务类中执行的方法 -->
+        </property>    
+    </bean>  
+    
+      <bean id="TradeLogCountTask"    
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">    
+        <property name="targetObject">
+            <bean class="com.ejet.task.TradeLogCountTask"></bean>  <!-- 定时任务实现类 -->
+        </property>    
+        <property name="targetMethod">    
+            <value>excute</value>    <!-- 定时任务类中执行的方法 -->
+        </property>    
+    </bean>  
+
+
+	<!-- 代理商统计配置触发器 -->     
+    <bean id="agentCountTrigger"    
+        class="org.springframework.scheduling.quartz.CronTriggerBean">    
+        <property name="jobDetail">    
+            <ref bean="agentCount"/> <!-- 触发器触发的 执行定时任务的bean,前面定义 -->     
+        </property>    
+        <property name="cronExpression">    
+            <value>0 0/2 0-23 * * ?</value>   <!-- 每天0-2时,每小时的等一分钟触发一次   -->  <!-- 定时任务执行的间隔 --> 
+        </property>    
+    </bean>  
+
+ 	<bean id="tradelogCountTrigger"    
+        class="org.springframework.scheduling.quartz.CronTriggerBean">    
+        <property name="jobDetail">    
+            <ref bean="TradeLogCountTask"/> <!-- 触发器触发的 执行定时任务的bean,前面定义 -->     
+        </property>    
+        <property name="cronExpression">    
+            <value>0 0/2 0-23 * * ?</value>   <!-- 每天0-2时,每小时的等一分钟触发一次   -->  <!-- 定时任务执行的间隔 --> 
+        </property>    
+    </bean>  
+
+	<!-- 调度器 -->  
+	<bean name="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">  
+		<!--必须，QuartzScheduler 延时启动，应用启动后 QuartzScheduler 再启动-->  
+		<property name="startupDelay" value="60"/>          
+		<!-- 触发器列表-->  
+		<property name="triggers">  
+		    <list>                  
+		       <!-- <ref local="agentCountTrigger"/>-->  
+		        <ref local="tradelogCountTrigger"/>
+		    </list>  
+		</property>  
+	</bean>  
+
+
+</beans>

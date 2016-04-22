@@ -1,0 +1,9 @@
+A:link { COLOR: #0000FF; TEXT-DECORATION: none;}
+A:visited { COLOR: #0000FF; TEXT-DECORATION: none}
+A:active  { COLOR: #3333ff; TEXT-DECORATION: none}
+A:hover   { COLOR: #ff0000; TEXT-DECORATION: none}
+
+body { font-size: 12pt; scrollbar-3dlight-color:#170708; scrollbar-arrow-color:#000000; scrollbar-base-color:#170708; scrollbar-darkshadow-color:#ffffff; scrollbar-face-color:#EEEAEB; scrollbar-highlight-color:#FBFDFC; scrollbar-shadow-color:#170708}
+.panel{ BACKGROUND: #C4D9EF; background-image: url("../image/bg.gif"); COLOR:#654125;}
+.col{ BACKGROUND: #C4D9EF;background-image:url("../image/col.gif")}
+.small  { font-size: 9pt;}

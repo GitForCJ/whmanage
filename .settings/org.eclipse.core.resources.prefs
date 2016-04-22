@@ -1,0 +1,27 @@
+#Tue Jun 02 15:33:44 GMT+08:00 2015
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/project-config/project.properties=GBK
+encoding//WebRoot/business/business.jsp=GB2312
+encoding//WebRoot/content/wltcontent.jsp=GB2312
+encoding//WebRoot/help=UTF-8
+encoding//WebRoot/help/cftcz.html=UTF-8
+encoding//WebRoot/help/edzy.html=UTF-8
+encoding//WebRoot/help/jycz.html=UTF-8
+encoding//WebRoot/help/jymx.html=UTF-8
+encoding//WebRoot/help/loginandregist.html=UTF-8
+encoding//WebRoot/help/mac.html=UTF-8
+encoding//WebRoot/help/sjczwt.html=UTF-8
+encoding//WebRoot/help/trade.html=UTF-8
+encoding//WebRoot/help/xgmm.html=UTF-8
+encoding//WebRoot/help/yzfzz.html=UTF-8
+encoding//WebRoot/help/zhcz.html=UTF-8
+encoding//WebRoot/help/zwcx.html=UTF-8
+encoding//WebRoot/js/phonepay.js=UTF-8
+encoding//WebRoot/js/selectCss.js=GBK
+encoding//WebRoot/js/util.js=GBK
+encoding//WebRoot/rights/tdyh.html=UTF-8
+encoding//WebRoot/wlttencent/tepay222.jsp=GBK
+encoding//src/cn/com/WebXml/IpAddressSearchWebService.java=UTF-8
+encoding//src/cn/com/WebXml/IpAddressSearchWebServiceLocator.java=UTF-8
+encoding//src/com/wlt/webm/business/bean/unicom3gquery/EncodeUtils.java=UTF-8
+encoding/<project>=GBK

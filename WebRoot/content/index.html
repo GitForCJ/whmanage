@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<LINK REL="stylesheet" type="text/css" href="css/tree.css"/>
+<SCRIPT LANGUAGE="Javascript" SRC="tree/tree.js"></SCRIPT>
+<SCRIPT LANGUAGE="Javascript" SRC="common/css.js"></SCRIPT>
+</HEAD>
+<BODY ONLOAD="initialize()" ONSELECTSTART="return false" TOPMARGIN="0" LEFTMARGIN="0">
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+  <TR STYLE="background-color: #5389bc;">
+    <TD><DIV CLASS="bOut" ONMOUSEOVER="swapClass(this, 'bOver')" ONMOUSEOUT="swapClass(this, 'bOut')" ONCLICK="expandAll(folderTree)">Expand</DIV></TD>
+    <TD><DIV CLASS="bOut" ONMOUSEOVER="swapClass(this, 'bOver')" ONMOUSEOUT="swapClass(this, 'bOut')" ONCLICK="collapse(folderTree)">Minimize</DIV></TD>
+    <TD WIDTH="100%"></TD>
+  </TR>
+</TABLE>
+
+<!-- Folder Tree Container -->
+<DIV id="folderTree" STYLE="padding-top: 8px;"></DIV>
+
+</BODY>
+</HTML>

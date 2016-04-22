@@ -1,0 +1,10 @@
+#Mon Jan 20 09:52:11 CST 2014
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/project-config/project.properties=GBK
+encoding//WebRoot/business/business.jsp=GB2312
+encoding//WebRoot/content/wltcontent.jsp=GB2312
+encoding//WebRoot/js/phonepay.js=UTF-8
+encoding//WebRoot/js/selectCss.js=UTF-8
+encoding//WebRoot/js/util.js=GBK
+encoding//WebRoot/wlttencent/tepay222.jsp=GBK
+encoding/<project>=GBK

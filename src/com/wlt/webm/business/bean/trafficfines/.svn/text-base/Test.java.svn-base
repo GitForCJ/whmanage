@@ -1,0 +1,25 @@
+package com.wlt.webm.business.bean.trafficfines;
+
+import com.alibaba.fastjson.JSON;
+
+public class Test {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		
+		//测试获取token
+		String url="http://59.41.186.76:13278/api/sys/login";
+		TokenRequest tokenreq=new TokenRequest();
+		tokenreq.setAccount("111");
+		tokenreq.setPassword("11");
+        String res=PublicMethod.sendMsgRequest(url, JSON.toJSONString(tokenreq));
+        System.out.println("获取token:"+res);
+        TokenResponse  resp=JSON.parseObject(res, TokenResponse.class);
+        
+        
+	}
+
+}

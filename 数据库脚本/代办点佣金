@@ -1,0 +1,13 @@
+SELECT * FROM sys_user WHERE user_ename LIKE '%Œ‚¿˚¥®%'
+
+SELECT * FROM sys_area
+
+SELECT * FROM wht_orderform_1504 WHERE user_name='13828193874' AND fee=100000 ORDER BY tradetime
+
+SELECT * FROM sys_user WHERE user_id=1362
+
+SELECT * FROM sys_employ0
+
+SELECT a.value,b.value FROM sys_employ0 a,wht_agentAnduser b 
+WHERE a.id=b.employ0id AND a.pid=35 AND a.type=1 AND b.flag=0 AND a.cm_id='wh100200'
+AND b.userno='0004661383'

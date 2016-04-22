@@ -1,0 +1,26 @@
+#MerchantID
+chinapay.merid = 808080211300507
+
+#MerchantKey FilePath
+chinapay.merkey.filepath = D:\\E\u76d8\\\u94f6\u8054\\MerPrk.key
+
+#PublicKey FilePath
+chinapay.pubkey.filepath = D:\\E\u76d8\\\u94f6\u8054\\PgPubk.key
+
+#Payment PostURL(Test environment)
+chinapay.payment.url = http://sfj.chinapay.com/dac/SinCutServletGBK
+
+#Payment PostURL(Production environment)
+#chinapay.payment.url = http://apps.chinapay.com/witsingletran/WitSinTranServlet    
+
+#WhiteList PostURL(Test environment)
+chinapay.WhiteList.url = http://sfj.chinapay.com/dac/WhitelistServletGBK 
+
+#WhiteList PostURL(Production environment)
+#chinapay.WhiteList.url = http://apps.chinapay.com/whitelist/WhitelistServlet  
+
+#Query PostURL(Test environment)
+chinapay.query.url = http://sfj.chinapay.com/dac/SinCutQueryServletGBK
+
+#Query PostURL(Production environment)
+#chinapay.query.url = http://apps.chinapay.com/singlequery/SingleQuery 

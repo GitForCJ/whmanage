@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/system/task.do" location="0,0" dimension="311,88" />
+  <StrutsActivity path="/system/custerror.do" location="650,50" dimension="347,88" />
+  <StrutsActivity path="/operation/tradereturnlist.jsp" location="650,250" dimension="170,49" />
+  <StrutsActivity path="/operation/tradebacklist.jsp" location="950,250" dimension="162,49" />
+  <StrutsActivity path="/system/tradelog.do" />
+  <StrutsActivity path="/system/tradereturnlist.jsp" />
+  <StrutsActivity path="/system/tradebacklist.jsp" />
+  <StrutsTransition id="/operation/tradelog.do,returnSuccess,/operation/tradereturnlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="396,224" />
+      <AbsolutePoint location="735,224" />
+      <AbsolutePoint location="735,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/tradelog.do,backSuccess,/system/tradebacklist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/tradelog.do,returnSuccess,/system/tradereturnlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation/tradelog.do,backSuccess,/operation/tradebacklist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="396,194" />
+      <AbsolutePoint location="1031,194" />
+      <AbsolutePoint location="1031,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

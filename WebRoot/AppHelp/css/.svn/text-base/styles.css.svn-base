@@ -1,0 +1,139 @@
+﻿
+/** Reset */
+* {
+	font-family: "museo500", "Arial","微软雅黑";
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	text-decoration: none;
+	box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+}
+
+/**
+ *  START FREEBIE STYLES
+ */
+
+ 	/*! Font Faces */
+@font-face {
+ font-family: 'museo500',"微软雅黑";
+ font-weight: normal;
+ font-style: normal;
+}
+
+
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body {font-size: 1.4rem;/*1.4 × 10px = 14px */}
+body{
+	background:#FFF;
+    color: #000;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    font-size: 1.4rem;
+}
+
+/*! Freebie Skelet */
+	ul.expmenu {
+	width: 100%;
+}
+ul.expmenu * {
+	list-style: none;
+}
+ul.expmenu > li > div.header {
+	padding: 16px;
+	border-bottom: 1px #c6c6c6 solid;
+	font-size:1.4rem;
+	height:60px;
+}
+ul.expmenu > li:last-child > div.header {
+	border-bottom: none;
+}
+ul.expmenu > li ul li {
+	background-color: #dfdfdf;
+	padding: 14px;
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #fff;
+	color: #666;
+	font-size: 1.4rem;
+	line-height:24px;
+}
+ul.expmenu > li ul li:last-child {
+	border-bottom: none;
+}
+ul.expmenu > li ul li.selected {
+	background-color: #f4f4f4;
+}
+ul.expmenu div.header {
+	background:#efefef;
+}
+ul.expmenu > li > div.header > .label {
+	/*padding-left: 24px;*/
+	background: no-repeat;
+	color:#2d2d2d;
+	float:left;
+	width:94%;
+	font-size:1.6rem;
+}
+ul.expmenu > li > div.header > .arrow {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: no-repeat center;
+	float: right;
+}
+ul.expmenu > li > div.header > .arrow.up {
+	background-image: url(../images/arrow_u.png);
+}
+ul.expmenu > li > div.header > .arrow.down {
+	background-image: url(../images/arrow_d.png);
+}
+/* Mouse Events */
+ul.expmenu div.header:hover {
+	
+}
+ ul.expmenu > li ul li:not(.selected):hover {
+ background: #e7e7e7; /* Old browsers */
+ cursor: pointer;
+}
+ ul.expmenu > li ul li:not(.selected):active {
+ background: #f1f1f1; /* Old browsers */
+ cursor: pointer;
+}
+/**
+ *  END FREEBIE STYLES
+ */
+	
+
+/**
+ *	Not important styles
+ */
+body {
+	color: #b1b1b1;
+	background: #fff; /* Old browsers */
+	font-family: "微软雅黑";
+}
+ul#pagination-freebie {
+	display: table;
+	padding-right: 20px;
+	margin: 20px auto;
+	list-style: none;
+}
+ul#pagination-freebie:last-child {
+	padding-right: 0;
+}
+ul#pagination-freebie li {
+	float: left;
+	margin-bottom: 20px
+}
+ul#pagination-freebie li:last-child {
+	margin-right: 0;
+}
+
+div#content {
+	display: block;
+	width:100%;
+	margin: 0 auto;
+}

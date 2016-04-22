@@ -1,0 +1,28 @@
+
+
+SELECT * FROM wht_qbbreakrecord_1505
+
+SELECT * FROM wht_orderform_1506
+
+SELECT * FROM wht_acctbill_1506
+
+SHOW CREATE TABLE wht_acctbill_1505
+
+ CREATE TABLE `wht_acctbill_1506` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `childfacct` VARCHAR(17) NOT NULL,
+  `dealserial` VARCHAR(50) NOT NULL,
+  `tradeaccount` VARCHAR(30) NOT NULL,
+  `tradetime` VARCHAR(14) NOT NULL,
+  `tradefee` BIGINT(20) DEFAULT NULL,
+  `infacctfee` BIGINT(20) DEFAULT NULL,
+  `tradetype` INT(11) NOT NULL,
+  `expl` VARCHAR(11) NOT NULL,
+  `state` INT(11) NOT NULL,
+  `distime` VARCHAR(14) NOT NULL,
+  `accountleft` BIGINT(20) DEFAULT NULL,
+  `tradeserial` VARCHAR(50) NOT NULL,
+  `other_childfacct` VARCHAR(40) DEFAULT NULL,
+  `pay_type` INT(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8

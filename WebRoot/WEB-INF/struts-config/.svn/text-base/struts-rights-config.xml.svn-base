@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+	<struts-config>
+		<form-beans>
+			<form-bean name="sysUserForm" type="com.wlt.webm.rights.form.SysUserForm" />
+			<form-bean name="sysAreaForm" type="com.wlt.webm.rights.form.SysAreaForm" />
+			<form-bean name="sysRoleForm" type="com.wlt.webm.rights.form.SysRoleForm" />
+			<form-bean name="sysCommissionForm" type="com.wlt.webm.business.form.SysCommissionForm" />
+			<form-bean name="sysRebateForm" type="com.wlt.webm.business.form.SysRebateForm" /> 
+			<form-bean name="prodForm" type="com.wlt.webm.business.form.BiProdForm" /> 
+			<form-bean name="sanForm" type="com.wlt.webm.business.form.BiSanForm" /> 
+			<form-bean name="jtfkForm" type="com.wlt.webm.business.form.JtfkForm" /> 
+			<form-bean name="sysLoginUserForm" type="com.wlt.webm.rights.form.SysLoginUserForm" />
+			<form-bean name="sysUserBankForm" type="com.wlt.webm.rights.form.SysUserBankForm" />
+			<form-bean name="stypeForm" type="com.wlt.webm.business.form.SysInterfaceTypeForm" /> 
+			<form-bean name="userInterfaceForm" type="com.wlt.webm.business.form.SysUserInterfaceForm" /> 
+			<form-bean name="paForm" type="com.wlt.webm.business.form.SysPhoneAreaForm" />
+			<form-bean name="ordForm" type="com.wlt.webm.business.form.OrderForm" />
+			<form-bean name="acctForm" type="com.wlt.webm.business.form.AcctBillForm" />
+			<form-bean name="bankForm" type="com.wlt.webm.business.form.BankLogForm" />
+			<form-bean name="noticeForm" type="com.wlt.webm.rights.form.SysNoticeForm" />
+			
+			<form-bean name="cityReportForm" type="com.wlt.webm.business.form.CityReportForm" />
+			<form-bean name="tasklogForm" type="com.wlt.webm.business.form.TaskForm" />
+			<form-bean name="checkAccountErrorForm" type="com.wlt.webm.business.form.CheckAccountErrorForm" />
+			<form-bean name="checkAccountErrorLogForm" type="com.wlt.webm.business.form.CheckAccountErrorLogForm" />
+			<form-bean name="reversalForm" type="com.wlt.webm.rights.form.ReversalForm" />
+			<form-bean name="tpForm" type="com.wlt.webm.business.form.TPForm" />
+			<form-bean name="autoForm" type="com.wlt.webm.rights.form.AutoCreateUser" />
+		</form-beans>
+
+		<action-mappings>
+			<action path="/rights/sysuser" name="sysUserForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.SysUserAction" validate="false">
+				<forward name="login_success" path="/rights/wltframe.jsp" />
+				<forward name="listsuccess" path="/rights/wltuserlist.jsp" />
+				<forward name="success" path="/rights/wltuseraddsus.jsp" />
+				<forward name="updatesuccess" path="/rights/sysuser.do?method=list" />
+				<forward name="login_fail" path="/rights/wltlogin.jsp" />
+				<forward name="login_out" path="/rights/wltlogin.jsp" />
+				<forward name="transchildsuccess" path="/business/wlttranschild.jsp" />
+			</action>
+			<action path="/rights/notice" name="noticeForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.SysNoticeAction" validate="false">
+				<forward name="success" path="/rights/wltnoticelist.jsp" />
+			</action>
+			<action path="/rights/sysarea" name="sysAreaForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.SysAreaAction" validate="false">
+				<forward name="success" path="/rights/wltarealist.jsp" />
+			</action>
+				<action path="/rights/sysrole" name="sysRoleForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.SysRoleAction" validate="false">
+				<forward name="success" path="/rights/wltrolelist.jsp" />
+			</action>
+			<action path="/rights/reversal" name="reversalForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.ReversalAction" validate="false">
+			</action>
+			
+			<action path="/business/syscommission" name="sysCommissionForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.SysCommissionAction" validate="false">
+				<forward name="success1" path="/business/wltcommissionlist.jsp" />
+				<forward name="success2" path="/business/wltcommissiontclist.jsp" />
+				<forward name="success3" path="/business/wltcommissionslist.jsp" />
+				<forward name="success4" path="/business/wltcommissionjklist.jsp" />
+				<forward name="success5" path="/business/wltcommissionjtlist.jsp" />
+				<forward name="successcheckmx" path="/business/wltcommissioncheckmx.jsp" />
+				<forward name="successchecktcmx" path="/business/wltcommissionchecktcmx.jsp" />
+				<forward name="successchecksmx" path="/business/wltcommissionchecksmx.jsp" />
+				<forward name="successcheckjkmx" path="/business/wltcommissioncheckjkmx.jsp" />
+				<forward name="successcheckjtmx" path="/business/wltcommissioncheckjtmx.jsp" />
+			</action>
+			<action path="/business/sysrebate" name="sysRebateForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.SysRebateAction" validate="false">
+				<forward name="success" path="/business/wltrebatelist.jsp" />
+			</action>
+			<action path="/business/prod" name="prodForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.BiProdAction" validate="false">
+				<forward name="success" path="/business/wltprodlist.jsp" />
+			</action>
+			<action path="/business/prod" name="sanForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.BiProdAction" validate="false">
+				<forward name="success" path="/business/wltsanlist.jsp" />
+			</action>
+			<action path="/business/jtfk" name="jtfkForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.JtfkAction" validate="false">
+				<forward name="success" path="/business/weizhanglist.jsp" />
+				<forward name="paysuccess" path="/business/weizhangchaxun.jsp" />
+			</action>
+			<action path="/rights/sysloginuser" name="sysLoginUserForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.SysLoginUserAction" validate="false">
+				<forward name="success" path="/" />
+			</action>
+			<action path="/rights/sysuserbank" name="sysUserBankForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.SysUserBankAction" validate="false">
+				<forward name="success" path="/rights/wltuserbanklist.jsp" />
+			</action>
+			<action path="/business/sit" name="stypeForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.SysInterfaceTypeAction" validate="false">
+				<forward name="success" path="/business/wltinterfacetypelist.jsp" />
+			</action>
+			<action path="/business/sui" name="userInterfaceForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.SysUserInterfaceAction" validate="false">
+				<forward name="success" path="/business/wltuserinterfacelist.jsp" />
+			</action>
+			<action path="/business/spa" name="paForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.SysPhoneAreaAction" validate="false">
+				<forward name="success" path="/business/wltphonearealist.jsp" />
+				<forward name="addsuccess" path="/business/spa.do?method=list" redirect="true"/>
+			</action>
+			<action path="/business/order" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.OrderAction" validate="false">
+				<forward name="success" path="/business/wltorderlist.jsp" />
+				<forward name="jtfkDetail" path="/business/orderjtfk.jsp" />
+				<forward name="chargeDetail" path="/business/ordercharge.jsp" />
+				<forward name="qbDetail" path="/business/orderqb.jsp" />
+				<forward name="reverseSuccess" path="/business/wltreverselist.jsp" />
+				<forward name="zshsuccess" path="/business/zshorderlist.jsp" />
+			</action>
+			<action path="/business/checkAccountError" name="checkAccountErrorForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.CheckAccountErrorAction" validate="false">
+				<forward name="success" path="/task/checkAccountErrorList.jsp" />
+			</action>
+			<action path="/business/checkAccountErrorLog" name="checkAccountErrorLogForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.CheckAccountErrorLogAction" validate="false">
+				<forward name="success" path="/task/checkAccountErrorLogList.jsp" />
+			</action>
+			<action path="/business/mobileCharge" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.MobileChargeAction" validate="false">
+				<forward name="success" path="/business/business.jsp" />
+				<forward name="mobilecharge" path="/business/business.jsp" />
+				<forward name="reverse" redirect="true" path="/business/order.do?method=listReverse" />
+			</action>
+			<action path="/business/zshCharge" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.ZshChargeAction" validate="false">
+			</action>
+			<action path="/business/zhiFuBaoCharge" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.ZhiFuBaoChargAction" validate="false">
+			</action>
+			<action path="/xunjie/xjaction" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.xunjie.action.XjAction" validate="false">
+				<forward name="success" path="/business/xjydbusiness.jsp" />
+				<forward name="mobilecharge" path="/business/xjydbusiness.jsp" />
+			</action>
+			<action path="/business/CmccAction" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.cmcc.CmccAction" validate="false">
+				<forward name="success" path="/business/cmccbusiness.jsp" />
+				<forward name="cmcccharge" path="/business/cmccbusiness.jsp" />
+			</action>
+			<action path="/business/UnicomAction" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.unicom.UnicomAction" validate="false">
+				<forward name="success" path="/business/unicombusiness.jsp" />
+				<forward name="unicomharge" path="/business/unicombusiness.jsp" />
+			</action>
+			<action path="/oufei/rcharge" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.OuFeiChargeReturnAction" validate="false">
+			</action>
+			<action path="/jiebei/rcharge" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.JieBeiChargeReturnAction" validate="false">
+			</action>
+			<action path="/business/acctbill" name="acctForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.AccountBillAction" validate="false">
+				<forward name="success" path="/business/wltacctbilllist.jsp" />
+				<forward name="commSuccess" path="/business/wltcommissionbilllist.jsp" />
+				<forward name="incomeSuccess" path="/business/wltincomebilllist.jsp" />
+				<forward name="yjSuccess" path="/business/wltyjbilllist.jsp" />
+			</action>
+			<action path="/business/bank" name="bankForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.NetPayAction" validate="false">
+				<forward name="transforwad" path="/business/wlttrans.jsp" />
+				<forward name="transnext" path="/business/wlttransnext.jsp" />
+				<forward name="loglist" path="/business/wltbankloglist.jsp" />
+			</action>
+			<action path="/business/banklog" name="bankForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.BankLogAction" validate="false">
+				<forward name="loglist" path="/business/wltbankloglist.jsp" />
+			</action>
+			
+			
+			<action path="/report/tradeLogCount" name="cityReportForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.TradeLogCityAction" validate="false">
+				<forward name="enter" path="/ejet/wlt_tradelogcitycount.jsp" />
+				<forward name="query" path="/ejet/wlt_tradelogcitycountlist.jsp" /> 
+				<forward name="export" path="/ejet/wlt_tradelogcitycount_export.jsp"></forward>
+			</action>
+			
+			
+			<action path="/report/tradeLogAgent" name="cityReportForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.TradeLogAgentAction" validate="false">
+				<forward name="enter" path="/ejet/wlt_tradelogAgentcount.jsp" />
+				<forward name="query" path="/ejet/wlt_tradelogAgentcountlist.jsp" /> 
+				<forward name="export" path="/ejet/wlt_tradelogAgentcount_export.jsp"></forward>
+			</action>
+			
+			<action path="/kami/fill" name="ordForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.kaimi.action.KMfill" validate="false">
+			</action>
+			
+			<action path="/report/tasklogmanage" name="tasklogForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.TaskLogManageAction" validate="false">
+				<forward name="query" path="/ejet/wlt_tasklistcount.jsp" /> 
+			</action>
+			
+			<action path="/report/citydaycount" name="tasklogForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.TaskLogManageAction" validate="false">
+				<forward name="query" path="/ejet/wlt_tasklistcount.jsp" /> 
+			</action>
+			
+			<action path="/report/agentdaycount" name="cityReportForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.TaskLogManageAction" validate="false">
+				<forward name="query" path="/ejet/wlt_tasklistcount.jsp" /> 
+			</action>
+			<action path="/tpcharge" name="tpForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.business.action.TPcharge" validate="false">
+			</action>
+			
+			<action path="/rights/auto" name="autoForm"
+				scope="request" parameter="method"
+				type="com.wlt.webm.rights.action.CreateUsers" validate="false">
+			</action>
+			
+		</action-mappings>
+	</struts-config>
+
+

@@ -1,0 +1,319 @@
+[INFO ]2016-03-29 10:21:11,769 MESSAGE : 0123456789 操作QUERY请求应答码:200
+[INFO ]2016-03-29 10:21:11,771 MESSAGE : 0123456789 操作QUERY响应结果:1|1|0123456789
+[INFO ]2016-03-29 11:08:32,221 MESSAGE : 123456789 操作FILL请求应答码:200
+[INFO ]2016-03-29 11:08:32,224 MESSAGE : 123456789 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-03-29 11:08:44,386 MESSAGE : 1234567809 操作FILL请求应答码:200
+[INFO ]2016-03-29 11:08:44,387 MESSAGE : 1234567809 操作FILL响应结果:0|充值已经提交成功，请等待结果
+[INFO ]2016-03-29 11:12:12,462 MESSAGE : 123895642 操作FILL请求应答码:200
+[INFO ]2016-03-29 11:12:12,463 MESSAGE : 123895642 操作FILL响应结果:0|充值已经提交成功，请等待结果
+[INFO ]2016-03-29 18:03:59,274 MESSAGE : 0123895642 操作FILL请求应答码:200
+[INFO ]2016-03-29 18:03:59,276 MESSAGE : 0123895642 操作FILL响应结果:0|充值已经提交成功，请等待结果
+[INFO ]2016-03-29 18:09:11,080 MESSAGE : 00123895642 操作FILL请求应答码:200
+[INFO ]2016-03-29 18:09:11,095 MESSAGE : 00123895642 操作FILL响应结果:0|充值已经提交成功，请等待结果
+[INFO ]2016-04-08 14:28:13,541 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:28:13,589 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:28:14,151 MESSAGE : 0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 14:29:18,546 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:29:18,546 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:29:18,671 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR]2016-04-08 14:31:29,646 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 14:32:16,852 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:32:16,852 MESSAGE : Retrying request
+[INFO ]2016-04-08 14:32:16,883 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:32:16,883 MESSAGE : Retrying request
+[INFO ]2016-04-08 14:32:16,915 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:32:16,915 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:32:16,946 MESSAGE : 00123895642 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:32:34,728 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:32:34,728 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:32:34,790 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 14:34:42,313 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:34:42,313 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:34:42,375 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 14:57:35,184 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:57:35,184 MESSAGE : Retrying request
+[INFO ]2016-04-08 14:57:35,215 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:57:35,215 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:57:35,277 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 14:57:48,997 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:57:48,997 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:57:49,028 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 14:58:16,045 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 14:58:16,045 MESSAGE : Retrying request
+[ERROR]2016-04-08 14:58:16,092 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:13:19,047 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:13:19,047 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:13:19,078 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:13:34,833 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:13:34,833 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:13:34,849 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:13:54,821 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:13:54,821 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:13:54,836 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:20:10,594 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:20:10,594 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:20:10,625 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR]2016-04-08 15:26:27,423 MESSAGE : 00123895642 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:31:27,314 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:31:27,314 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:31:27,345 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:32:11,583 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:32:11,583 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:32:11,598 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:39:56,508 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:39:56,524 MESSAGE : Retrying request
+[INFO ]2016-04-08 15:39:56,524 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:39:56,524 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:39:56,555 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:43:37,435 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:43:37,437 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:43:37,452 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:45:24,206 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:45:24,206 MESSAGE : Retrying request
+[INFO ]2016-04-08 15:45:24,221 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:45:24,221 MESSAGE : Retrying request
+[INFO ]2016-04-08 15:45:24,299 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:45:24,299 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:45:24,331 MESSAGE : 00123895641 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:48:08,015 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:48:08,015 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:48:08,141 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:52:26,089 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:52:26,089 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:52:26,105 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[ERROR]2016-04-08 15:54:35,332 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 15:57:31,499 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 15:57:31,501 MESSAGE : Retrying request
+[ERROR]2016-04-08 15:57:31,523 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 16:04:53,151 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:04:53,166 MESSAGE : Retrying request
+[ERROR]2016-04-08 16:04:53,182 MESSAGE : 0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 16:21:04,441 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:21:04,441 MESSAGE : Retrying request
+[ERROR]2016-04-08 16:21:04,472 MESSAGE : 0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 16:32:13,816 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-08 16:32:13,816 MESSAGE : Retrying request
+[INFO ]2016-04-08 16:32:34,834 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-08 16:32:34,834 MESSAGE : Retrying request
+[INFO ]2016-04-08 16:32:34,851 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:32:34,851 MESSAGE : Retrying request
+[ERROR]2016-04-08 16:32:34,898 MESSAGE : 0123456789 操作QUERY 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 16:33:01,150 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:33:01,150 MESSAGE : Retrying request
+[ERROR]2016-04-08 16:33:01,197 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 16:33:29,073 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:33:29,073 MESSAGE : Retrying request
+[INFO ]2016-04-08 16:33:29,105 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:33:29,105 MESSAGE : Retrying request
+[INFO ]2016-04-08 16:33:29,120 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:33:29,120 MESSAGE : Retrying request
+[ERROR]2016-04-08 16:33:29,183 MESSAGE : 00123895641 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:37:05,345 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 16:37:05,345 MESSAGE : Retrying request
+[ERROR]2016-04-08 16:37:05,454 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 17:14:49,812 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 17:14:49,812 MESSAGE : Retrying request
+[ERROR]2016-04-08 17:14:49,828 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 17:28:12,599 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-08 17:28:12,599 MESSAGE : Retrying request
+[ERROR]2016-04-08 17:28:12,614 MESSAGE : 00123895641 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-08 17:36:56,270 MESSAGE : 00123895641 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:36:56,271 MESSAGE : 00123895641 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-08 17:37:28,373 MESSAGE : 00123895641 操作QUERY请求应答码:200
+[INFO ]2016-04-08 17:37:28,375 MESSAGE : 00123895641 操作QUERY响应结果:1|-1|00123895641
+[INFO ]2016-04-08 17:38:24,706 MESSAGE : 00123895641 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:38:24,706 MESSAGE : 00123895641 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-08 17:38:37,363 MESSAGE : 00123895632 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:38:37,363 MESSAGE : 00123895632 操作FILL响应结果:id CRBYF0      
+[INFO ]2016-04-08 17:39:25,200 MESSAGE : 00123895632 操作QUERY请求应答码:200
+[INFO ]2016-04-08 17:39:25,200 MESSAGE : 00123895632 操作QUERY响应结果:1|-1|00123895632
+[INFO ]2016-04-08 17:42:08,733 MESSAGE : 00123895632 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:42:08,733 MESSAGE : 00123895632 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-08 17:42:21,052 MESSAGE : 00123895633 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:42:21,052 MESSAGE : 00123895633 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-08 17:44:06,261 MESSAGE : 00123895644 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:44:06,261 MESSAGE : 00123895644 操作FILL响应结果:id CRBYF0      
+[INFO ]2016-04-08 17:46:24,598 MESSAGE : 00123895645 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:46:24,598 MESSAGE : 00123895645 操作FILL响应结果:id CRBYF@     
+[INFO ]2016-04-08 17:47:27,416 MESSAGE : 00123895646 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:47:27,416 MESSAGE : 00123895646 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-08 17:57:16,336 MESSAGE : 00123895646 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:57:16,352 MESSAGE : 00123895646 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-08 17:57:24,634 MESSAGE : 00123895647 操作FILL请求应答码:200
+[INFO ]2016-04-08 17:57:24,634 MESSAGE : 00123895647 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-08 18:00:32,706 MESSAGE : 00123895648 操作FILL请求应答码:200
+[INFO ]2016-04-08 18:00:32,706 MESSAGE : 00123895648 操作FILL响应结果:-1|没有找到对应商品
+[INFO ]2016-04-08 18:00:46,597 MESSAGE : 00123895648 操作FILL请求应答码:200
+[INFO ]2016-04-08 18:00:46,597 MESSAGE : 00123895648 操作FILL响应结果:id CRBYF@     
+[INFO ]2016-04-08 18:00:58,818 MESSAGE : 00123895648 操作FILL请求应答码:200
+[INFO ]2016-04-08 18:00:58,818 MESSAGE : 00123895648 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-08 18:01:06,288 MESSAGE : 00123895649 操作FILL请求应答码:200
+[INFO ]2016-04-08 18:01:06,288 MESSAGE : 00123895649 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-11 10:09:31,118 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-11 10:09:31,118 MESSAGE : Retrying request
+[INFO ]2016-04-11 10:09:31,134 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-11 10:09:31,134 MESSAGE : Retrying request
+[ERROR]2016-04-11 10:09:31,150 MESSAGE : 00123895650 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-11 10:53:34,752 MESSAGE : 00123895650 操作FILL请求应答码:200
+[INFO ]2016-04-11 10:53:34,752 MESSAGE : 00123895650 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-11 14:22:37,111 MESSAGE : 00123895650 操作FILL请求应答码:200
+[INFO ]2016-04-11 14:22:37,111 MESSAGE : 00123895650 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-11 14:27:24,860 MESSAGE : 00123895651 操作FILL请求应答码:200
+[INFO ]2016-04-11 14:27:24,860 MESSAGE : 00123895651 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-11 14:33:56,950 MESSAGE : 00123895653 操作FILL请求应答码:200
+[INFO ]2016-04-11 14:33:56,965 MESSAGE : 00123895653 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-11 14:42:02,883 MESSAGE : 00123895654 操作FILL请求应答码:200
+[INFO ]2016-04-11 14:42:02,898 MESSAGE : 00123895654 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-11 14:42:13,383 MESSAGE : 00123895654 操作FILL请求应答码:200
+[INFO ]2016-04-11 14:42:13,383 MESSAGE : 00123895654 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-11 14:42:20,212 MESSAGE : 00123895655 操作FILL请求应答码:200
+[INFO ]2016-04-11 14:42:20,212 MESSAGE : 00123895655 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-11 14:55:01,342 MESSAGE : 00123895633 操作QUERY请求应答码:200
+[INFO ]2016-04-11 14:55:01,342 MESSAGE : 00123895633 操作QUERY响应结果:1|-1|00123895633
+[INFO ]2016-04-11 14:56:40,468 MESSAGE : 00123895634 操作QUERY请求应答码:200
+[INFO ]2016-04-11 14:56:40,468 MESSAGE : 00123895634 操作QUERY响应结果:0|很抱歉，没有找到您的订单:00123895634
+[INFO ]2016-04-11 14:56:48,343 MESSAGE : 00123895632 操作QUERY请求应答码:200
+[INFO ]2016-04-11 14:56:48,343 MESSAGE : 00123895632 操作QUERY响应结果:1|-1|00123895632
+[INFO ]2016-04-11 15:20:50,408 MESSAGE : 00123895656 操作FILL请求应答码:200
+[INFO ]2016-04-11 15:20:50,408 MESSAGE : 00123895656 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-11 15:21:18,644 MESSAGE : 00123895656 操作FILL请求应答码:200
+[INFO ]2016-04-11 15:21:18,661 MESSAGE : 00123895656 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-11 15:21:23,084 MESSAGE : 00123895657 操作FILL请求应答码:200
+[INFO ]2016-04-11 15:21:23,084 MESSAGE : 00123895657 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-11 15:21:38,368 MESSAGE : 00123895658 操作FILL请求应答码:200
+[INFO ]2016-04-11 15:21:38,368 MESSAGE : 00123895658 操作FILL响应结果:id CRBYF`      
+[INFO ]2016-04-11 15:59:49,537 MESSAGE : 00123895658 操作FILL请求应答码:200
+[INFO ]2016-04-11 15:59:49,537 MESSAGE : 00123895658 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-11 16:00:02,632 MESSAGE : 00123895659 操作FILL请求应答码:200
+[INFO ]2016-04-11 16:00:02,632 MESSAGE : 00123895659 操作FILL响应结果:id CRBYFLOAT 5 
+[INFO ]2016-04-11 16:18:27,922 MESSAGE : 00123895659 操作FILL请求应答码:200
+[INFO ]2016-04-11 16:18:27,938 MESSAGE : 00123895659 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-11 16:18:41,610 MESSAGE : 00123895660 操作FILL请求应答码:200
+[INFO ]2016-04-11 16:18:41,626 MESSAGE : 00123895660 操作FILL响应结果:id CRBYF0     
+[INFO ]2016-04-11 16:20:53,728 MESSAGE : 00123895661 操作FILL请求应答码:200
+[INFO ]2016-04-11 16:20:53,728 MESSAGE : 00123895661 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-11 17:09:35,127 MESSAGE : 00123895661 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:09:35,143 MESSAGE : 00123895661 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-11 17:09:51,316 MESSAGE : 00123895662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:09:51,316 MESSAGE : 00123895662 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-11 17:10:03,832 MESSAGE : 00123895662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:10:03,832 MESSAGE : 00123895662 操作FILL响应结果:-1|没有找到对应商品
+[INFO ]2016-04-11 17:10:12,879 MESSAGE : 00123895662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:10:12,879 MESSAGE : 00123895662 操作FILL响应结果:id CRBYF0      
+[INFO ]2016-04-11 17:10:43,711 MESSAGE : 00123895662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:10:43,711 MESSAGE : 00123895662 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-11 17:13:27,861 MESSAGE : 00123895662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:13:27,861 MESSAGE : 00123895662 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-11 17:13:42,909 MESSAGE : 00123892662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:13:42,909 MESSAGE : 00123892662 操作FILL响应结果:-1|没有找到对应商品
+[INFO ]2016-04-11 17:13:50,222 MESSAGE : 00123892662 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:13:50,222 MESSAGE : 00123892662 操作FILL响应结果:-1|没有找到对应商品
+[INFO ]2016-04-11 17:14:02,363 MESSAGE : 00123892663 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:14:02,379 MESSAGE : 00123892663 操作FILL响应结果:-1|没有找到对应商品
+[INFO ]2016-04-11 17:14:16,318 MESSAGE : 00123892664 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:14:16,318 MESSAGE : 00123892664 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-11 17:16:03,856 MESSAGE : 00123892665 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:16:03,856 MESSAGE : 00123892665 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-11 17:18:21,442 MESSAGE : 00123892667 操作FILL请求应答码:200
+[INFO ]2016-04-11 17:18:21,442 MESSAGE : 00123892667 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 10:20:41,781 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-12 10:20:41,796 MESSAGE : Retrying request
+[ERROR]2016-04-12 10:20:42,046 MESSAGE : 00123892668 操作FILL 系统异常java.net.SocketException: Connection reset
+[INFO ]2016-04-12 10:23:37,534 MESSAGE : 00123892668 操作FILL请求应答码:200
+[INFO ]2016-04-12 10:23:37,534 MESSAGE : 00123892668 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 10:24:06,428 MESSAGE : 00123892668 操作FILL请求应答码:200
+[INFO ]2016-04-12 10:24:06,428 MESSAGE : 00123892668 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-12 10:24:31,367 MESSAGE : 00123892668 操作FILL请求应答码:200
+[INFO ]2016-04-12 10:24:31,367 MESSAGE : 00123892668 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-12 10:24:42,102 MESSAGE : 00123892669 操作FILL请求应答码:200
+[INFO ]2016-04-12 10:24:42,102 MESSAGE : 00123892669 操作FILL响应结果:-1|没有找到对应商品
+[INFO ]2016-04-12 10:24:51,102 MESSAGE : 00123892669 操作FILL请求应答码:200
+[INFO ]2016-04-12 10:24:51,102 MESSAGE : 00123892669 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 10:34:09,850 MESSAGE : 00123892111 操作FILL请求应答码:200
+[INFO ]2016-04-12 10:34:09,850 MESSAGE : 00123892111 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 11:14:41,203 MESSAGE : 00123892112 操作FILL请求应答码:200
+[INFO ]2016-04-12 11:14:41,203 MESSAGE : 00123892112 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 11:15:26,505 MESSAGE : 00123892113 操作FILL请求应答码:200
+[INFO ]2016-04-12 11:15:26,505 MESSAGE : 00123892113 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 11:18:40,765 MESSAGE : 00123892114 操作FILL请求应答码:200
+[INFO ]2016-04-12 11:18:40,765 MESSAGE : 00123892114 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 11:59:26,417 MESSAGE : 00123892115 操作FILL请求应答码:200
+[INFO ]2016-04-12 11:59:26,417 MESSAGE : 00123892115 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 14:26:51,459 MESSAGE : 00123892116 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:26:51,506 MESSAGE : 00123892116 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 14:39:33,022 MESSAGE : 00123892117 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:39:33,022 MESSAGE : 00123892117 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 14:45:40,030 MESSAGE : 00123892118 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:45:40,030 MESSAGE : 00123892118 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 14:46:02,984 MESSAGE : 00123892118 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:46:02,984 MESSAGE : 00123892118 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 14:50:26,684 MESSAGE : 00123892118 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:50:26,684 MESSAGE : 00123892118 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 14:52:13,736 MESSAGE : 00123892118 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:52:13,736 MESSAGE : 00123892118 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 14:52:54,096 MESSAGE : 00123892118 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:52:54,096 MESSAGE : 00123892118 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 14:53:09,380 MESSAGE : 00123892119 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:53:09,380 MESSAGE : 00123892119 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 14:53:22,113 MESSAGE : 00123892119 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:53:22,113 MESSAGE : 00123892119 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-12 14:53:29,988 MESSAGE : 00123892120 操作FILL请求应答码:200
+[INFO ]2016-04-12 14:53:29,988 MESSAGE : 00123892120 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 15:04:16,351 MESSAGE : 00123892121 操作FILL请求应答码:200
+[INFO ]2016-04-12 15:04:16,368 MESSAGE : 00123892121 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 15:06:08,997 MESSAGE : 00123892122 操作FILL请求应答码:200
+[INFO ]2016-04-12 15:06:09,013 MESSAGE : 00123892122 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 15:07:24,190 MESSAGE : 00123892123 操作FILL请求应答码:200
+[INFO ]2016-04-12 15:07:24,190 MESSAGE : 00123892123 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 15:11:05,392 MESSAGE : 00123892123 操作FILL请求应答码:200
+[INFO ]2016-04-12 15:11:05,392 MESSAGE : 00123892123 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 15:17:51,521 MESSAGE : 00123892123 操作FILL请求应答码:200
+[INFO ]2016-04-12 15:17:51,537 MESSAGE : 00123892123 操作FILL响应结果:-1|没有找到合适的商品
+[INFO ]2016-04-12 16:16:32,753 MESSAGE : 00123892123 操作FILL请求应答码:200
+[INFO ]2016-04-12 16:16:32,753 MESSAGE : 00123892123 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 16:16:53,270 MESSAGE : 00123892124 操作FILL请求应答码:200
+[INFO ]2016-04-12 16:16:53,270 MESSAGE : 00123892124 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 19:03:26,579 MESSAGE : 00123892127 操作FILL请求应答码:200
+[INFO ]2016-04-12 19:03:26,596 MESSAGE : 00123892127 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 19:11:06,701 MESSAGE : 00123892128 操作FILL请求应答码:200
+[INFO ]2016-04-12 19:11:06,701 MESSAGE : 00123892128 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-12 19:14:49,871 MESSAGE : 00123892128 操作QUERY请求应答码:200
+[INFO ]2016-04-12 19:14:49,871 MESSAGE : 00123892128 操作QUERY响应结果:1|1|00123892128
+[INFO ]2016-04-13 11:31:01,711 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-13 11:31:01,727 MESSAGE : Retrying request
+[INFO ]2016-04-13 11:31:01,774 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-13 11:31:01,774 MESSAGE : Retrying request
+[INFO ]2016-04-13 11:31:01,821 MESSAGE : I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-13 11:31:01,821 MESSAGE : Retrying request
+[ERROR]2016-04-13 11:31:01,836 MESSAGE : 00123892220 操作FILL 系统异常org.apache.commons.httpclient.NoHttpResponseException: The server 121.201.27.51 failed to respond
+[INFO ]2016-04-13 11:34:13,590 MESSAGE : 00123892220 操作FILL请求应答码:200
+[INFO ]2016-04-13 11:34:13,590 MESSAGE : 00123892220 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-13 11:36:53,369 MESSAGE : 00123892221 操作FILL请求应答码:200
+[INFO ]2016-04-13 11:36:53,369 MESSAGE : 00123892221 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-13 11:38:18,237 MESSAGE : 0012389222 操作FILL请求应答码:200
+[INFO ]2016-04-13 11:38:18,237 MESSAGE : 0012389222 操作FILL响应结果:0|充值提交成功，请等待
+[INFO ]2016-04-13 11:44:16,699 MESSAGE : 0012389222 操作QUERY请求应答码:200
+[INFO ]2016-04-13 11:44:16,699 MESSAGE : 0012389222 操作QUERY响应结果:1|1|0012389222
+[INFO ]2016-04-13 11:44:16,871 MESSAGE : 00123892221 操作FILL请求应答码:200
+[INFO ]2016-04-13 11:44:16,871 MESSAGE : 00123892221 操作FILL响应结果:-1|重复的订单号，请确认订单
+[INFO ]2016-04-13 11:44:25,137 MESSAGE : 0012389222 操作QUERY请求应答码:200
+[INFO ]2016-04-13 11:44:25,137 MESSAGE : 0012389222 操作QUERY响应结果:1|1|0012389222
+[INFO ]2016-04-13 19:13:04,899 MESSAGE : 消息缓存池开始启动...
+[INFO ]2016-04-13 19:13:04,915 MESSAGE : 消息缓存池启动完成...
+[INFO ]2016-04-13 19:13:25,050 MESSAGE : 消息缓存池开始启动...
+[INFO ]2016-04-13 19:13:25,057 MESSAGE : 消息缓存池启动完成...
+[INFO ]2016-04-13 19:30:44,085 MESSAGE : 消息缓存池开始启动...
+[INFO ]2016-04-13 19:30:44,093 MESSAGE : 消息缓存池启动完成...
+[INFO ]2016-04-13 19:31:00,181 MESSAGE : 消息缓存池开始启动...
+[INFO ]2016-04-13 19:31:00,188 MESSAGE : 消息缓存池启动完成...
+[INFO ]2016-04-21 11:03:42,453 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-21 11:03:42,481 MESSAGE : Retrying request
+[INFO ]2016-04-21 11:04:03,493 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-21 11:04:03,494 MESSAGE : Retrying request
+[INFO ]2016-04-21 11:05:54,877 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-21 11:05:54,884 MESSAGE : Retrying request
+[INFO ]2016-04-21 11:06:15,896 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-21 11:06:15,897 MESSAGE : Retrying request
+[INFO ]2016-04-21 11:06:36,899 MESSAGE : I/O exception (java.net.ConnectException) caught when processing request: Connection timed out: connect
+[INFO ]2016-04-21 11:06:36,901 MESSAGE : Retrying request
+[ERROR]2016-04-21 11:06:57,924 MESSAGE : 联动流量产品查询,,系统异常,ex:java.net.ConnectException: Connection timed out: connect

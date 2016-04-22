@@ -1,0 +1,64 @@
+//			if("10008".equals(tradeNo)){//大汉三通流量
+//				//phoneType 0电信  1移动 2联通
+//				switch (Integer.parseInt(phoneType)) {
+//				case 0://电信
+//					tradetype = "0011";
+//					acctType = 29;
+//					miaoshu="三通电信流量";
+//					break;
+//				case 1://移动
+//					tradetype = "0010";
+//					acctType = 28;
+//					miaoshu="三通移动流量";
+//					break;
+//				case 2://联通
+//					tradetype = "0009";
+//					acctType = 27;
+//					miaoshu="三通联通流量";
+//					break;
+//				default:
+//					break;
+//				}
+//				String cm="0";//0 全国   1 省内
+//				String gp=(String) content.get("groups"); //接口商魔板编号
+//				String name=(String) content.get("name"); 
+//				tradeFee=db.getString("select price*1000 from wht_flowprice where type="+phoneType+" and name='"+name+"'");
+//				if("1".equals(isline)){//1直营,接口商
+//					float value=db.getFloat("select value from sys_tpemploy_Flow where type="+phoneType+" and groups='"+gp+"' and cm_addr="+cm);
+//					facctFee=FloatArith.mul(Double.parseDouble(tradeFee),1-FloatArith.div(value, 100))+"";
+//				}else{//代理点
+//					facctFee=""+Double.parseDouble(tradeFee)*Double.parseDouble(DBConfig.getInstance().getLiantong_flow());
+//				}
+//			}
+//			if("10009".equals(tradeNo)){//乐流流量
+//				//phoneType 0电信  1移动 2联通
+//				switch (Integer.parseInt(phoneType)) {
+//				case 0://电信
+//					tradetype = "0011";
+//					acctType = 29;
+//					miaoshu="乐流电信流量";
+//					break;
+//				case 1://移动
+//					tradetype = "0010";
+//					acctType = 28;
+//					miaoshu="乐流移动流量";
+//					break;
+//				case 2://联通
+//					tradetype = "0009";
+//					acctType = 27;
+//					miaoshu="乐流联通流量";
+//					break;
+//				default:
+//					break;
+//				}
+//				String cm="0";//0 全国   1 省内
+//				String gp=(String) content.get("groups"); //接口商魔板编号
+//				String name=(String) content.get("name"); 
+//				tradeFee=db.getString("select price*1000 from wht_flowprice where type="+phoneType+" and name='"+name+"'");
+//				if("1".equals(isline)){//1直营,接口商
+//					float value=db.getFloat("select value from sys_tpemploy_Flow where type="+phoneType+" and groups='"+gp+"' and cm_addr="+cm);
+//					facctFee=FloatArith.mul(Double.parseDouble(tradeFee),1-FloatArith.div(value, 100))+"";
+//				}else{//代理点
+//					facctFee=""+Double.parseDouble(tradeFee)*Double.parseDouble(DBConfig.getInstance().getLiantong_flow());
+//				}
+//			}

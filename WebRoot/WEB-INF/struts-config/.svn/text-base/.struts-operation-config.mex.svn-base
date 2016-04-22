@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/operation/phonepay.do" location="0,387" dimension="358,84" />
+  <StrutsActivity path="/operation/mobilephonepay.do" location="0,0" dimension="394,84" />
+  <StrutsActivity path="/operation/sellcard.do" location="0,516" dimension="358,84" />
+  <StrutsActivity path="/operation/busiagent.do" location="0,129" dimension="364,84" />
+  <StrutsActivity path="/operation/broadband.do" location="0,258" dimension="364,84" />
+  <StrutsActivity path="/operation/reprint.do" location="403,516" dimension="352,84" />
+  <StrutsActivity path="/operation/unionPay.do" location="650,150" dimension="367,104" />
+  <StrutsActivity path="/operation/tenpayResult.do" location="650,350" dimension="372,104" />
+  <StrutsActivity path="/operation/switch.do" location="950,550" dimension="347,104" />
+  <StrutsActivity path="/operation/returnbackservice.do" location="50,650" dimension="454,104" />
+  <StrutsActivity path="/operation/cashback.do" location="650,750" dimension="369,104" />
+  <StrutsActivity path="/operation/commissiontransfer.do" location="50,850" dimension="432,104" />
+  <StrutsActivity path="/operation/xinshengResult.do" location="650,950" dimension="333,104" />
+  <StrutsActivity path="/operation/batchinto.do" location="50,1050" dimension="368,104" />
+  <StrutsActivity path="/operation/fineinFormation.do" />
+  <StrutsActivity path="/operation/informationConfirm.jsp" />
+  <StrutsActivity path="/operation/tradingInquires.jsp" />
+  <StrutsActivity path="/operation/finesInput.jsp" />
+  <StrutsActivity path="/operation/updateTicketInformation.jsp" />
+  <StrutsActivity path="/operation/ticketInformation.jsp" />
+  <StrutsActivity path="/operation/finesThatBusiness.jsp" />
+  <StrutsTransition id="/operation/fineinFormation.do,tradinginquires,/operation/tradingInquires.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation/fineinFormation.do,finesThatBusiness,/operation/finesThatBusiness.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation/fineinFormation.do,ticketInformation,/operation/ticketInformation.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation/fineinFormation.do,informationConfirm,/operation/informationConfirm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation/fineinFormation.do,updateticketInformation,/operation/updateTicketInformation.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation/fineinFormation.do,finesInput,/operation/finesInput.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

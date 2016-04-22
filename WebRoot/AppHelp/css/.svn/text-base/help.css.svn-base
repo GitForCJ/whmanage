@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** Reset */
+* {
+	font-family: "museo500", "Arial","微软雅黑";
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	text-decoration: none;
+	box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+}
+
+
+@font-face {
+ font-family: 'museo500',"微软雅黑";
+ font-weight: normal;
+ font-style: normal;
+}
+
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body {font-size: 1.4rem;/*1.4 × 10px = 14px */}
+body{
+	background:#FFF;
+    color: #000;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    font-size: 1.4rem;
+}
+
+
+section{
+	width:100%;
+	margin:0 auto;
+	border-bottom:1px #333 solid;
+	padding:6px 0;
+}
+
+section h2{
+	width:96%;
+	margin:10px auto;
+	line-height:30px;
+}
+
+section h2 span{
+	display:inline-block;
+	width:24px;
+	height:24px;
+	text-align:center;
+	line-height:24px;
+	background-color:#359BED;
+	border-radius:4px;
+	color:#fff;
+	margin-right:10px;
+}
+
+section p{
+	width:96%;
+	margin:0 auto;
+	line-height:30px;
+}
+
+section p span{
+	display:inline-block;
+	width:24px;
+	height:24px;
+	text-align:center;
+	line-height:24px;
+	background-color:#FA824F;
+	border-radius:4px;
+	color:#fff;
+	margin-right:10px;
+}
+
+
+
+

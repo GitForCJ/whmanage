@@ -1,0 +1,51 @@
+#vdividermenu{
+	padding-top:10px;
+    height:40px;
+	margin: 0 auto;
+	width: 100%;
+	background: #0078B6;
+	overflow: hidden;
+    float:left;
+    vertical-align: middle;
+	/*padding: 20px;*/
+}
+
+#vdividermenu ul{
+vertical-align: middle;
+margin-left: 50px;
+padding: 0;
+margin-bottom: 1em;
+float: left;
+font: bold 15px ËÎÌו;
+width: 100%;;
+/*border: 1px solid #625e00;*/
+background-color: #0078B6;
+}
+
+* html #vdividermenu ul{ /*IE only rule, reduce menu width*/
+width: 99%;
+}
+
+#vdividermenu ul li{
+display: inline;
+}
+
+#vdividermenu ul li a{
+font-family:inherit;
+font-size: 1.5em;
+color:white;
+float: left;
+color:white;
+padding: 5px 5px; 
+text-decoration: none;
+background: transparent url(../image/vertical.gif) center right no-repeat;
+}
+
+#vdividermenu ul li a:visited{
+color:white;
+}
+
+#vdividermenu ul li a:hover{
+color:white;
+background-color: #F7F203;
+}

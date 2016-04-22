@@ -1,0 +1,5 @@
+SELECT * FROM wht_orderform_1507 WHERE term_type=3 AND EXISTS(SELECT '0009','0010','0011') AND state=0
+
+
+SELECT a.userno,a.returnurl,b.tradeserial,b.state   FROM sys_agentsign a LEFT JOIN wht_orderform_1507 b
+ON a.userno=b.userno WHERE a.state=0 AND b.id.n AND b.term_type=3 AND EXISTS(SELECT '0009','0010','0011') AND b.state=0

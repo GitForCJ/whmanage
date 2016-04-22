@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mac地址绑定</title>
+<meta name="description" content="mac地址绑定" />
+<meta name="keywords" content="mac地址绑定" />
+<link href="css/style.css" rel="stylesheet" media="all" type="text/css">
+<!--<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>-->
+</head>
+
+
+<body>
+<div class="fly_wrapper">
+
+	<div class="flymain">
+    	<img src="images/bg_top.jpg" alt=""><!--topBg-->
+       
+       <div class="cz">
+       		<h1>mac地址绑定</h1>
+            
+            <h3>1. 系统用户查看本地MAC地址：<br><br>
+            	<span>1) 打卡开始程序中的“运行”选项；
+                </span>
+            </h3>
+           
+            <img src="images/a11.jpg" alt="">
+            
+            <p style=" margin:30px 0;">2) 在“运行”框中输入 cmd；</p>
+            <img src="images/a22.jpg" alt="">
+            
+            <p style=" margin:30px 0;">3) 在运行对话框中，输入 ipconfig /all ;</p>
+            <img src="images/ipconfig.jpg" alt="">
+            
+            <p style=" margin:30px 0;">4) 然后回车；标红区域为本机有线MAC地址和无线MAC地址。</p>
+            <img src="images/macaddress.jpg" alt="">
+            
+            
+            <h3>2. MAC地址绑定：<br><br>
+            	<span>1)  IE浏览器设置：在IE浏览器“工具”中，选择“Internet选项”，选择“自定义级别”。
+                </span>
+            </h3>
+           
+            <img src="images/i1.jpg" alt="">
+            
+            <p style=" margin:30px 0;">2) 在“自定义级别”中，找到“对未标记为可安全执行脚本的ActiveX控件初始化并执行”选择“启用”状态。<br>
+
+			<span style="color:#f00; font-weight:normal;">注：必须选择为启用，否则无法完成MAC地址的获取及绑定。</span></p>
+            <img src="images/i2.jpg" alt="">
+            
+            <p style=" margin:30px 0;">3) 标记为启用后，点击确定。登录：www.wanhuipay.com登录，在“账户设置”—“安全设置”中，找到MAC地址绑定，选择“验证”。</p>
+            <img src="images/i3.jpg" alt="">
+            
+            <p style=" margin:30px 0; color:#f00;">4) 将“当前系统获取的MAC地址”复制粘贴到“备用MAC地址一”中，点击确认完成MAC地址。
+
+注：当系统开启ActiveX控件时，IE浏览器会提示有风险，若操作修复则系统无法获取MAC地址；若用户已完成MAC地址绑定操作，则用户下次无法登录系统。IE绑定MAC地址后，无法使用其他浏览器登录。</p>
+           
+            
+            
+       </div>
+       
+        <img src="images/bg_bottom.jpg" alt=""><!--bottomBg-->
+    </div>
+    
+</div><!--fly_wrapper End-->
+    
+    
+    
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix(".fixpng");
+</script>
+<![endif]-->
+
+</body>
+</html>

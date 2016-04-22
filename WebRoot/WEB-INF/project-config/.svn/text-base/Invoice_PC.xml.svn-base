@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<system> 
+	
+	<!-- 注意：
+						1、下面格节点名称必须一致都为"NodeItem"
+						2、其中NodeName名称不变，同时里面的值不需要改动
+						3、调试人员只需改动Xcoor、Ycoor的值，调整打印位置
+						（X为打印位置距离发票最左边的距离，即为相对发票X坐标；
+						  Y为打印位置距离发票最上边距离，即为相对发票Y坐标）
+	 -->
+	
+	<NodeItem>		
+		<Xcoor> 800 </Xcoor>  <!-- 发票长度 -->
+		<Ycoor> 375 </Ycoor>   <!-- 发票宽度 -->
+		<NodeName> pageSize </NodeName>	 <!--这项不需要改动-->
+	</NodeItem>
+	
+	<!--开票日期-->
+	<NodeItem>		
+		<Xcoor> 130 </Xcoor>  <!--用户名称x坐标-->
+		<Ycoor> 94 </Ycoor>  
+		<NodeName> deductDate </NodeName>	 
+	</NodeItem>
+	
+	<!--客户姓名-->
+	<NodeItem>		
+		<Xcoor> 90 </Xcoor> <!--电话号码x坐标-->
+		<Ycoor> 107 </Ycoor>
+	<NodeName> userName </NodeName>		
+	</NodeItem>	
+		<!--客户号码-->
+	<NodeItem>		
+		<Xcoor> 90 </Xcoor> <!--电话号码x坐标-->
+		<Ycoor> 120 </Ycoor>
+	<NodeName> phone </NodeName>		
+	</NodeItem>	
+			<!--客户号码-->
+	<NodeItem>		
+		<Xcoor> 90 </Xcoor> <!--电话号码x坐标-->
+		<Ycoor> 133 </Ycoor>
+	<NodeName> payDate </NodeName>		
+	</NodeItem>	
+	
+
+	
+	<!--打印人-->	
+	<NodeItem>		
+		<Xcoor> 378 </Xcoor> <!--收款日期x坐标-->
+		<Ycoor> 245 </Ycoor>
+		<NodeName> printer </NodeName>	
+	</NodeItem>	
+	
+	  <!--打印时间-->
+	<NodeItem>		
+		<Xcoor> 455 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 305 </Ycoor>
+		<NodeName> printTime </NodeName>	
+	</NodeItem>	
+	<!--地址-->
+	<NodeItem>		
+		<Xcoor> 86 </Xcoor>	
+		<Ycoor> 374 </Ycoor>
+		<NodeName> address </NodeName>	
+	</NodeItem>	
+	<!--业务类型-->
+	<NodeItem>		
+		<Xcoor> 556 </Xcoor>	
+		<Ycoor> 504 </Ycoor>
+		<NodeName> tradeType </NodeName>	
+	</NodeItem>	
+	<!--打印明细-->
+	<NodeItem>		
+		<Xcoor> 90 </Xcoor>	
+		<Ycoor> 159 </Ycoor>
+		<NodeName> printDetail </NodeName>	
+	</NodeItem>	
+	<!--合同号-->
+	<NodeItem>		
+		<Xcoor> 0 </Xcoor>	
+		<Ycoor> 200 </Ycoor>
+		<NodeName> contentNo </NodeName>	
+	</NodeItem>	
+
+
+	<!--本月应收@-->
+	<NodeItem>		
+		<Xcoor> 90 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 303 </Ycoor>
+		<NodeName> monthTotal </NodeName>	
+	</NodeItem>	
+	
+	<!--本月应收金额@-->
+	<NodeItem>		
+		<Xcoor> 139 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 303 </Ycoor>
+		<NodeName> total </NodeName>	
+	</NodeItem>	
+	
+	<!--本月实收@-->
+	<NodeItem>		
+		<Xcoor> 203 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 303 </Ycoor>
+		<NodeName> factMoney  </NodeName>	
+	</NodeItem>
+	
+	<!--本月实收金额@-->
+	<NodeItem>		
+		<Xcoor> 252 </Xcoor>	<!--本次费用统计日期x坐标-->
+		<Ycoor> 303 </Ycoor>
+		<NodeName> payFee </NodeName>	
+	</NodeItem>	
+	
+	<!--发票金额@-->
+	<NodeItem>		
+		<Xcoor> 315 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 303 </Ycoor>
+		<NodeName> capital  </NodeName>	
+	</NodeItem>	
+	
+	
+	<!--实收金额大写@-->
+	<NodeItem>		
+		<Xcoor> 435 </Xcoor>	<!--实收金额大写x坐标-->
+		<Ycoor> 303 </Ycoor>
+		<NodeName> payFeeBig </NodeName>	
+	</NodeItem>
+	
+	<NodeItem>		
+		<Xcoor> 175 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 187 </Ycoor>
+		<NodeName> Con  </NodeName>	
+	</NodeItem>	
+
+	<NodeItem>		
+		<Xcoor> 625 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 400 </Ycoor>
+		<NodeName> terminal  </NodeName>	
+	</NodeItem>	
+	
+	
+		<!--收款人-->
+		<NodeItem>		
+		<Xcoor> 445 </Xcoor>	<!--工号x坐标-->
+		<Ycoor> 316 </Ycoor>
+		<NodeName> termname  </NodeName>	
+	</NodeItem>	
+		
+		
+	<!--  
+		<Tenpay> 
+		<bargainor_id>1216119701</bargainor_id>
+		<key>b86fea6d754413071a2f9a46b7a5f4f9</key>
+		<return_url>http://www.wanhuipay.com/ten/tenpay.do</return_url>
+		<show_url>http://www.wanhuipay.com/wlttencent/tenpaytransfersuccess.jsp</show_url>
+		<task_interval>5</task_interval>
+
+		<xinsheng_id>10000407526</xinsheng_id>
+		<pkey>30819f300d06092a864886f70d010101050003818d0030818902818100c8f7c80d7f35289cff9d3e6c87aff3bbb95b91537591ab28c1c9e105d1679cac75fe40cdce97f7285e1197c8775eaeff9d9448102c01ce9f21f365908569f558188836ea802d505aa7647f091a3495c59a24b0103e3b647200866c7aa1538f8a70d0a3bf1202582bd787e938cc1a672d82b9723d4e7b63cb54b18c34d649fd450203010001</pkey>
+	    <xsreturn_url>https://http://www.wanhuipay.com/operation/xinshengtransfersuccess.jsp</xsreturn_url>
+	    <xsnotice_url>https://http://www.wanhuipay.com/operation/xinshengResult.do</xsnotice_url>
+	    <xsip>https://http://www.wanhuipay.com[220.231.192.42]</xsip>
+            <qb_id>qbas_hrdtech</qb_id>
+            <qb_sign>hrdt_698912896118</qb_sign>
+            <qb_url>http://www.wanhuipay.com/qb/fill.do</qb_url>
+            <qb_show>http://www.wanhuipay.com/wlttencent/qbtransfersuccess.jsp</qb_show>
+            <qb_host>http://www.wanhuipay.com/</qb_host> 
+		</Tenpay> 
+-->
+
+			<Tenpay> 
+		<bargainor_id>1217952001</bargainor_id>
+		<key>ccbc9ab36fcf9cf2b0d3b1f8cd1a1f31</key>
+		<return_url>http://caisj359.oicp.net:8090/wh/ten/tenpay.do</return_url>
+		<show_url>http://caisj359.oicp.net:8090/wh/wlttencent/tenpaytransfersuccess.jsp</show_url>
+		<task_interval>5</task_interval>
+
+		<xinsheng_id>10000407526</xinsheng_id>
+		<pkey>30819f300d06092a864886f70d010101050003818d0030818902818100c8f7c80d7f35289cff9d3e6c87aff3bbb95b91537591ab28c1c9e105d1679cac75fe40cdce97f7285e1197c8775eaeff9d9448102c01ce9f21f365908569f558188836ea802d505aa7647f091a3495c59a24b0103e3b647200866c7aa1538f8a70d0a3bf1202582bd787e938cc1a672d82b9723d4e7b63cb54b18c34d649fd450203010001</pkey>
+	    <xsreturn_url>https://www.10000lt.net/operation/xinshengtransfersuccess.jsp</xsreturn_url>
+	    <xsnotice_url>https://www.10000lt.net/operation/xinshengResult.do</xsnotice_url>
+	    <xsip>https://www.10000lt.net[50.68.225.50]</xsip>
+            <qb_id>qbas_hrdtech</qb_id>
+            <qb_sign>hrdt_698912896118</qb_sign>
+            <qb_url>http://caisj359.oicp.net:8090/wh/qb/fill.do</qb_url>
+            <qb_show>http://caisj359.oicp.net:8090/wh/wlttencent/qbtransfersuccess.jsp</qb_show>
+            <qb_host>http://caisj359.oicp.net:8090/wh/</qb_host> 
+		</Tenpay> 
+</system>

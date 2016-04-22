@@ -1,0 +1,37 @@
+@charset "gb2312";
+body,html {margin:0; padding:0; font-family:"Î¢ÈíÑÅºÚ",Arial, Verdana,"ËÎÌå"; background:#FFF; color:#333; font-size:12px; line-height:180%;}
+/* ÐÞÕýIE6Õñ¶¯bug */
+html,body{background-image:url(about:blank);background-attachment:fixed;}
+
+
+/* link css */
+a {color:#808080; text-decoration:none; cursor:pointer;}
+a:visited {text-decoration:none;}
+a:hover {color:#C01141;text-decoration:none;}
+a:active {color:#C01141;}
+a:focus { outline: none; }
+
+#popdiv{ display:none;border:1px solid #8398ac; color:#0078b6; width:205px; font-size:14px; background:#FFF; padding:5px; position:absolute; clear:both; text-align:left;z-index:9999;}
+#popdiv a{ display:block;line-height:22px; height:22px;color:#0078b6;  font-size:14px;padding:3px 10px 3px 5px;}
+#popdiv a:Hover{ background:#517baf; color:#FFF;font-size:14px;}
+
+#popdiv #sellist{ overflow:auto; font-size:14px;}
+#popdiv #sellist a{text-overflow:ellipsis;  overflow:hidden; font-size:14px;}
+
+#tmpsel a{ display:inline;}
+
+.sub-input{background:url(../images/input_sp.png) left 0px no-repeat;padding:0px 0px 0px 5px;line-height:25px;float:left;display:inline;}
+.sub-input a{background:url(../images/input_sp.png) right 0px no-repeat; font-size:14px; padding:3px 12px 2px 7px;height:24px;line-height:22px;float:left;display:block;color:#0078b6;text-overflow:ellipsis;  overflow:hidden}
+.sub-input a:hover{background:url(../images/input_sp.png) right -105px no-repeat; font-size:14px; color:#0E87D8;}
+.sia-1{ width:42px;}
+.sia-2{ width:122px;}
+.sia-3{ width:284px;}
+.sia-4{ width:190px;}
+.sia-5{ width:158px;}
+.sfg{display:block; width:10px; padding:0 2px; float:left; text-align:center;}
+
+
+
+
+
+

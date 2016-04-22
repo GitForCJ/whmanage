@@ -1,0 +1,92 @@
+/* 页面背景 */
+body {
+  background-color: #C4D9EF;
+  background-image: url("../image/bg.gif");
+}
+/* 整个系统的字体样式 */
+body,table,tr,td,p,font,ol,ul,li {
+  font-family:"微软雅黑";
+  font-size:10pt; 
+  line-height:150%;
+}
+/* 链接的颜色 */
+A:visited {
+  color:#0000FF;text-decoration: none;
+}
+A:link {
+  color:#0000FF;text-decoration: none;
+}
+A:active {
+  color:#0000FF;text-decoration: none;
+}
+/* 页面四周页边距为0 */
+.minmargin {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+/* 导航条的背景色 */
+.menubg{
+  BACKGROUND-COLOR:#336699
+}
+/* 导航条的字体样式 */
+.menu {
+  font-size:11pt;
+  font-weight: normal;
+  color: #003366;
+  text-align: center;
+}
+/* 按钮样式 */
+.button {
+  BORDER-RIGHT: #7b9ebd 1px solid;
+  PADDING-RIGHT: 2px;
+  BORDER-TOP: #7b9ebd 1px solid;
+  PADDING-LEFT: 2px;
+  FONT-SIZE: 14px;
+  FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde);
+  BORDER-LEFT: #7b9ebd 1px solid;
+  CURSOR: hand;
+  COLOR: black;
+  PADDING-TOP: 2px;
+  BORDER-BOTTOM: #7b9ebd 1px solid;
+}
+/* 表格的背景 */
+.table{
+  BACKGROUND-COLOR: #000000;
+}
+/* 表格的标题样式 */
+.tabletitle {
+  background-image: url(../image/tabletop.gif);
+  text-align: center;
+  font-weight: bold;
+  color: #003366;
+}
+/* 表格的列头样式 */
+.coltitle {
+  background-color: #93AEC8;
+  text-align: center;
+  color: #003366;
+}
+/* 表格的行样式 */
+.row {
+  BACKGROUND-COLOR:#e3e3e3;
+}
+/* 表格的行样式 */
+.centerrow {
+  BACKGROUND-COLOR:#e3e3e3;
+  text-align: center;
+}
+/* 表格的单元格样式 */
+.col {
+  BACKGROUND-COLOR:#e3e3e3;
+}
+/*红色字体*/
+.red {
+  color: red;
+}
+/*透明的文本框*/
+.transparent {
+  border: none;
+  background-color: transparent;
+}

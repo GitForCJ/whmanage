@@ -1,0 +1,36 @@
+150412005645474922001231   tradeserial='150412005645474922001231' AND  20150411195316000045590201177202
+
+
+SELECT * FROM wht_orderform_1504 WHERE service='0005'
+
+
+SELECT * FROM wht_acctbill_1504 WHERE tradeserial='150412005645474922001231'
+
+SELECT state FROM wht_qbbreakrecord_1504 WHERE  buyid=16 AND oldorderid='20150411195316000045590201177202' 
+
+
+DESC wht_qbbreakrecord_1504
+
+SELECT user_login,user_ename FROM sys_user WHERE user_no='0002541374'
+
+SELECT b.user_login,b.user_ename,a.tradeserial,a.tradetime,a.tradeobject,
+(CASE WHEN a.buyid=16 THEN 'µçÐÅ' WHEN a.buyid=10 THEN '¹ÚÃû' END),a.state,a.oldorderid,a.tradefee/1000
+ FROM  wht_qbbreakrecord_1504 a,sys_user b WHERE a.userno=b.user_no 
+AND a.tradetime>'20150412000000' AND a.tradetime<'20150412235959'
+
+
+SELECT COUNT(*) FROM  wht_qbbreakrecord_1504 a WHERE a.tradetime>'20150412000000' AND a.tradetime<'20150412235959'
+
+
+SELECT * FROM wht_qbbreakrecord_1504 WHERE tradeobject='862296039'
+
+
+0000455902
+
+0003121425
+
+SELECT * FROM sys_agentsign
+
+SELECT * FROM sys_user WHERE user_no='0000455902'
+
+0003121425
